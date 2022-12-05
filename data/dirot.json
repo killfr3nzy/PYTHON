@@ -1,0 +1,4900 @@
+[
+    {
+        "line_1": "3 חדרים",
+        "line_2": "קומה 1",
+        "line_3": "עידן שלום נכסים",
+        "row_1": "יוספטל",
+        "row_2": "דירה, יוספטל, פתח תקווה",
+        "row_3": [
+            "3 חדרים",
+            "60 מ״ר",
+            "קומה 1"
+        ],
+        "row_4": [
+            {
+                "key": "rooms",
+                "label": "חדרים",
+                "value": 3
+            },
+            {
+                "key": "floor",
+                "label": "קומה",
+                "value": 1
+            },
+            {
+                "key": "SquareMeter",
+                "label": "מ\"ר",
+                "value": 60
+            }
+        ],
+        "row_5": null,
+        "search_text": "שם מוכר עידן שלום נכסים עידן שלום נכסים עידן שלום נכס להשכרה מסוג דירה מספר חדרים 3 בקומה 1 בכתובת יוספטל פתח תקווה אזור פתח תקווה והסביבה מרכז הנכס כולל ריהוט מיזוג משופצת מצב הנכס משופץ מספר תשלומים 12 כניסה מיידית תאור לקוח בס\"ד דירת 3 חד' בקומה 1 מתוך 3 , משופצת , דוד שמש, שקטה, ממזוגת , כניסה מידית עידן שלום נכסים משרד לתיווך ושיווק נכסים ,תוכלו להתרשם ממגוון נכסים ! אמינות ומקצועיות מעל הכל . סוכנות עידן שלום נכסים ",
+        "title_1": "יוספטל",
+        "title_2": "דירה",
+        "images": {
+            "Image1": {
+                "src": "https://img.yad2.co.il/Pic/202210/25/2_6/o/y2_3_8_stpF1_991922_20221025.jpeg"
+            },
+            "Image2": {
+                "src": "https://img.yad2.co.il/Pic/202210/25/2_6/o/y2_7_994658_20221025.jpeg"
+            },
+            "Image3": {
+                "src": "https://img.yad2.co.il/Pic/202210/25/2_6/o/y2_5_992439_20221025.jpeg"
+            },
+            "Image4": {
+                "src": "https://img.yad2.co.il/Pic/202210/25/2_6/o/y2_1_uFulddNr_993592_20221025.jpeg"
+            },
+            "Image5": {
+                "src": "https://img.yad2.co.il/Pic/202210/25/2_6/o/y2_2_995244_20221025.jpeg"
+            },
+            "Image6": {
+                "src": "https://img.yad2.co.il/Pic/202210/25/2_6/o/y2_4_996585_20221025.jpeg"
+            },
+            "Image7": {
+                "src": "https://img.yad2.co.il/Pic/202210/25/2_6/o/y2_6_995969_20221025.jpeg"
+            }
+        },
+        "images_count": 7,
+        "img_url": "https://img.yad2.co.il/Pic/202210/25/2_6/o/y2_3_8_stpF1_991922_20221025.jpeg",
+        "images_urls": [
+            "https://img.yad2.co.il/Pic/202210/25/2_6/o/y2_3_8_stpF1_991922_20221025.jpeg",
+            "https://img.yad2.co.il/Pic/202210/25/2_6/o/y2_7_994658_20221025.jpeg",
+            "https://img.yad2.co.il/Pic/202210/25/2_6/o/y2_5_992439_20221025.jpeg",
+            "https://img.yad2.co.il/Pic/202210/25/2_6/o/y2_1_uFulddNr_993592_20221025.jpeg",
+            "https://img.yad2.co.il/Pic/202210/25/2_6/o/y2_2_995244_20221025.jpeg",
+            "https://img.yad2.co.il/Pic/202210/25/2_6/o/y2_4_996585_20221025.jpeg",
+            "https://img.yad2.co.il/Pic/202210/25/2_6/o/y2_6_995969_20221025.jpeg"
+        ],
+        "mp4_video_url": null,
+        "video_url": null,
+        "PrimaryArea": "hamerkaz_area",
+        "PrimaryAreaID": 2,
+        "AreaID_text": "אזור פתח תקווה והסביבה",
+        "SecondaryArea": "hamerkaz_area",
+        "area_id": 4,
+        "city": "פתח תקווה",
+        "city_code": 7900,
+        "coordinates": {
+            "latitude": 32.093548,
+            "longitude": 34.90479
+        },
+        "geohash": "sv8yd62ykwcy",
+        "ad_highlight_type": "none",
+        "background_color": "f0f0f0",
+        "highlight_text": "תיווך",
+        "order_type_id": 1,
+        "ad_number": 54758799,
+        "cat_id": 2,
+        "customer_id": 3214485,
+        "feed_source": "commercial",
+        "id": "xs98p61b",
+        "link_token": "xs98p61b",
+        "merchant": true,
+        "contact_name": "עידן שלום",
+        "merchant_name": "עידן שלום נכסים",
+        "record_id": 48439658,
+        "subcat_id": "6",
+        "currency": "₪",
+        "currency_text": "₪",
+        "price": "3,800 ₪",
+        "deal_info": null,
+        "date": "2022-12-05 10:33:20",
+        "date_added": "2022-10-25 19:12:43",
+        "updated_at": "עידן שלום נכסים",
+        "IsVisibleForReco": false,
+        "ad_type": "ad",
+        "can_change_layout": 1,
+        "can_hide": 0,
+        "default_layout": "system",
+        "external": [],
+        "is_hidden": 0,
+        "is_liked": 0,
+        "is_trade_in_button": false,
+        "like_count": 0,
+        "line_1_text_color": "",
+        "line_2_text_color": "808080",
+        "promotional_ad": 0,
+        "remove_on_unlike": false,
+        "type": "ad",
+        "uid": null,
+        "address_more": null,
+        "broker_avatar": "",
+        "hood_id": 751,
+        "office_about": "עידן שלום נכסים משרד לתיווך ושיווק נכסים ,תוכלו להתרשם ממגוון נכסים ! אמינות ומקצועיות מעל הכל .",
+        "office_logo_url": "//img.yad2.co.il/Pic/TivMiniSite/logo100_2_7_713066_20190515150504-l.jpg?t=1670229590137",
+        "square_meters": 60,
+        "HomeTypeID_text": "דירה",
+        "neighborhood": "יוספטל",
+        "AssetClassificationID_text": "משופץ",
+        "Rooms_text": 3,
+        "abovePrice": "3000",
+        "priority": 1,
+        "background_type": 1,
+        "is_platinum": true,
+        "is_mobile_platinum": true
+    },
+    {
+        "line_1": "2 חדרים",
+        "line_2": "קומה 1",
+        "line_3": "דירות גואטה",
+        "row_1": "הרצל",
+        "row_2": "דירה, המרכז השקט / מרכז העיר, פתח תקווה",
+        "row_3": [
+            "2 חדרים",
+            "60 מ״ר",
+            "קומה 1"
+        ],
+        "row_4": [
+            {
+                "key": "rooms",
+                "label": "חדרים",
+                "value": 2
+            },
+            {
+                "key": "floor",
+                "label": "קומה",
+                "value": 1
+            },
+            {
+                "key": "SquareMeter",
+                "label": "מ\"ר",
+                "value": 60
+            }
+        ],
+        "row_5": null,
+        "search_text": "שם מוכר דירות גואטה דירות גואטה שביט נכס להשכרה מסוג דירה מספר חדרים 2 בקומה 1 בכתובת הרצל המרכז השקט / מרכז העיר פתח תקווה אזור פתח תקווה והסביבה מרכז הנכס כולל מיזוג מצב הנכס במצב שמור מספר תשלומים 1 תאור לקוח נכס מספר: 42652, בהרצל 2.5 חד קב ללא מעלית מרוהטת מלא כולל מוצרי חשמל \nבלעדי לדירות גואטה\nלפרטים לפנות לשביט חב דירות גואטה מתמחה בשיווק נדלן בפתח תקווה והסביבה ומהווה דור המשך למשפחה העוסקת בענף  משנת 1964 ומעורה היטב בפעילות הנדלן באזור * 10 סוכני נדלן חרוצים ומנוסים בעלי רישיון ממשרד המשפטים\r\n*מרכז קשרים ענף עם רשימת לקוחות פוטנציאלים\r\n*שימוש במערכות טכנולוגיות חדישות לאיתור וקידום הנכס סוכנות דירות גואטה ",
+        "title_1": "הרצל",
+        "title_2": "דירה",
+        "images": {
+            "Image1": {
+                "src": "https://img.yad2.co.il/Pic/202212/03/2_6/o/o2_6_1_02744_20221203090619.jpg"
+            },
+            "Image2": {
+                "src": "https://img.yad2.co.il/Pic/202212/03/2_6/o/o2_6_2_05880_20221203090619.jpg"
+            }
+        },
+        "images_count": 2,
+        "img_url": "https://img.yad2.co.il/Pic/202212/03/2_6/o/o2_6_1_02744_20221203090619.jpg",
+        "images_urls": [
+            "https://img.yad2.co.il/Pic/202212/03/2_6/o/o2_6_1_02744_20221203090619.jpg",
+            "https://img.yad2.co.il/Pic/202212/03/2_6/o/o2_6_2_05880_20221203090619.jpg"
+        ],
+        "mp4_video_url": null,
+        "video_url": null,
+        "PrimaryArea": "hamerkaz_area",
+        "PrimaryAreaID": 2,
+        "AreaID_text": "אזור פתח תקווה והסביבה",
+        "SecondaryArea": "hamerkaz_area",
+        "area_id": 4,
+        "city": "פתח תקווה",
+        "city_code": 7900,
+        "street": "הרצל",
+        "coordinates": {
+            "latitude": 32.0853795576923,
+            "longitude": 34.8883096923077
+        },
+        "geohash": "sv8y9buyus30",
+        "ad_highlight_type": "none",
+        "background_color": "f0f0f0",
+        "highlight_text": "תיווך",
+        "order_type_id": 1,
+        "ad_number": 43300463,
+        "cat_id": 2,
+        "customer_id": 482074,
+        "feed_source": "commercial",
+        "id": "xkpdestt",
+        "link_token": "xkpdestt",
+        "merchant": true,
+        "contact_name": "שביט",
+        "merchant_name": "דירות גואטה",
+        "record_id": 48630530,
+        "subcat_id": "6",
+        "currency": "₪",
+        "currency_text": "₪",
+        "price": "4,000 ₪",
+        "deal_info": null,
+        "date": "2022-12-05 09:57:17",
+        "date_added": "2022-12-03 09:06:17",
+        "updated_at": "דירות גואטה",
+        "IsVisibleForReco": false,
+        "ad_type": "ad",
+        "can_change_layout": 1,
+        "can_hide": 0,
+        "default_layout": "system",
+        "external": [],
+        "is_hidden": 0,
+        "is_liked": 0,
+        "is_trade_in_button": false,
+        "like_count": 0,
+        "line_1_text_color": "",
+        "line_2_text_color": "808080",
+        "promotional_ad": 0,
+        "remove_on_unlike": false,
+        "type": "ad",
+        "uid": null,
+        "address_more": null,
+        "broker_avatar": "",
+        "hood_id": 2001001,
+        "office_about": "חב דירות גואטה מתמחה בשיווק נדלן בפתח תקווה והסביבה ומהווה דור המשך למשפחה העוסקת בענף  משנת 1964 ומעורה היטב בפעילות הנדלן באזור * 10 סוכני נדלן חרוצים ומנוסים בעלי רישיון ממשרד המשפטים\r\n*מרכז קשרים ענף עם רשימת לקוחות פוטנציאלים\r\n*שימוש במערכות טכנולוגיות חדישות לאיתור וקידום הנכס",
+        "office_logo_url": "//img.yad2.co.il/Pic/TivMiniSite/y2_1_07803_20211214092924.jpeg?t=1670227126062",
+        "square_meters": 60,
+        "HomeTypeID_text": "דירה",
+        "neighborhood": "המרכז השקט / מרכז העיר",
+        "AssetClassificationID_text": "במצב שמור",
+        "Rooms_text": 2,
+        "abovePrice": "4000",
+        "priority": 1,
+        "background_type": 1,
+        "is_platinum": true,
+        "is_mobile_platinum": true
+    },
+    {
+        "line_1": "2 חדרים",
+        "line_2": "קומה 3",
+        "line_3": "נדל\"ן סנטר",
+        "row_1": "צה\"ל 60",
+        "row_2": "דירה, בר יהודה, פתח תקווה",
+        "row_3": [
+            "2 חדרים",
+            "50 מ״ר",
+            "קומה 3"
+        ],
+        "row_4": [
+            {
+                "key": "rooms",
+                "label": "חדרים",
+                "value": 2
+            },
+            {
+                "key": "floor",
+                "label": "קומה",
+                "value": 3
+            },
+            {
+                "key": "SquareMeter",
+                "label": "מ\"ר",
+                "value": 50
+            }
+        ],
+        "row_5": null,
+        "search_text": "שם מוכר נדל\"ן סנטר נדל\"ן סנטר איציק סמגין נכס להשכרה מסוג דירה מספר חדרים 2 בקומה 3 בכתובת צה\"ל 60 בר יהודה פתח תקווה אזור פתח תקווה והסביבה מרכז הנכס כולל מיזוג מצב הנכס במצב שמור השכרה לטווח ארוך מספר תשלומים 13 כניסה מיידית תאור לקוח בכפר גנים א בצהל 60 דירת 2 חדרים במקור כ 50 מר בקומה 3/3 עורפית במקום שקט וירוק קרוב לתחבורה ציבורית רכבת קלה מרכזי קניות שיווק נכסים מצריך ידע נרחב בשוק הנדלן, יכולת אפיון, פילוח והבנה מלאה בצרכי הלקוח ומעל לכל צוות יועצי נדלן מנוסה, בעל הסמכה מקצועית והתמחות אזורית.  נדל\"ן סנטר - הינו משרד התיווך המוביל בפתח תקווה ומטפל באופן בלעדי בנכסים ואינם מוצעים בשוק הפרטי ו/או על ידי גורמים אחרים בשוק. המשרד עובד על פי סטנדרטים בינלאומיים וליווי אישי לכל אחד מלקוחותינו. צוות יועצי הנדלן שלנו איכותיים בעלי יושר, מקצועיות ובעלי הסמכה לבצע עבודתם בצורה מקצועית, אתית, אחראית ויעילה, עם ניסיון של שנים במכירות ושיווק נכסי נדלן. סוכנות נדל\"ן סנטר ",
+        "title_1": "צה\"ל 60",
+        "title_2": "דירה",
+        "images": {
+            "Image1": {
+                "src": "https://img.yad2.co.il/Pic/202210/28/2_6/o/y2_4_xeN9mWgjyJ_20221028.jpg"
+            },
+            "Image2": {
+                "src": "https://img.yad2.co.il/Pic/202210/28/2_6/o/y2_1_tqwk2WpSr7_20221028.jpg"
+            },
+            "Image3": {
+                "src": "https://img.yad2.co.il/Pic/202210/28/2_6/o/y2_7_szafhpJflh_20221028.jpg"
+            },
+            "Image4": {
+                "src": "https://img.yad2.co.il/Pic/202210/28/2_6/o/y2_2_dj4cqKhIa__20221028.jpg"
+            },
+            "Image5": {
+                "src": "https://img.yad2.co.il/Pic/202210/28/2_6/o/y2_3_K5dKzY_YT4_20221028.jpg"
+            },
+            "Image6": {
+                "src": "https://img.yad2.co.il/Pic/202210/28/2_6/o/y2_5_KtEHTGnDNF_20221028.jpg"
+            },
+            "Image7": {
+                "src": "https://img.yad2.co.il/Pic/202210/28/2_6/o/y2_6_MfQUUFKFch_20221028.jpg"
+            },
+            "Image8": {
+                "src": "https://img.yad2.co.il/Pic/202210/28/2_6/o/y2_8_GhlLJLVHWs_20221028.jpg"
+            },
+            "Image9": {
+                "src": "https://img.yad2.co.il/Pic/202210/28/2_6/o/y2_9_HJLO7RnVjf_20221028.jpg"
+            }
+        },
+        "images_count": 9,
+        "img_url": "https://img.yad2.co.il/Pic/202210/28/2_6/o/y2_4_xeN9mWgjyJ_20221028.jpg",
+        "images_urls": [
+            "https://img.yad2.co.il/Pic/202210/28/2_6/o/y2_4_xeN9mWgjyJ_20221028.jpg",
+            "https://img.yad2.co.il/Pic/202210/28/2_6/o/y2_1_tqwk2WpSr7_20221028.jpg",
+            "https://img.yad2.co.il/Pic/202210/28/2_6/o/y2_7_szafhpJflh_20221028.jpg",
+            "https://img.yad2.co.il/Pic/202210/28/2_6/o/y2_2_dj4cqKhIa__20221028.jpg",
+            "https://img.yad2.co.il/Pic/202210/28/2_6/o/y2_3_K5dKzY_YT4_20221028.jpg",
+            "https://img.yad2.co.il/Pic/202210/28/2_6/o/y2_5_KtEHTGnDNF_20221028.jpg",
+            "https://img.yad2.co.il/Pic/202210/28/2_6/o/y2_6_MfQUUFKFch_20221028.jpg",
+            "https://img.yad2.co.il/Pic/202210/28/2_6/o/y2_8_GhlLJLVHWs_20221028.jpg",
+            "https://img.yad2.co.il/Pic/202210/28/2_6/o/y2_9_HJLO7RnVjf_20221028.jpg"
+        ],
+        "mp4_video_url": null,
+        "video_url": null,
+        "PrimaryArea": "hamerkaz_area",
+        "PrimaryAreaID": 2,
+        "AreaID_text": "אזור פתח תקווה והסביבה",
+        "SecondaryArea": "hamerkaz_area",
+        "area_id": 4,
+        "city": "פתח תקווה",
+        "city_code": 7900,
+        "street": "צה\"ל",
+        "coordinates": {
+            "latitude": 32.083683,
+            "longitude": 34.869866
+        },
+        "geohash": "sv8y92xkyzbx",
+        "ad_highlight_type": "none",
+        "background_color": "f0f0f0",
+        "highlight_text": "תיווך",
+        "order_type_id": 1,
+        "ad_number": 77753037,
+        "cat_id": 2,
+        "customer_id": 7072507,
+        "feed_source": "commercial",
+        "id": "jzli6qrw",
+        "link_token": "jzli6qrw",
+        "merchant": true,
+        "contact_name": "איציק סמגין",
+        "merchant_name": "נדל\"ן סנטר",
+        "record_id": 48338093,
+        "subcat_id": "6",
+        "currency": "₪",
+        "currency_text": "₪",
+        "price": "3,200 ₪",
+        "deal_info": null,
+        "date": "2022-12-05 09:18:18",
+        "date_added": "2022-10-28 13:02:10",
+        "updated_at": "נדל\"ן סנטר",
+        "IsVisibleForReco": false,
+        "ad_type": "ad",
+        "can_change_layout": 1,
+        "can_hide": 0,
+        "default_layout": "system",
+        "external": [],
+        "is_hidden": 0,
+        "is_liked": 0,
+        "is_trade_in_button": false,
+        "like_count": 0,
+        "line_1_text_color": "",
+        "line_2_text_color": "808080",
+        "promotional_ad": 0,
+        "remove_on_unlike": false,
+        "type": "ad",
+        "uid": null,
+        "address_more": null,
+        "broker_avatar": "https://img.yad2.co.il/Pic/202206/27/2_6/o/y2_1_06713_20220627123656.jpeg",
+        "hood_id": 746,
+        "office_about": "שיווק נכסים מצריך ידע נרחב בשוק הנדלן, יכולת אפיון, פילוח והבנה מלאה בצרכי הלקוח ומעל לכל צוות יועצי נדלן מנוסה, בעל הסמכה מקצועית והתמחות אזורית.  נדל\"ן סנטר - הינו משרד התיווך המוביל בפתח תקווה ומטפל באופן בלעדי בנכסים ואינם מוצעים בשוק הפרטי ו/או על ידי גורמים אחרים בשוק. המשרד עובד על פי סטנדרטים בינלאומיים וליווי אישי לכל אחד מלקוחותינו. צוות יועצי הנדלן שלנו איכותיים בעלי יושר, מקצועיות ובעלי הסמכה לבצע עבודתם בצורה מקצועית, אתית, אחראית ויעילה, עם ניסיון של שנים במכירות ושיווק נכסי נדלן.",
+        "office_logo_url": "//img.yad2.co.il/Pic/TivMiniSite/ab3e0ffa-e662-4617-a9be-e32fb427e7a6.jpg?t=1670224735435",
+        "square_meters": 50,
+        "HomeTypeID_text": "דירה",
+        "neighborhood": "בר יהודה",
+        "AssetClassificationID_text": "במצב שמור",
+        "Rooms_text": 2,
+        "abovePrice": "3000",
+        "priority": 1,
+        "background_type": 1,
+        "is_platinum": true,
+        "is_mobile_platinum": true
+    },
+    {
+        "line_1": "2 חדרים",
+        "line_2": "קומת קרקע",
+        "line_3": "25 מ״ר",
+        "row_1": "חפץ חיים 24",
+        "row_2": "דירה, המרכז השקט / מרכז העיר, פתח תקווה",
+        "row_3": [
+            "2 חדרים",
+            "25 מ״ר",
+            "קומת קרקע"
+        ],
+        "row_4": [
+            {
+                "key": "rooms",
+                "label": "חדרים",
+                "value": 2
+            },
+            {
+                "key": "floor",
+                "label": "קומה",
+                "value": "קרקע"
+            },
+            {
+                "key": "SquareMeter",
+                "label": "מ\"ר",
+                "value": 25
+            }
+        ],
+        "row_5": null,
+        "search_text": "שם מוכר שלום נכס להשכרה מסוג דירה מספר חדרים 2 בכתובת חפץ חיים 24 המרכז השקט / מרכז העיר פתח תקווה אזור פתח תקווה והסביבה מרכז הנכס כולל ריהוט מיזוג מזגן תדיראן משופצת מצב הנכס משופץ השכרה לטווח ארוך מספר תשלומים 12 כניסה מיידית תאור לקוח דירה במרכז קרובה לחנויות ולתחבורה ציבורית, כולל ארנונה , מים וועד בית\n\nבבקשה להשאיר הודעה בווטצאפ לא להתקשר מיטה זוגית, ארון, שולחן עם כסאות, מקרר, מיקרו,כיריים, דוד שמש, מזגן, מכונת כביסה ",
+        "title_1": "חפץ חיים 24",
+        "title_2": "דירה",
+        "images": {
+            "Image1": {
+                "src": "https://img.yad2.co.il/Pic/202211/22/2_2/o/y2_1_02758_20221122154453.jpeg"
+            },
+            "Image2": {
+                "src": "https://img.yad2.co.il/Pic/202211/22/2_2/o/y2_2_03464_20221122173318.jpeg"
+            },
+            "Image3": {
+                "src": "https://img.yad2.co.il/Pic/202211/22/2_2/o/y2_3_02012_20221122182627.jpeg"
+            },
+            "Image4": {
+                "src": "https://img.yad2.co.il/Pic/202211/22/2_2/o/y2_4_08525_20221122182630.jpeg"
+            }
+        },
+        "images_count": 4,
+        "img_url": "https://img.yad2.co.il/Pic/202211/22/2_2/o/y2_1_02758_20221122154453.jpeg",
+        "images_urls": [
+            "https://img.yad2.co.il/Pic/202211/22/2_2/o/y2_1_02758_20221122154453.jpeg",
+            "https://img.yad2.co.il/Pic/202211/22/2_2/o/y2_2_03464_20221122173318.jpeg",
+            "https://img.yad2.co.il/Pic/202211/22/2_2/o/y2_3_02012_20221122182627.jpeg",
+            "https://img.yad2.co.il/Pic/202211/22/2_2/o/y2_4_08525_20221122182630.jpeg"
+        ],
+        "mp4_video_url": null,
+        "video_url": null,
+        "PrimaryArea": "hamerkaz_area",
+        "PrimaryAreaID": 2,
+        "AreaID_text": "אזור פתח תקווה והסביבה",
+        "SecondaryArea": "hamerkaz_area",
+        "area_id": 4,
+        "city": "פתח תקווה",
+        "city_code": 7900,
+        "street": "חפץ חיים",
+        "coordinates": {
+            "latitude": 32.082856,
+            "longitude": 34.887168
+        },
+        "geohash": "sv8y9bs01vvf",
+        "ad_highlight_type": "none",
+        "background_color": "f0f0f0",
+        "highlight_text": "",
+        "order_type_id": 1,
+        "ad_number": 95493283,
+        "cat_id": 2,
+        "customer_id": 5235418,
+        "feed_source": "private",
+        "id": "mc44pqjl",
+        "link_token": "mc44pqjl",
+        "merchant": false,
+        "contact_name": "שלום",
+        "merchant_name": null,
+        "record_id": 48543311,
+        "subcat_id": "2",
+        "currency": "₪",
+        "currency_text": "₪",
+        "price": "2,500 ₪",
+        "deal_info": null,
+        "date": "2022-12-05 10:21:19",
+        "date_added": "2022-11-22 15:21:46",
+        "updated_at": "עודכן היום",
+        "IsVisibleForReco": false,
+        "ad_type": "ad",
+        "can_change_layout": 1,
+        "can_hide": 0,
+        "default_layout": "system",
+        "external": [],
+        "is_hidden": 0,
+        "is_liked": 0,
+        "is_trade_in_button": false,
+        "like_count": 0,
+        "line_1_text_color": "",
+        "line_2_text_color": "808080",
+        "promotional_ad": 0,
+        "remove_on_unlike": false,
+        "type": "ad",
+        "uid": null,
+        "address_more": null,
+        "broker_avatar": "",
+        "hood_id": 2001001,
+        "office_about": null,
+        "office_logo_url": null,
+        "square_meters": 25,
+        "HomeTypeID_text": "דירה",
+        "neighborhood": "המרכז השקט / מרכז העיר",
+        "AssetClassificationID_text": "משופץ",
+        "Rooms_text": 2,
+        "abovePrice": "2000"
+    },
+    {
+        "line_1": "2 חדרים",
+        "line_2": "קומה -1",
+        "line_3": "58 מ״ר",
+        "row_1": "קיבוץ גלויות 32",
+        "row_2": "מרתף/פרטר, קרית אליעזר פרי, פתח תקווה",
+        "row_3": [
+            "2 חדרים",
+            "58 מ״ר",
+            "קומה -1"
+        ],
+        "row_4": [
+            {
+                "key": "rooms",
+                "label": "חדרים",
+                "value": 2
+            },
+            {
+                "key": "floor",
+                "label": "קומה",
+                "value": -1
+            },
+            {
+                "key": "SquareMeter",
+                "label": "מ\"ר",
+                "value": 58
+            }
+        ],
+        "row_5": null,
+        "search_text": "שם מוכר ציון נכס להשכרה מסוג מרתף/פרטר מספר חדרים 2 בקומה -1 בכתובת קיבוץ גלויות 32 קרית אליעזר פרי פתח תקווה אזור פתח תקווה והסביבה מרכז הנכס כולל ריהוט חניה מיזוג מצב הנכס משופץ השכרה לטווח ארוך מספר תשלומים 12 כולל בעלי חיים תאור לקוח להשכרה, מרתף/פרטר, קומה -1, בפתח תקווה דירת מרתף בת שני חדרים ממוזגת. יש ארון בגדים. ",
+        "title_1": "קיבוץ גלויות 32",
+        "title_2": "מרתף/פרטר",
+        "images": {
+            "Image1": {
+                "src": "https://img.yad2.co.il/Pic/202212/04/2_2/o/y2_1_05334_20221204124455.jpeg"
+            },
+            "Image2": {
+                "src": "https://img.yad2.co.il/Pic/202212/04/2_2/o/y2_2_04751_20221204124458.jpeg"
+            },
+            "Image3": {
+                "src": "https://img.yad2.co.il/Pic/202212/04/2_2/o/y2_3_04213_20221204124501.jpeg"
+            },
+            "Image4": {
+                "src": "https://img.yad2.co.il/Pic/202212/04/2_2/o/y2_4_09495_20221204124504.jpeg"
+            },
+            "Image5": {
+                "src": "https://img.yad2.co.il/Pic/202212/04/2_2/o/y2_5_09010_20221204124514.jpeg"
+            },
+            "Image6": {
+                "src": "https://img.yad2.co.il/Pic/202212/04/2_2/o/y2_6_02392_20221204124518.jpeg"
+            },
+            "Image7": {
+                "src": "https://img.yad2.co.il/Pic/202212/04/2_2/o/y2_7_07727_20221204124523.jpeg"
+            },
+            "Image8": {
+                "src": "https://img.yad2.co.il/Pic/202212/04/2_2/o/y2_8_07180_20221204124529.jpeg"
+            },
+            "Image9": {
+                "src": "https://img.yad2.co.il/Pic/202212/04/2_2/o/y2_9_09302_20221204124536.jpeg"
+            }
+        },
+        "images_count": 9,
+        "img_url": "https://img.yad2.co.il/Pic/202212/04/2_2/o/y2_1_05334_20221204124455.jpeg",
+        "images_urls": [
+            "https://img.yad2.co.il/Pic/202212/04/2_2/o/y2_1_05334_20221204124455.jpeg",
+            "https://img.yad2.co.il/Pic/202212/04/2_2/o/y2_2_04751_20221204124458.jpeg",
+            "https://img.yad2.co.il/Pic/202212/04/2_2/o/y2_3_04213_20221204124501.jpeg",
+            "https://img.yad2.co.il/Pic/202212/04/2_2/o/y2_4_09495_20221204124504.jpeg",
+            "https://img.yad2.co.il/Pic/202212/04/2_2/o/y2_5_09010_20221204124514.jpeg",
+            "https://img.yad2.co.il/Pic/202212/04/2_2/o/y2_6_02392_20221204124518.jpeg",
+            "https://img.yad2.co.il/Pic/202212/04/2_2/o/y2_7_07727_20221204124523.jpeg",
+            "https://img.yad2.co.il/Pic/202212/04/2_2/o/y2_8_07180_20221204124529.jpeg",
+            "https://img.yad2.co.il/Pic/202212/04/2_2/o/y2_9_09302_20221204124536.jpeg"
+        ],
+        "mp4_video_url": null,
+        "video_url": null,
+        "PrimaryArea": "hamerkaz_area",
+        "PrimaryAreaID": 2,
+        "AreaID_text": "אזור פתח תקווה והסביבה",
+        "SecondaryArea": "hamerkaz_area",
+        "area_id": 4,
+        "city": "פתח תקווה",
+        "city_code": 7900,
+        "street": "קיבוץ גלויות",
+        "coordinates": {
+            "latitude": 32.085396,
+            "longitude": 34.90041
+        },
+        "geohash": "sv8yd0vwyrrf",
+        "ad_highlight_type": "none",
+        "background_color": "f0f0f0",
+        "highlight_text": "",
+        "order_type_id": 1,
+        "ad_number": 41749449,
+        "cat_id": 2,
+        "customer_id": 2343738,
+        "feed_source": "private",
+        "id": "wbht417a",
+        "link_token": "wbht417a",
+        "merchant": false,
+        "contact_name": "ציון",
+        "merchant_name": null,
+        "record_id": 48641273,
+        "subcat_id": "2",
+        "currency": "₪",
+        "currency_text": "₪",
+        "price": "2,600 ₪",
+        "deal_info": null,
+        "date": "2022-12-04 12:48:03",
+        "date_added": "2022-12-04 12:44:45",
+        "updated_at": "עודכן ב 04/12/2022",
+        "IsVisibleForReco": false,
+        "ad_type": "ad",
+        "can_change_layout": 1,
+        "can_hide": 0,
+        "default_layout": "system",
+        "external": [],
+        "is_hidden": 0,
+        "is_liked": 0,
+        "is_trade_in_button": false,
+        "like_count": 0,
+        "line_1_text_color": "",
+        "line_2_text_color": "808080",
+        "promotional_ad": 0,
+        "remove_on_unlike": false,
+        "type": "ad",
+        "uid": null,
+        "address_more": null,
+        "broker_avatar": "",
+        "hood_id": 768,
+        "office_about": null,
+        "office_logo_url": null,
+        "square_meters": 58,
+        "HomeTypeID_text": "מרתף/פרטר",
+        "neighborhood": "קרית אליעזר פרי",
+        "AssetClassificationID_text": "משופץ",
+        "Rooms_text": 2,
+        "abovePrice": "2000"
+    },
+    {
+        "line_1": "2 חדרים",
+        "line_2": "קומה 4",
+        "line_3": "32 מ״ר",
+        "row_1": "חנה רובינא 12",
+        "row_2": "דירה, הדר גנים, פתח תקווה",
+        "row_3": [
+            "2 חדרים",
+            "32 מ״ר",
+            "קומה 4"
+        ],
+        "row_4": [
+            {
+                "key": "rooms",
+                "label": "חדרים",
+                "value": 2
+            },
+            {
+                "key": "floor",
+                "label": "קומה",
+                "value": 4
+            },
+            {
+                "key": "SquareMeter",
+                "label": "מ\"ר",
+                "value": 32
+            }
+        ],
+        "row_5": null,
+        "search_text": "שם מוכר מאיר נכס להשכרה מסוג דירה מספר חדרים 2 בקומה 4 בכתובת חנה רובינא 12 הדר גנים פתח תקווה אזור פתח תקווה והסביבה מרכז הנכס כולל ריהוט חניה מיזוג משופצת מצב הנכס משופץ מספר תשלומים 12 כניסה מיידית תאור לקוח בעיר הכי טובה בארץ.בשכונה מבוקשת .דירה יפיפיה מעוצבת אדריכלית.קרובה לסופר ומרכז מסחרי.קרובה לתחב\"ץ.הדירה מרוהטת קומפלט.רק לא לשכוח להביא מברשת שיניים.הדירה פנויה לכניסה מידית.קומה 4 ללא מעלית. מקרר .מכונת כביסה .ארון 4 דלתות.מיטה.מזרון.שולחן.כסא.כירה חשמלית. ",
+        "title_1": "חנה רובינא 12",
+        "title_2": "דירה",
+        "images": {
+            "Image1": {
+                "src": "https://img.yad2.co.il/Pic/202212/02/2_2/o/y2_1_04167_20221202102158.jpeg"
+            },
+            "Image2": {
+                "src": "https://img.yad2.co.il/Pic/202212/02/2_2/o/y2_2_08142_20221202152809.jpeg"
+            },
+            "Image3": {
+                "src": "https://img.yad2.co.il/Pic/202212/02/2_2/o/y2_3_06885_20221202153016.jpeg"
+            },
+            "Image4": {
+                "src": "https://img.yad2.co.il/Pic/202212/02/2_2/o/y2_4_09864_20221202153227.jpeg"
+            }
+        },
+        "images_count": 4,
+        "img_url": "https://img.yad2.co.il/Pic/202212/02/2_2/o/y2_1_04167_20221202102158.jpeg",
+        "images_urls": [
+            "https://img.yad2.co.il/Pic/202212/02/2_2/o/y2_1_04167_20221202102158.jpeg",
+            "https://img.yad2.co.il/Pic/202212/02/2_2/o/y2_2_08142_20221202152809.jpeg",
+            "https://img.yad2.co.il/Pic/202212/02/2_2/o/y2_3_06885_20221202153016.jpeg",
+            "https://img.yad2.co.il/Pic/202212/02/2_2/o/y2_4_09864_20221202153227.jpeg"
+        ],
+        "mp4_video_url": null,
+        "video_url": null,
+        "PrimaryArea": "hamerkaz_area",
+        "PrimaryAreaID": 2,
+        "AreaID_text": "אזור פתח תקווה והסביבה",
+        "SecondaryArea": "hamerkaz_area",
+        "area_id": 4,
+        "city": "פתח תקווה",
+        "city_code": 7900,
+        "street": "חנה רובינא",
+        "coordinates": {
+            "latitude": 32.075537,
+            "longitude": 34.909808
+        },
+        "geohash": "sv8y6rht93rx",
+        "ad_highlight_type": "none",
+        "background_color": "f0f0f0",
+        "highlight_text": "",
+        "order_type_id": 1,
+        "ad_number": 86777545,
+        "cat_id": 2,
+        "customer_id": 7632920,
+        "feed_source": "private",
+        "id": "vowfx3jo",
+        "link_token": "vowfx3jo",
+        "merchant": false,
+        "contact_name": "מאיר",
+        "merchant_name": null,
+        "record_id": 48624453,
+        "subcat_id": "2",
+        "currency": "₪",
+        "currency_text": "₪",
+        "price": "2,700 ₪",
+        "deal_info": null,
+        "date": "2022-12-05 08:09:21",
+        "date_added": "2022-12-02 10:08:31",
+        "updated_at": "עודכן היום",
+        "IsVisibleForReco": false,
+        "ad_type": "ad",
+        "can_change_layout": 1,
+        "can_hide": 0,
+        "default_layout": "system",
+        "external": [],
+        "is_hidden": 0,
+        "is_liked": 0,
+        "is_trade_in_button": false,
+        "like_count": 0,
+        "line_1_text_color": "",
+        "line_2_text_color": "808080",
+        "promotional_ad": 0,
+        "remove_on_unlike": false,
+        "type": "ad",
+        "uid": null,
+        "address_more": null,
+        "broker_avatar": "",
+        "hood_id": 748,
+        "office_about": null,
+        "office_logo_url": null,
+        "square_meters": 32,
+        "HomeTypeID_text": "דירה",
+        "neighborhood": "הדר גנים",
+        "AssetClassificationID_text": "משופץ",
+        "Rooms_text": 2,
+        "abovePrice": "2000"
+    },
+    {
+        "type": "advanced_ad"
+    },
+    {
+        "line_1": "2 חדרים",
+        "line_2": "קומה 3",
+        "line_3": "38 מ״ר",
+        "row_1": "העלייה השנייה 6",
+        "row_2": "דירה, לב המושבה / מרכז העיר, פתח תקווה",
+        "row_3": [
+            "2 חדרים",
+            "38 מ״ר",
+            "קומה 3"
+        ],
+        "row_4": [
+            {
+                "key": "rooms",
+                "label": "חדרים",
+                "value": 2
+            },
+            {
+                "key": "floor",
+                "label": "קומה",
+                "value": 3
+            },
+            {
+                "key": "SquareMeter",
+                "label": "מ\"ר",
+                "value": 38
+            }
+        ],
+        "row_5": null,
+        "search_text": "שם מוכר דרור נכס להשכרה מסוג דירה מספר חדרים 2 בקומה 3 בכתובת העלייה השנייה 6 לב המושבה / מרכז העיר פתח תקווה אזור פתח תקווה והסביבה מרכז הנכס כולל ריהוט מיזוג משופצת מצב הנכס משופץ מספר תשלומים 12 כניסה מיידית תאור לקוח דירה שקטה ומשופצת במרכז העיר, מיזוג בכל חדר, דוד שמש וגז. המחיר כולל ארנונה וועד מקרר, מכונת כביסה, כיריים גז, מיטה זוגית, ארון בגדים. ",
+        "title_1": "העלייה השנייה 6",
+        "title_2": "דירה",
+        "images": {
+            "Image1": {
+                "src": "https://img.yad2.co.il/Pic/202212/04/2_2/o/y2_1_05925_20221204134259.jpeg"
+            },
+            "Image2": {
+                "src": "https://img.yad2.co.il/Pic/202212/04/2_2/o/y2_2_03186_20221204134443.jpeg"
+            },
+            "Image3": {
+                "src": "https://img.yad2.co.il/Pic/202212/04/2_2/o/y2_3_09649_20221204134649.jpeg"
+            },
+            "Image4": {
+                "src": "https://img.yad2.co.il/Pic/202212/04/2_2/o/y2_4_02710_20221204134819.jpeg"
+            },
+            "Image5": {
+                "src": "https://img.yad2.co.il/Pic/202212/04/2_2/o/y2_5_05126_20221204134825.jpeg"
+            }
+        },
+        "images_count": 5,
+        "img_url": "https://img.yad2.co.il/Pic/202212/04/2_2/o/y2_1_05925_20221204134259.jpeg",
+        "images_urls": [
+            "https://img.yad2.co.il/Pic/202212/04/2_2/o/y2_1_05925_20221204134259.jpeg",
+            "https://img.yad2.co.il/Pic/202212/04/2_2/o/y2_2_03186_20221204134443.jpeg",
+            "https://img.yad2.co.il/Pic/202212/04/2_2/o/y2_3_09649_20221204134649.jpeg",
+            "https://img.yad2.co.il/Pic/202212/04/2_2/o/y2_4_02710_20221204134819.jpeg",
+            "https://img.yad2.co.il/Pic/202212/04/2_2/o/y2_5_05126_20221204134825.jpeg"
+        ],
+        "mp4_video_url": null,
+        "video_url": null,
+        "PrimaryArea": "hamerkaz_area",
+        "PrimaryAreaID": 2,
+        "AreaID_text": "אזור פתח תקווה והסביבה",
+        "SecondaryArea": "hamerkaz_area",
+        "area_id": 4,
+        "city": "פתח תקווה",
+        "city_code": 7900,
+        "street": "העלייה השנייה",
+        "coordinates": {
+            "latitude": 32.086906,
+            "longitude": 34.888083
+        },
+        "geohash": "sv8y9chxz2b1",
+        "ad_highlight_type": "none",
+        "background_color": "f0f0f0",
+        "highlight_text": "",
+        "order_type_id": 1,
+        "ad_number": 85781367,
+        "cat_id": 2,
+        "customer_id": 3588550,
+        "feed_source": "private",
+        "id": "ssuqqxp9",
+        "link_token": "ssuqqxp9",
+        "merchant": false,
+        "contact_name": "דרור",
+        "merchant_name": null,
+        "record_id": 48641933,
+        "subcat_id": "2",
+        "currency": "₪",
+        "currency_text": "₪",
+        "price": "2,950 ₪",
+        "deal_info": null,
+        "date": "2022-12-05 08:50:48",
+        "date_added": "2022-12-04 13:41:19",
+        "updated_at": "עודכן היום",
+        "IsVisibleForReco": false,
+        "ad_type": "ad",
+        "can_change_layout": 1,
+        "can_hide": 0,
+        "default_layout": "system",
+        "external": [],
+        "is_hidden": 0,
+        "is_liked": 0,
+        "is_trade_in_button": false,
+        "like_count": 0,
+        "line_1_text_color": "",
+        "line_2_text_color": "808080",
+        "promotional_ad": 0,
+        "remove_on_unlike": false,
+        "type": "ad",
+        "uid": null,
+        "address_more": null,
+        "broker_avatar": "",
+        "hood_id": 2001002,
+        "office_about": null,
+        "office_logo_url": null,
+        "square_meters": 38,
+        "HomeTypeID_text": "דירה",
+        "neighborhood": "לב המושבה / מרכז העיר",
+        "AssetClassificationID_text": "משופץ",
+        "Rooms_text": 2,
+        "abovePrice": "2000"
+    },
+    {
+        "line_1": "2 חדרים",
+        "line_2": "קומה 1",
+        "line_3": "30 מ״ר",
+        "row_1": "רוטשילד 38",
+        "row_2": "דירה, לב המושבה / מרכז העיר, פתח תקווה",
+        "row_3": [
+            "2 חדרים",
+            "30 מ״ר",
+            "קומה 1"
+        ],
+        "row_4": [
+            {
+                "key": "rooms",
+                "label": "חדרים",
+                "value": 2
+            },
+            {
+                "key": "floor",
+                "label": "קומה",
+                "value": 1
+            },
+            {
+                "key": "SquareMeter",
+                "label": "מ\"ר",
+                "value": 30
+            }
+        ],
+        "row_5": null,
+        "search_text": "שם מוכר משה נכס להשכרה מסוג דירה מספר חדרים 2 בקומה 1 בכתובת רוטשילד 38 לב המושבה / מרכז העיר פתח תקווה אזור פתח תקווה והסביבה מרכז הנכס כולל מיזוג מצב הנכס במצב שמור מספר תשלומים 12 כניסה מיידית תאור לקוח להשכרה, דירה, קומה ראשונה, בפתח תקווה ",
+        "title_1": "רוטשילד 38",
+        "title_2": "דירה",
+        "images": {
+            "Image1": {
+                "src": "https://img.yad2.co.il/Pic/202212/04/2_2/o/y2_1_01055_20221204090652.jpeg"
+            },
+            "Image2": {
+                "src": "https://img.yad2.co.il/Pic/202212/04/2_2/o/y2_2_05812_20221204090755.jpeg"
+            },
+            "Image3": {
+                "src": "https://img.yad2.co.il/Pic/202212/04/2_2/o/y2_3_08648_20221204090856.jpeg"
+            }
+        },
+        "images_count": 3,
+        "img_url": "https://img.yad2.co.il/Pic/202212/04/2_2/o/y2_1_01055_20221204090652.jpeg",
+        "images_urls": [
+            "https://img.yad2.co.il/Pic/202212/04/2_2/o/y2_1_01055_20221204090652.jpeg",
+            "https://img.yad2.co.il/Pic/202212/04/2_2/o/y2_2_05812_20221204090755.jpeg",
+            "https://img.yad2.co.il/Pic/202212/04/2_2/o/y2_3_08648_20221204090856.jpeg"
+        ],
+        "mp4_video_url": null,
+        "video_url": null,
+        "PrimaryArea": "hamerkaz_area",
+        "PrimaryAreaID": 2,
+        "AreaID_text": "אזור פתח תקווה והסביבה",
+        "SecondaryArea": "hamerkaz_area",
+        "area_id": 4,
+        "city": "פתח תקווה",
+        "city_code": 7900,
+        "street": "רוטשילד",
+        "coordinates": {
+            "latitude": 32.091631,
+            "longitude": 34.880666
+        },
+        "geohash": "sv8y9dp763te",
+        "ad_highlight_type": "yellow",
+        "background_color": "fef0a9",
+        "highlight_text": "",
+        "order_type_id": 3,
+        "ad_number": 87317298,
+        "cat_id": 2,
+        "customer_id": 3892031,
+        "feed_source": "private",
+        "id": "wlrermhs",
+        "link_token": "wlrermhs",
+        "merchant": false,
+        "contact_name": "משה",
+        "merchant_name": null,
+        "record_id": 48638711,
+        "subcat_id": "2",
+        "currency": "₪",
+        "currency_text": "₪",
+        "price": "3,000 ₪",
+        "deal_info": null,
+        "date": "2022-12-05 00:18:27",
+        "date_added": "2022-12-04 09:06:10",
+        "updated_at": "עודכן היום",
+        "IsVisibleForReco": false,
+        "ad_type": "ad",
+        "can_change_layout": 1,
+        "can_hide": 0,
+        "default_layout": "system",
+        "external": [],
+        "is_hidden": 0,
+        "is_liked": 0,
+        "is_trade_in_button": false,
+        "like_count": 0,
+        "line_1_text_color": "",
+        "line_2_text_color": "808080",
+        "promotional_ad": 0,
+        "remove_on_unlike": false,
+        "type": "ad",
+        "uid": null,
+        "address_more": null,
+        "broker_avatar": "",
+        "hood_id": 2001002,
+        "office_about": null,
+        "office_logo_url": null,
+        "square_meters": 30,
+        "HomeTypeID_text": "דירה",
+        "neighborhood": "לב המושבה / מרכז העיר",
+        "AssetClassificationID_text": "במצב שמור",
+        "Rooms_text": 2,
+        "abovePrice": "3000"
+    },
+    {
+        "type": "innerRich"
+    },
+    {
+        "line_1": "2 חדרים",
+        "line_2": "קומת קרקע",
+        "line_3": "43 מ״ר",
+        "row_1": "הרב ריינס 36",
+        "row_2": "יחידת דיור, תקומה / קרית חזני, פתח תקווה",
+        "row_3": [
+            "2 חדרים",
+            "43 מ״ר",
+            "קומת קרקע"
+        ],
+        "row_4": [
+            {
+                "key": "rooms",
+                "label": "חדרים",
+                "value": 2
+            },
+            {
+                "key": "floor",
+                "label": "קומה",
+                "value": "קרקע"
+            },
+            {
+                "key": "SquareMeter",
+                "label": "מ\"ר",
+                "value": 43
+            }
+        ],
+        "row_5": null,
+        "search_text": "שם מוכר אברהם נכס להשכרה מסוג יחידת דיור מספר חדרים 2 בכתובת הרב ריינס 36 תקומה / קרית חזני פתח תקווה אזור פתח תקווה והסביבה מרכז הנכס כולל סורגים מזגן תדיראן מצב הנכס במצב שמור מספר תשלומים 12 תאור לקוח להשכרה יחידת דיור בקומת מרתף. מאווררת. דוד שמש. ארון קיר. מזגנים. מתאים לזוג שומר שבת.  בשכונת כפר אברהם פ\"ת ",
+        "title_1": "הרב ריינס 36",
+        "title_2": "יחידת דיור",
+        "images": {
+            "Image1": {
+                "src": "https://img.yad2.co.il/Pic/202211/20/2_2/o/y2_1_09612_20221120192458.jpeg"
+            },
+            "Image2": {
+                "src": "https://img.yad2.co.il/Pic/202211/20/2_2/o/y2_2_05331_20221120192500.jpeg"
+            },
+            "Image3": {
+                "src": "https://img.yad2.co.il/Pic/202211/20/2_2/o/y2_3_08961_20221120192503.jpeg"
+            },
+            "Image4": {
+                "src": "https://img.yad2.co.il/Pic/202211/20/2_2/o/y2_4_08260_20221120192505.jpeg"
+            }
+        },
+        "images_count": 4,
+        "img_url": "https://img.yad2.co.il/Pic/202211/20/2_2/o/y2_1_09612_20221120192458.jpeg",
+        "images_urls": [
+            "https://img.yad2.co.il/Pic/202211/20/2_2/o/y2_1_09612_20221120192458.jpeg",
+            "https://img.yad2.co.il/Pic/202211/20/2_2/o/y2_2_05331_20221120192500.jpeg",
+            "https://img.yad2.co.il/Pic/202211/20/2_2/o/y2_3_08961_20221120192503.jpeg",
+            "https://img.yad2.co.il/Pic/202211/20/2_2/o/y2_4_08260_20221120192505.jpeg"
+        ],
+        "mp4_video_url": null,
+        "video_url": null,
+        "PrimaryArea": "hamerkaz_area",
+        "PrimaryAreaID": 2,
+        "AreaID_text": "אזור פתח תקווה והסביבה",
+        "SecondaryArea": "hamerkaz_area",
+        "area_id": 4,
+        "city": "פתח תקווה",
+        "city_code": 7900,
+        "street": "הרב ריינס",
+        "coordinates": {
+            "latitude": 32.092821,
+            "longitude": 34.898933
+        },
+        "geohash": "sv8yd4kdhp6w",
+        "ad_highlight_type": "none",
+        "background_color": "f0f0f0",
+        "highlight_text": "",
+        "order_type_id": 1,
+        "ad_number": 61616004,
+        "cat_id": 2,
+        "customer_id": 2844488,
+        "feed_source": "private",
+        "id": "6l6kelg7",
+        "link_token": "6l6kelg7",
+        "merchant": false,
+        "contact_name": "אברהם",
+        "merchant_name": null,
+        "record_id": 48526109,
+        "subcat_id": "2",
+        "currency": "₪",
+        "currency_text": "₪",
+        "price": "3,100 ₪",
+        "deal_info": null,
+        "date": "2022-12-04 15:35:37",
+        "date_added": "2022-11-20 18:34:04",
+        "updated_at": "עודכן ב 04/12/2022",
+        "IsVisibleForReco": false,
+        "ad_type": "ad",
+        "can_change_layout": 1,
+        "can_hide": 0,
+        "default_layout": "system",
+        "external": [],
+        "is_hidden": 0,
+        "is_liked": 0,
+        "is_trade_in_button": false,
+        "like_count": 0,
+        "line_1_text_color": "",
+        "line_2_text_color": "808080",
+        "promotional_ad": 0,
+        "remove_on_unlike": false,
+        "type": "ad",
+        "uid": null,
+        "address_more": null,
+        "broker_avatar": "",
+        "hood_id": 779,
+        "office_about": null,
+        "office_logo_url": null,
+        "square_meters": 43,
+        "HomeTypeID_text": "יחידת דיור",
+        "neighborhood": "תקומה / קרית חזני",
+        "AssetClassificationID_text": "במצב שמור",
+        "Rooms_text": 2,
+        "abovePrice": "3000"
+    },
+    {
+        "type": "advanced_ad"
+    },
+    {
+        "line_1": "2 חדרים",
+        "line_2": "קומה 3",
+        "line_3": "50 מ״ר",
+        "row_1": "דורון 5",
+        "row_2": "דירה, רמת ורבר, פתח תקווה",
+        "row_3": [
+            "2 חדרים",
+            "50 מ״ר",
+            "קומה 3"
+        ],
+        "row_4": [
+            {
+                "key": "rooms",
+                "label": "חדרים",
+                "value": 2
+            },
+            {
+                "key": "floor",
+                "label": "קומה",
+                "value": 3
+            },
+            {
+                "key": "SquareMeter",
+                "label": "מ\"ר",
+                "value": 50
+            }
+        ],
+        "row_5": null,
+        "search_text": "שם מוכר יבגני נכס להשכרה מסוג דירה מספר חדרים 2 בקומה 3 בכתובת דורון 5 רמת ורבר פתח תקווה אזור פתח תקווה והסביבה מרכז הנכס כולל ריהוט מיזוג מזגן תדיראן מצב הנכס במצב שמור השכרה לטווח ארוך מספר תשלומים 12 כניסה מיידית תאור לקוח דירה 2 חדרים, סלון וחדר שינה, מטבח. דוד שמש וחשל, מזגן בכל חדר. 3 כיווני אוויר. הדירה ריקה. קרוב לתחבורה, שוק, בנקים ובתי חולים. הרבה חניה מתחת לבית. אין תשלומים וועד בית. חלק מהריהוט (איקאה) ומכשירי החשמל אפשר לקנות מהשוכר במחיר נמוך חלק מהריהוט (איקאה) ומכשירי החשמל אפשר לקנות מהשוכר במחיר נמוך ",
+        "title_1": "דורון 5",
+        "title_2": "דירה",
+        "images": {
+            "Image1": {
+                "src": "https://img.yad2.co.il/Pic/202212/04/2_2/o/y2_1_02218_20221204200512.jpeg"
+            },
+            "Image2": {
+                "src": "https://img.yad2.co.il/Pic/202212/04/2_2/o/y2_2_03296_20221204201021.jpeg"
+            },
+            "Image3": {
+                "src": "https://img.yad2.co.il/Pic/202212/04/2_2/o/y2_3_03436_20221204201102.jpeg"
+            },
+            "Image4": {
+                "src": "https://img.yad2.co.il/Pic/202212/04/2_2/o/y2_4_07712_20221204201141.jpeg"
+            },
+            "Image5": {
+                "src": "https://img.yad2.co.il/Pic/202212/04/2_2/o/y2_5_09661_20221204201227.jpeg"
+            },
+            "Image6": {
+                "src": "https://img.yad2.co.il/Pic/202212/04/2_2/o/y2_6_07837_20221204202116.jpeg"
+            },
+            "Image7": {
+                "src": "https://img.yad2.co.il/Pic/202212/04/2_2/o/y2_7_01135_20221204202208.jpeg"
+            },
+            "Image8": {
+                "src": "https://img.yad2.co.il/Pic/202212/04/2_2/o/y2_8_07742_20221204203152.jpeg"
+            },
+            "Image9": {
+                "src": "https://img.yad2.co.il/Pic/202212/04/2_2/o/y2_9_09646_20221204203253.jpeg"
+            }
+        },
+        "images_count": 9,
+        "img_url": "https://img.yad2.co.il/Pic/202212/04/2_2/o/y2_1_02218_20221204200512.jpeg",
+        "images_urls": [
+            "https://img.yad2.co.il/Pic/202212/04/2_2/o/y2_1_02218_20221204200512.jpeg",
+            "https://img.yad2.co.il/Pic/202212/04/2_2/o/y2_2_03296_20221204201021.jpeg",
+            "https://img.yad2.co.il/Pic/202212/04/2_2/o/y2_3_03436_20221204201102.jpeg",
+            "https://img.yad2.co.il/Pic/202212/04/2_2/o/y2_4_07712_20221204201141.jpeg",
+            "https://img.yad2.co.il/Pic/202212/04/2_2/o/y2_5_09661_20221204201227.jpeg",
+            "https://img.yad2.co.il/Pic/202212/04/2_2/o/y2_6_07837_20221204202116.jpeg",
+            "https://img.yad2.co.il/Pic/202212/04/2_2/o/y2_7_01135_20221204202208.jpeg",
+            "https://img.yad2.co.il/Pic/202212/04/2_2/o/y2_8_07742_20221204203152.jpeg",
+            "https://img.yad2.co.il/Pic/202212/04/2_2/o/y2_9_09646_20221204203253.jpeg"
+        ],
+        "mp4_video_url": null,
+        "video_url": null,
+        "PrimaryArea": "hamerkaz_area",
+        "PrimaryAreaID": 2,
+        "AreaID_text": "אזור פתח תקווה והסביבה",
+        "SecondaryArea": "hamerkaz_area",
+        "area_id": 4,
+        "city": "פתח תקווה",
+        "city_code": 7900,
+        "street": "דורון",
+        "coordinates": {
+            "latitude": 32.089098,
+            "longitude": 34.876169
+        },
+        "geohash": "sv8y99sh99km",
+        "ad_highlight_type": "none",
+        "background_color": "f0f0f0",
+        "highlight_text": "",
+        "order_type_id": 1,
+        "ad_number": 97565490,
+        "cat_id": 2,
+        "customer_id": 6806315,
+        "feed_source": "private",
+        "id": "y1hxapdq",
+        "link_token": "y1hxapdq",
+        "merchant": false,
+        "contact_name": "יבגני",
+        "merchant_name": null,
+        "record_id": 48645777,
+        "subcat_id": "2",
+        "currency": "₪",
+        "currency_text": "₪",
+        "price": "3,250 ₪",
+        "deal_info": null,
+        "date": "2022-12-05 10:35:47",
+        "date_added": "2022-12-04 19:53:53",
+        "updated_at": "עודכן היום",
+        "IsVisibleForReco": false,
+        "ad_type": "ad",
+        "can_change_layout": 1,
+        "can_hide": 0,
+        "default_layout": "system",
+        "external": [],
+        "is_hidden": 0,
+        "is_liked": 0,
+        "is_trade_in_button": false,
+        "like_count": 0,
+        "line_1_text_color": "",
+        "line_2_text_color": "808080",
+        "promotional_ad": 0,
+        "remove_on_unlike": false,
+        "type": "ad",
+        "uid": null,
+        "address_more": null,
+        "broker_avatar": "",
+        "hood_id": 773,
+        "office_about": null,
+        "office_logo_url": null,
+        "square_meters": 50,
+        "HomeTypeID_text": "דירה",
+        "neighborhood": "רמת ורבר",
+        "AssetClassificationID_text": "במצב שמור",
+        "Rooms_text": 2,
+        "abovePrice": "3000"
+    },
+    {
+        "line_1": "2.5 חדרים",
+        "line_2": "קומה 2",
+        "line_3": "40 מ״ר",
+        "row_1": "של\"ג 4",
+        "row_2": "יחידת דיור, קרית מטלון, פתח תקווה",
+        "row_3": [
+            "2.5 חדרים",
+            "40 מ״ר",
+            "קומה 2"
+        ],
+        "row_4": [
+            {
+                "key": "rooms",
+                "label": "חדרים",
+                "value": 2.5
+            },
+            {
+                "key": "floor",
+                "label": "קומה",
+                "value": 2
+            },
+            {
+                "key": "SquareMeter",
+                "label": "מ\"ר",
+                "value": 40
+            }
+        ],
+        "row_5": null,
+        "search_text": "שם מוכר דני נכס להשכרה מסוג יחידת דיור מספר חדרים 2.5 בקומה 2 בכתובת של\"ג 4 קרית מטלון פתח תקווה אזור פתח תקווה והסביבה מרכז הנכס כולל ריהוט מיזוג מרפסת משופצת מצב הנכס חדש (גרו בנכס) מספר תשלומים 13 כניסה מיידית תאור לקוח להשכרה, יחידת דיור, קומה 2, בפתח תקווה יחידת דיור בקומת גג\r\nאחרי שיפוץ \r\nיש קצת ריהוט וציוד ביחידה\r\nהיחידה נמצאת בסמיכות לבית דתי ולכן מעדיפים דיירים שומרי שבת ",
+        "title_1": "של\"ג 4",
+        "title_2": "יחידת דיור",
+        "images": {
+            "Image1": {
+                "src": "https://img.yad2.co.il/Pic/202211/08/2_2/o/y2_1_02638_20221108144007.jpeg"
+            },
+            "Image2": {
+                "src": "https://img.yad2.co.il/Pic/202211/08/2_2/o/y2_2_06375_20221108144011.jpeg"
+            },
+            "Image3": {
+                "src": "https://img.yad2.co.il/Pic/202211/08/2_2/o/y2_3_08592_20221108144015.jpeg"
+            },
+            "Image4": {
+                "src": "https://img.yad2.co.il/Pic/202211/08/2_2/o/y2_4_04569_20221108144026.jpeg"
+            },
+            "Image5": {
+                "src": "https://img.yad2.co.il/Pic/202211/08/2_2/o/y2_5_04024_20221108144038.jpeg"
+            },
+            "Image6": {
+                "src": "https://img.yad2.co.il/Pic/202211/08/2_2/o/y2_6_06303_20221108144049.jpeg"
+            },
+            "Image7": {
+                "src": "https://img.yad2.co.il/Pic/202211/08/2_2/o/y2_7_09145_20221108144057.jpeg"
+            },
+            "Image8": {
+                "src": "https://img.yad2.co.il/Pic/202211/08/2_2/o/y2_8_06922_20221108144107.jpeg"
+            },
+            "Image9": {
+                "src": "https://img.yad2.co.il/Pic/202211/08/2_2/o/y2_9_08299_20221108144116.jpeg"
+            },
+            "Image10": {
+                "src": "https://img.yad2.co.il/Pic/202211/08/2_2/o/y2_10_08212_20221108144126.jpeg"
+            }
+        },
+        "images_count": 10,
+        "img_url": "https://img.yad2.co.il/Pic/202211/08/2_2/o/y2_1_02638_20221108144007.jpeg",
+        "images_urls": [
+            "https://img.yad2.co.il/Pic/202211/08/2_2/o/y2_1_02638_20221108144007.jpeg",
+            "https://img.yad2.co.il/Pic/202211/08/2_2/o/y2_2_06375_20221108144011.jpeg",
+            "https://img.yad2.co.il/Pic/202211/08/2_2/o/y2_3_08592_20221108144015.jpeg",
+            "https://img.yad2.co.il/Pic/202211/08/2_2/o/y2_4_04569_20221108144026.jpeg",
+            "https://img.yad2.co.il/Pic/202211/08/2_2/o/y2_5_04024_20221108144038.jpeg",
+            "https://img.yad2.co.il/Pic/202211/08/2_2/o/y2_6_06303_20221108144049.jpeg",
+            "https://img.yad2.co.il/Pic/202211/08/2_2/o/y2_7_09145_20221108144057.jpeg",
+            "https://img.yad2.co.il/Pic/202211/08/2_2/o/y2_8_06922_20221108144107.jpeg",
+            "https://img.yad2.co.il/Pic/202211/08/2_2/o/y2_9_08299_20221108144116.jpeg",
+            "https://img.yad2.co.il/Pic/202211/08/2_2/o/y2_10_08212_20221108144126.jpeg"
+        ],
+        "mp4_video_url": null,
+        "video_url": null,
+        "PrimaryArea": "hamerkaz_area",
+        "PrimaryAreaID": 2,
+        "AreaID_text": "אזור פתח תקווה והסביבה",
+        "SecondaryArea": "hamerkaz_area",
+        "area_id": 4,
+        "city": "פתח תקווה",
+        "city_code": 7900,
+        "street": "של\"ג",
+        "coordinates": {
+            "latitude": 32.091534,
+            "longitude": 34.849242
+        },
+        "geohash": "sv8y9406wpw0",
+        "ad_highlight_type": "none",
+        "background_color": "f0f0f0",
+        "highlight_text": "",
+        "order_type_id": 1,
+        "ad_number": 69862128,
+        "cat_id": 2,
+        "customer_id": 7233241,
+        "feed_source": "private",
+        "id": "pubrwat1",
+        "link_token": "pubrwat1",
+        "merchant": false,
+        "contact_name": "דני",
+        "merchant_name": null,
+        "record_id": 48427440,
+        "subcat_id": "2",
+        "currency": "₪",
+        "currency_text": "₪",
+        "price": "3,250 ₪",
+        "deal_info": null,
+        "date": "2022-12-04 20:19:36",
+        "date_added": "2022-11-08 14:40:05",
+        "updated_at": "עודכן ב 04/12/2022",
+        "IsVisibleForReco": false,
+        "ad_type": "ad",
+        "can_change_layout": 1,
+        "can_hide": 0,
+        "default_layout": "system",
+        "external": [],
+        "is_hidden": 0,
+        "is_liked": 0,
+        "is_trade_in_button": false,
+        "like_count": 0,
+        "line_1_text_color": "",
+        "line_2_text_color": "808080",
+        "promotional_ad": 0,
+        "remove_on_unlike": false,
+        "type": "ad",
+        "uid": null,
+        "address_more": null,
+        "broker_avatar": "",
+        "hood_id": 772,
+        "office_about": null,
+        "office_logo_url": null,
+        "square_meters": 40,
+        "HomeTypeID_text": "יחידת דיור",
+        "neighborhood": "קרית מטלון",
+        "AssetClassificationID_text": "חדש (גרו בנכס)",
+        "Rooms_text": 2.5,
+        "abovePrice": "3000"
+    },
+    {
+        "line_1": "2.5 חדרים",
+        "line_2": "קומה 2",
+        "line_3": "50 מ״ר",
+        "row_1": "ד\"ר וייסבורג 4",
+        "row_2": "דירה, יוספטל, פתח תקווה",
+        "row_3": [
+            "2.5 חדרים",
+            "50 מ״ר",
+            "קומה 2"
+        ],
+        "row_4": [
+            {
+                "key": "rooms",
+                "label": "חדרים",
+                "value": 2.5
+            },
+            {
+                "key": "floor",
+                "label": "קומה",
+                "value": 2
+            },
+            {
+                "key": "SquareMeter",
+                "label": "מ\"ר",
+                "value": 50
+            }
+        ],
+        "row_5": null,
+        "search_text": "שם מוכר פיליפ נכס להשכרה מסוג דירה מספר חדרים 2.5 בקומה 2 בכתובת ד\"ר וייסבורג 4 יוספטל פתח תקווה אזור פתח תקווה והסביבה מרכז הנכס כולל מיזוג משופצת מצב הנכס משופץ השכרה לטווח ארוך מספר תשלומים 12 כולל בעלי חיים כניסה מיידית תאור לקוח דירה בת 2.5 חדרים בשכונת יוספטל. לא חדשה. צבע חדש. לא מרוהטת. עלייה של 12 מדרגות מהקרקע. ",
+        "title_1": "ד\"ר וייסבורג 4",
+        "title_2": "דירה",
+        "images": {
+            "Image1": {
+                "src": "https://img.yad2.co.il/Pic/202211/12/2_2/o/y2_1_04758_20221112201422.jpeg"
+            },
+            "Image2": {
+                "src": "https://img.yad2.co.il/Pic/202211/12/2_2/o/y2_2_03405_20221112201435.jpeg"
+            },
+            "Image3": {
+                "src": "https://img.yad2.co.il/Pic/202211/12/2_2/o/y2_3_06088_20221112201445.jpeg"
+            },
+            "Image4": {
+                "src": "https://img.yad2.co.il/Pic/202211/12/2_2/o/y2_4_02043_20221112201456.jpeg"
+            },
+            "Image5": {
+                "src": "https://img.yad2.co.il/Pic/202211/12/2_2/o/y2_5_02183_20221112201515.jpeg"
+            },
+            "Image6": {
+                "src": "https://img.yad2.co.il/Pic/202211/12/2_2/o/y2_6_07740_20221112201529.jpeg"
+            }
+        },
+        "images_count": 6,
+        "img_url": "https://img.yad2.co.il/Pic/202211/12/2_2/o/y2_1_04758_20221112201422.jpeg",
+        "images_urls": [
+            "https://img.yad2.co.il/Pic/202211/12/2_2/o/y2_1_04758_20221112201422.jpeg",
+            "https://img.yad2.co.il/Pic/202211/12/2_2/o/y2_2_03405_20221112201435.jpeg",
+            "https://img.yad2.co.il/Pic/202211/12/2_2/o/y2_3_06088_20221112201445.jpeg",
+            "https://img.yad2.co.il/Pic/202211/12/2_2/o/y2_4_02043_20221112201456.jpeg",
+            "https://img.yad2.co.il/Pic/202211/12/2_2/o/y2_5_02183_20221112201515.jpeg",
+            "https://img.yad2.co.il/Pic/202211/12/2_2/o/y2_6_07740_20221112201529.jpeg"
+        ],
+        "mp4_video_url": null,
+        "video_url": null,
+        "PrimaryArea": "hamerkaz_area",
+        "PrimaryAreaID": 2,
+        "AreaID_text": "אזור פתח תקווה והסביבה",
+        "SecondaryArea": "hamerkaz_area",
+        "area_id": 4,
+        "city": "פתח תקווה",
+        "city_code": 7900,
+        "street": "ד\"ר וייסבורג",
+        "coordinates": {
+            "latitude": 32.093992,
+            "longitude": 34.904321
+        },
+        "geohash": "sv8yd68919sp",
+        "ad_highlight_type": "none",
+        "background_color": "f0f0f0",
+        "highlight_text": "",
+        "order_type_id": 1,
+        "ad_number": 98238970,
+        "cat_id": 2,
+        "customer_id": 5423154,
+        "feed_source": "private",
+        "id": "61e8sadh",
+        "link_token": "61e8sadh",
+        "merchant": false,
+        "contact_name": "פיליפ",
+        "merchant_name": null,
+        "record_id": 48349516,
+        "subcat_id": "2",
+        "currency": "₪",
+        "currency_text": "₪",
+        "price": "3,250 ₪",
+        "deal_info": null,
+        "date": "2022-12-04 10:10:31",
+        "date_added": "2022-10-30 09:35:04",
+        "updated_at": "עודכן ב 04/12/2022",
+        "IsVisibleForReco": false,
+        "ad_type": "ad",
+        "can_change_layout": 1,
+        "can_hide": 0,
+        "default_layout": "system",
+        "external": [],
+        "is_hidden": 0,
+        "is_liked": 0,
+        "is_trade_in_button": false,
+        "like_count": 0,
+        "line_1_text_color": "",
+        "line_2_text_color": "808080",
+        "promotional_ad": 0,
+        "remove_on_unlike": false,
+        "type": "ad",
+        "uid": null,
+        "address_more": null,
+        "broker_avatar": "",
+        "hood_id": 751,
+        "office_about": null,
+        "office_logo_url": null,
+        "square_meters": 50,
+        "HomeTypeID_text": "דירה",
+        "neighborhood": "יוספטל",
+        "AssetClassificationID_text": "משופץ",
+        "Rooms_text": 2.5,
+        "abovePrice": "3000"
+    },
+    {
+        "line_1": "2.5 חדרים",
+        "line_2": "קומת קרקע",
+        "line_3": "65 מ״ר",
+        "row_1": "ברנר 26",
+        "row_2": "יחידת דיור, יוספטל, פתח תקווה",
+        "row_3": [
+            "2.5 חדרים",
+            "65 מ״ר",
+            "קומת קרקע"
+        ],
+        "row_4": [
+            {
+                "key": "rooms",
+                "label": "חדרים",
+                "value": 2.5
+            },
+            {
+                "key": "floor",
+                "label": "קומה",
+                "value": "קרקע"
+            },
+            {
+                "key": "SquareMeter",
+                "label": "מ\"ר",
+                "value": 65
+            }
+        ],
+        "row_5": null,
+        "search_text": "שם מוכר Moranazaria נכס להשכרה מסוג יחידת דיור מספר חדרים 2.5 בכתובת ברנר 26 יוספטל פתח תקווה אזור פתח תקווה והסביבה מרכז הנכס כולל סורגים מיזוג מזגן תדיראן מרפסת מצב הנכס חדש (גרו בנכס) השכרה לטווח ארוך מספר תשלומים 12 כולל בעלי חיים תאור לקוח יחידת דיור עם חצר קטנה ",
+        "title_1": "ברנר 26",
+        "title_2": "יחידת דיור",
+        "images": {
+            "Image1": {
+                "src": "https://img.yad2.co.il/Pic/202211/29/2_2/o/y2_1_02653_20221129130545.jpeg"
+            },
+            "Image2": {
+                "src": "https://img.yad2.co.il/Pic/202211/29/2_2/o/y2_3_07301_20221129130547.jpeg"
+            },
+            "Image3": {
+                "src": "https://img.yad2.co.il/Pic/202211/29/2_2/o/y2_4_09095_20221129130549.jpeg"
+            },
+            "Image4": {
+                "src": "https://img.yad2.co.il/Pic/202211/29/2_2/o/y2_5_02776_20221129130552.jpeg"
+            },
+            "Image5": {
+                "src": "https://img.yad2.co.il/Pic/202211/29/2_2/o/y2_6_06962_20221129130559.jpeg"
+            },
+            "Image6": {
+                "src": "https://img.yad2.co.il/Pic/202211/29/2_2/o/y2_7_03073_20221129130601.jpeg"
+            },
+            "Image7": {
+                "src": "https://img.yad2.co.il/Pic/202211/29/2_2/o/y2_8_03413_20221129130604.jpeg"
+            }
+        },
+        "images_count": 7,
+        "img_url": "https://img.yad2.co.il/Pic/202211/29/2_2/o/y2_1_02653_20221129130545.jpeg",
+        "images_urls": [
+            "https://img.yad2.co.il/Pic/202211/29/2_2/o/y2_1_02653_20221129130545.jpeg",
+            "https://img.yad2.co.il/Pic/202211/29/2_2/o/y2_3_07301_20221129130547.jpeg",
+            "https://img.yad2.co.il/Pic/202211/29/2_2/o/y2_4_09095_20221129130549.jpeg",
+            "https://img.yad2.co.il/Pic/202211/29/2_2/o/y2_5_02776_20221129130552.jpeg",
+            "https://img.yad2.co.il/Pic/202211/29/2_2/o/y2_6_06962_20221129130559.jpeg",
+            "https://img.yad2.co.il/Pic/202211/29/2_2/o/y2_7_03073_20221129130601.jpeg",
+            "https://img.yad2.co.il/Pic/202211/29/2_2/o/y2_8_03413_20221129130604.jpeg"
+        ],
+        "mp4_video_url": null,
+        "video_url": null,
+        "PrimaryArea": "hamerkaz_area",
+        "PrimaryAreaID": 2,
+        "AreaID_text": "אזור פתח תקווה והסביבה",
+        "SecondaryArea": "hamerkaz_area",
+        "area_id": 4,
+        "city": "פתח תקווה",
+        "city_code": 7900,
+        "street": "ברנר",
+        "coordinates": {
+            "latitude": 32.092311,
+            "longitude": 34.902885
+        },
+        "geohash": "sv8yd4px20m7",
+        "ad_highlight_type": "none",
+        "background_color": "f0f0f0",
+        "highlight_text": "",
+        "order_type_id": 1,
+        "ad_number": 49178620,
+        "cat_id": 2,
+        "customer_id": 4936151,
+        "feed_source": "private",
+        "id": "iet49271",
+        "link_token": "iet49271",
+        "merchant": false,
+        "contact_name": "Moranazaria",
+        "merchant_name": null,
+        "record_id": 48599141,
+        "subcat_id": "2",
+        "currency": "₪",
+        "currency_text": "₪",
+        "price": "3,300 ₪",
+        "deal_info": null,
+        "date": "2022-12-04 11:53:39",
+        "date_added": "2022-11-29 13:05:44",
+        "updated_at": "עודכן ב 04/12/2022",
+        "IsVisibleForReco": false,
+        "ad_type": "ad",
+        "can_change_layout": 1,
+        "can_hide": 0,
+        "default_layout": "system",
+        "external": [],
+        "is_hidden": 0,
+        "is_liked": 0,
+        "is_trade_in_button": false,
+        "like_count": 0,
+        "line_1_text_color": "",
+        "line_2_text_color": "808080",
+        "promotional_ad": 0,
+        "remove_on_unlike": false,
+        "type": "ad",
+        "uid": null,
+        "address_more": null,
+        "broker_avatar": "",
+        "hood_id": 751,
+        "office_about": null,
+        "office_logo_url": null,
+        "square_meters": 65,
+        "HomeTypeID_text": "יחידת דיור",
+        "neighborhood": "יוספטל",
+        "AssetClassificationID_text": "חדש (גרו בנכס)",
+        "Rooms_text": 2.5,
+        "abovePrice": "3000"
+    },
+    {
+        "type": "advanced_ad"
+    },
+    {
+        "line_1": "2 חדרים",
+        "line_2": "קומה 2",
+        "line_3": "41 מ״ר",
+        "row_1": "דוד פרנקפורטר 9",
+        "row_2": "דירה, המרכז השקט / מרכז העיר, פתח תקווה",
+        "row_3": [
+            "2 חדרים",
+            "41 מ״ר",
+            "קומה 2"
+        ],
+        "row_4": [
+            {
+                "key": "rooms",
+                "label": "חדרים",
+                "value": 2
+            },
+            {
+                "key": "floor",
+                "label": "קומה",
+                "value": 2
+            },
+            {
+                "key": "SquareMeter",
+                "label": "מ\"ר",
+                "value": 41
+            }
+        ],
+        "row_5": null,
+        "search_text": "שם מוכר raffi נכס להשכרה מסוג דירה מספר חדרים 2 בקומה 2 בכתובת דוד פרנקפורטר 9 המרכז השקט / מרכז העיר פתח תקווה אזור פתח תקווה והסביבה מרכז הנכס כולל מיזוג מצב הנכס במצב שמור מספר תשלומים 12 תאור לקוח להשכרה, דירה, קומה 2, בפתח תקווה. נא להשאיר פרטים בוואטסאפ. למעוניינים לראות את הדירה שמתפנה רק בסוף מרץ, אפשר בימים שלישי וראשון בין 19:00-20:00 ",
+        "title_1": "דוד פרנקפורטר 9",
+        "title_2": "דירה",
+        "images": {
+            "Image1": {
+                "src": "https://img.yad2.co.il/Pic/202211/17/2_2/o/y2_1_01486_20221117135907.jpeg"
+            },
+            "Image2": {
+                "src": "https://img.yad2.co.il/Pic/202211/17/2_2/o/y2_2_01235_20221117135910.jpeg"
+            },
+            "Image3": {
+                "src": "https://img.yad2.co.il/Pic/202211/17/2_2/o/y2_3_09418_20221117135913.jpeg"
+            },
+            "Image4": {
+                "src": "https://img.yad2.co.il/Pic/202211/17/2_2/o/y2_4_03510_20221117135916.jpeg"
+            },
+            "Image5": {
+                "src": "https://img.yad2.co.il/Pic/202211/17/2_2/o/y2_5_08389_20221117135919.jpeg"
+            },
+            "Image6": {
+                "src": "https://img.yad2.co.il/Pic/202211/17/2_2/o/y2_6_08164_20221117135922.jpeg"
+            }
+        },
+        "images_count": 6,
+        "img_url": "https://img.yad2.co.il/Pic/202211/17/2_2/o/y2_1_01486_20221117135907.jpeg",
+        "images_urls": [
+            "https://img.yad2.co.il/Pic/202211/17/2_2/o/y2_1_01486_20221117135907.jpeg",
+            "https://img.yad2.co.il/Pic/202211/17/2_2/o/y2_2_01235_20221117135910.jpeg",
+            "https://img.yad2.co.il/Pic/202211/17/2_2/o/y2_3_09418_20221117135913.jpeg",
+            "https://img.yad2.co.il/Pic/202211/17/2_2/o/y2_4_03510_20221117135916.jpeg",
+            "https://img.yad2.co.il/Pic/202211/17/2_2/o/y2_5_08389_20221117135919.jpeg",
+            "https://img.yad2.co.il/Pic/202211/17/2_2/o/y2_6_08164_20221117135922.jpeg"
+        ],
+        "mp4_video_url": null,
+        "video_url": null,
+        "PrimaryArea": "hamerkaz_area",
+        "PrimaryAreaID": 2,
+        "AreaID_text": "אזור פתח תקווה והסביבה",
+        "SecondaryArea": "hamerkaz_area",
+        "area_id": 4,
+        "city": "פתח תקווה",
+        "city_code": 7900,
+        "street": "דוד פרנקפורטר",
+        "coordinates": {
+            "latitude": 32.085381,
+            "longitude": 34.880731
+        },
+        "geohash": "sv8y98zqguw0",
+        "ad_highlight_type": "none",
+        "background_color": "f0f0f0",
+        "highlight_text": "",
+        "order_type_id": 1,
+        "ad_number": 77877590,
+        "cat_id": 2,
+        "customer_id": 2039386,
+        "feed_source": "private",
+        "id": "i0yg49t0",
+        "link_token": "i0yg49t0",
+        "merchant": false,
+        "contact_name": "raffi",
+        "merchant_name": null,
+        "record_id": 48502576,
+        "subcat_id": "2",
+        "currency": "₪",
+        "currency_text": "₪",
+        "price": "3,300 ₪",
+        "deal_info": null,
+        "date": "2022-11-30 17:03:05",
+        "date_added": "2022-11-17 13:59:06",
+        "updated_at": "עודכן ב 30/11/2022",
+        "IsVisibleForReco": false,
+        "ad_type": "ad",
+        "can_change_layout": 1,
+        "can_hide": 0,
+        "default_layout": "system",
+        "external": [],
+        "is_hidden": 0,
+        "is_liked": 0,
+        "is_trade_in_button": false,
+        "like_count": 0,
+        "line_1_text_color": "",
+        "line_2_text_color": "808080",
+        "promotional_ad": 0,
+        "remove_on_unlike": false,
+        "type": "ad",
+        "uid": null,
+        "address_more": null,
+        "broker_avatar": "",
+        "hood_id": 2001001,
+        "office_about": null,
+        "office_logo_url": null,
+        "square_meters": 41,
+        "HomeTypeID_text": "דירה",
+        "neighborhood": "המרכז השקט / מרכז העיר",
+        "AssetClassificationID_text": "במצב שמור",
+        "Rooms_text": 2,
+        "abovePrice": "3000"
+    },
+    {
+        "line_1": "2 חדרים",
+        "line_2": "קומת קרקע",
+        "line_3": "32 מ״ר",
+        "row_1": "יונה 62",
+        "row_2": "יחידת דיור, שעריה, פתח תקווה",
+        "row_3": [
+            "2 חדרים",
+            "32 מ״ר",
+            "קומת קרקע"
+        ],
+        "row_4": [
+            {
+                "key": "rooms",
+                "label": "חדרים",
+                "value": 2
+            },
+            {
+                "key": "floor",
+                "label": "קומה",
+                "value": "קרקע"
+            },
+            {
+                "key": "SquareMeter",
+                "label": "מ\"ר",
+                "value": 32
+            }
+        ],
+        "row_5": null,
+        "search_text": "שם מוכר אבי נכס להשכרה מסוג יחידת דיור מספר חדרים 2 בכתובת יונה 62 שעריה פתח תקווה אזור פתח תקווה והסביבה מרכז הנכס כולל מיזוג מרפסת מצב הנכס חדש מקבלן (לא גרו בנכס) מספר תשלומים 12 כניסה מיידית תאור לקוח יחידת דיור חדשה מתאימה ליחיד. ",
+        "title_1": "יונה 62",
+        "title_2": "יחידת דיור",
+        "images": {
+            "Image1": {
+                "src": "https://img.yad2.co.il/Pic/202211/29/2_2/o/y2_1_07924_20221129225300.jpeg"
+            },
+            "Image2": {
+                "src": "https://img.yad2.co.il/Pic/202211/29/2_2/o/y2_2_03282_20221129225419.jpeg"
+            },
+            "Image3": {
+                "src": "https://img.yad2.co.il/Pic/202211/29/2_2/o/y2_3_03985_20221129225531.jpeg"
+            },
+            "Image4": {
+                "src": "https://img.yad2.co.il/Pic/202211/29/2_2/o/y2_4_03036_20221129225649.jpeg"
+            },
+            "Image5": {
+                "src": "https://img.yad2.co.il/Pic/202211/29/2_2/o/y2_5_03449_20221129225826.jpeg"
+            },
+            "Image6": {
+                "src": "https://img.yad2.co.il/Pic/202211/29/2_2/o/y2_6_04793_20221129230006.jpeg"
+            }
+        },
+        "images_count": 6,
+        "img_url": "https://img.yad2.co.il/Pic/202211/29/2_2/o/y2_1_07924_20221129225300.jpeg",
+        "images_urls": [
+            "https://img.yad2.co.il/Pic/202211/29/2_2/o/y2_1_07924_20221129225300.jpeg",
+            "https://img.yad2.co.il/Pic/202211/29/2_2/o/y2_2_03282_20221129225419.jpeg",
+            "https://img.yad2.co.il/Pic/202211/29/2_2/o/y2_3_03985_20221129225531.jpeg",
+            "https://img.yad2.co.il/Pic/202211/29/2_2/o/y2_4_03036_20221129225649.jpeg",
+            "https://img.yad2.co.il/Pic/202211/29/2_2/o/y2_5_03449_20221129225826.jpeg",
+            "https://img.yad2.co.il/Pic/202211/29/2_2/o/y2_6_04793_20221129230006.jpeg"
+        ],
+        "mp4_video_url": null,
+        "video_url": null,
+        "PrimaryArea": "hamerkaz_area",
+        "PrimaryAreaID": 2,
+        "AreaID_text": "אזור פתח תקווה והסביבה",
+        "SecondaryArea": "hamerkaz_area",
+        "area_id": 4,
+        "city": "פתח תקווה",
+        "city_code": 7900,
+        "street": "יונה",
+        "coordinates": {
+            "latitude": 32.070339,
+            "longitude": 34.89929
+        },
+        "geohash": "sv8y6nhzk2kx",
+        "ad_highlight_type": "none",
+        "background_color": "f0f0f0",
+        "highlight_text": "",
+        "order_type_id": 1,
+        "ad_number": 84231456,
+        "cat_id": 2,
+        "customer_id": 7636854,
+        "feed_source": "private",
+        "id": "st4eq0d2",
+        "link_token": "st4eq0d2",
+        "merchant": false,
+        "contact_name": "אבי",
+        "merchant_name": null,
+        "record_id": 48604006,
+        "subcat_id": "2",
+        "currency": "₪",
+        "currency_text": "₪",
+        "price": "3,400 ₪",
+        "deal_info": null,
+        "date": "2022-12-03 18:31:53",
+        "date_added": "2022-11-29 22:51:53",
+        "updated_at": "עודכן ב 03/12/2022",
+        "IsVisibleForReco": false,
+        "ad_type": "ad",
+        "can_change_layout": 1,
+        "can_hide": 0,
+        "default_layout": "system",
+        "external": [],
+        "is_hidden": 0,
+        "is_liked": 0,
+        "is_trade_in_button": false,
+        "like_count": 0,
+        "line_1_text_color": "",
+        "line_2_text_color": "808080",
+        "promotional_ad": 0,
+        "remove_on_unlike": false,
+        "type": "ad",
+        "uid": null,
+        "address_more": null,
+        "broker_avatar": "",
+        "hood_id": 778,
+        "office_about": null,
+        "office_logo_url": null,
+        "square_meters": 32,
+        "HomeTypeID_text": "יחידת דיור",
+        "neighborhood": "שעריה",
+        "AssetClassificationID_text": "חדש מקבלן (לא גרו בנכס)",
+        "Rooms_text": 2,
+        "abovePrice": "3000"
+    },
+    {
+        "line_1": "2 חדרים",
+        "line_2": "קומה 3",
+        "line_3": "50 מ״ר",
+        "row_1": "נחלת צבי 75",
+        "row_2": "דירה, תקומה / קרית חזני, פתח תקווה",
+        "row_3": [
+            "2 חדרים",
+            "50 מ״ר",
+            "קומה 3"
+        ],
+        "row_4": [
+            {
+                "key": "rooms",
+                "label": "חדרים",
+                "value": 2
+            },
+            {
+                "key": "floor",
+                "label": "קומה",
+                "value": 3
+            },
+            {
+                "key": "SquareMeter",
+                "label": "מ\"ר",
+                "value": 50
+            }
+        ],
+        "row_5": null,
+        "search_text": "שם מוכר יניב נכס להשכרה מסוג דירה מספר חדרים 2 בקומה 3 בכתובת נחלת צבי 75 תקומה / קרית חזני פתח תקווה אזור פתח תקווה והסביבה מרכז הנכס כולל חניה מיזוג מרפסת מצב הנכס במצב שמור השכרה לטווח ארוך מספר תשלומים 12 כולל בעלי חיים כניסה מיידית תאור לקוח מקלחת ושרותים לאחר שיפוץ.2 מזגנים חדשים.דוד שמש וחשמל.חניה מקורה בטאבו רק של הדירה. 6 דיירים בבנין ,2 בכל קומה.\nקומה 3 בלי מעלית.קרובה לתחבורה ציבורית . חנות מכולת מתחת לבנין.עורפית ושקטה ,אין אף אחד מול החלון.עברה צבע . ",
+        "title_1": "נחלת צבי 75",
+        "title_2": "דירה",
+        "images": {
+            "Image1": {
+                "src": "https://img.yad2.co.il/Pic/202211/22/2_2/o/y2_1_01097_20221122140800.jpeg"
+            },
+            "Image2": {
+                "src": "https://img.yad2.co.il/Pic/202211/22/2_2/o/y2_2_07574_20221122140807.jpeg"
+            },
+            "Image3": {
+                "src": "https://img.yad2.co.il/Pic/202211/22/2_2/o/y2_3_07918_20221122140813.jpeg"
+            },
+            "Image4": {
+                "src": "https://img.yad2.co.il/Pic/202211/22/2_2/o/y2_4_01973_20221122140820.jpeg"
+            },
+            "Image5": {
+                "src": "https://img.yad2.co.il/Pic/202211/22/2_2/o/y2_5_03140_20221122140827.jpeg"
+            },
+            "Image6": {
+                "src": "https://img.yad2.co.il/Pic/202211/22/2_2/o/y2_6_05204_20221122140840.jpeg"
+            }
+        },
+        "images_count": 6,
+        "img_url": "https://img.yad2.co.il/Pic/202211/22/2_2/o/y2_1_01097_20221122140800.jpeg",
+        "images_urls": [
+            "https://img.yad2.co.il/Pic/202211/22/2_2/o/y2_1_01097_20221122140800.jpeg",
+            "https://img.yad2.co.il/Pic/202211/22/2_2/o/y2_2_07574_20221122140807.jpeg",
+            "https://img.yad2.co.il/Pic/202211/22/2_2/o/y2_3_07918_20221122140813.jpeg",
+            "https://img.yad2.co.il/Pic/202211/22/2_2/o/y2_4_01973_20221122140820.jpeg",
+            "https://img.yad2.co.il/Pic/202211/22/2_2/o/y2_5_03140_20221122140827.jpeg",
+            "https://img.yad2.co.il/Pic/202211/22/2_2/o/y2_6_05204_20221122140840.jpeg"
+        ],
+        "mp4_video_url": null,
+        "video_url": null,
+        "PrimaryArea": "hamerkaz_area",
+        "PrimaryAreaID": 2,
+        "AreaID_text": "אזור פתח תקווה והסביבה",
+        "SecondaryArea": "hamerkaz_area",
+        "area_id": 4,
+        "city": "פתח תקווה",
+        "city_code": 7900,
+        "street": "נחלת צבי",
+        "coordinates": {
+            "latitude": 32.095308,
+            "longitude": 34.894117
+        },
+        "geohash": "sv8yd4c0ez53",
+        "ad_highlight_type": "none",
+        "background_color": "f0f0f0",
+        "highlight_text": "",
+        "order_type_id": 1,
+        "ad_number": 55357739,
+        "cat_id": 2,
+        "customer_id": 6727219,
+        "feed_source": "private",
+        "id": "i26iioy2",
+        "link_token": "i26iioy2",
+        "merchant": false,
+        "contact_name": "יניב",
+        "merchant_name": null,
+        "record_id": 48542564,
+        "subcat_id": "2",
+        "currency": "₪",
+        "currency_text": "₪",
+        "price": "3,400 ₪",
+        "deal_info": null,
+        "date": "2022-11-22 14:13:57",
+        "date_added": "2022-11-22 14:07:56",
+        "updated_at": "עודכן ב 22/11/2022",
+        "IsVisibleForReco": false,
+        "ad_type": "ad",
+        "can_change_layout": 1,
+        "can_hide": 0,
+        "default_layout": "system",
+        "external": [],
+        "is_hidden": 0,
+        "is_liked": 0,
+        "is_trade_in_button": false,
+        "like_count": 0,
+        "line_1_text_color": "",
+        "line_2_text_color": "808080",
+        "promotional_ad": 0,
+        "remove_on_unlike": false,
+        "type": "ad",
+        "uid": null,
+        "address_more": null,
+        "broker_avatar": "",
+        "hood_id": 779,
+        "office_about": null,
+        "office_logo_url": null,
+        "square_meters": 50,
+        "HomeTypeID_text": "דירה",
+        "neighborhood": "תקומה / קרית חזני",
+        "AssetClassificationID_text": "במצב שמור",
+        "Rooms_text": 2,
+        "abovePrice": "3000"
+    },
+    {
+        "line_1": "3.5 חדרים",
+        "line_2": "קומה 1",
+        "line_3": "60 מ״ר",
+        "row_1": "ברל כצנלסון 42",
+        "row_2": "דירה, רמת ורבר, פתח תקווה",
+        "row_3": [
+            "3.5 חדרים",
+            "60 מ״ר",
+            "קומה 1"
+        ],
+        "row_4": [
+            {
+                "key": "rooms",
+                "label": "חדרים",
+                "value": 3.5
+            },
+            {
+                "key": "floor",
+                "label": "קומה",
+                "value": 1
+            },
+            {
+                "key": "SquareMeter",
+                "label": "מ\"ר",
+                "value": 60
+            }
+        ],
+        "row_5": null,
+        "search_text": "שם מוכר א נכס להשכרה מסוג דירה מספר חדרים 3.5 בקומה 1 בכתובת ברל כצנלסון 42 רמת ורבר פתח תקווה אזור פתח תקווה והסביבה מרכז הנכס כולל סורגים מיזוג מצב הנכס משופץ השכרה לטווח ארוך מספר תשלומים 12 כניסה מיידית תאור לקוח להשכרה 3 חדרים ממוזגת ומוארת בקרבת פארק יד לבנים.\nבדירה ארון קיר גדול,מיזוג,דוד שמש.\nלכניסה מיידית ",
+        "title_1": "ברל כצנלסון 42",
+        "title_2": "דירה",
+        "images": {
+            "Image1": {
+                "src": "https://img.yad2.co.il/Pic/202212/05/2_2/o/y2_2_08332_20221205095643.jpeg"
+            },
+            "Image2": {
+                "src": "https://img.yad2.co.il/Pic/202212/05/2_2/o/y2_3_04020_20221205095706.jpeg"
+            },
+            "Image3": {
+                "src": "https://img.yad2.co.il/Pic/202212/05/2_2/o/y2_4_08027_20221205095731.jpeg"
+            },
+            "Image4": {
+                "src": "https://img.yad2.co.il/Pic/202212/05/2_2/o/y2_5_02341_20221205095749.jpeg"
+            }
+        },
+        "images_count": 4,
+        "img_url": "https://img.yad2.co.il/Pic/202212/05/2_2/o/y2_2_08332_20221205095643.jpeg",
+        "images_urls": [
+            "https://img.yad2.co.il/Pic/202212/05/2_2/o/y2_2_08332_20221205095643.jpeg",
+            "https://img.yad2.co.il/Pic/202212/05/2_2/o/y2_3_04020_20221205095706.jpeg",
+            "https://img.yad2.co.il/Pic/202212/05/2_2/o/y2_4_08027_20221205095731.jpeg",
+            "https://img.yad2.co.il/Pic/202212/05/2_2/o/y2_5_02341_20221205095749.jpeg"
+        ],
+        "mp4_video_url": null,
+        "video_url": null,
+        "PrimaryArea": "hamerkaz_area",
+        "PrimaryAreaID": 2,
+        "AreaID_text": "אזור פתח תקווה והסביבה",
+        "SecondaryArea": "hamerkaz_area",
+        "area_id": 4,
+        "city": "פתח תקווה",
+        "city_code": 7900,
+        "street": "ברל כצנלסון",
+        "coordinates": {
+            "latitude": 32.086306,
+            "longitude": 34.875078
+        },
+        "geohash": "sv8y995k20yy",
+        "ad_highlight_type": "none",
+        "background_color": "f0f0f0",
+        "highlight_text": "",
+        "order_type_id": 1,
+        "ad_number": 45055115,
+        "cat_id": 2,
+        "customer_id": 5596864,
+        "feed_source": "private",
+        "id": "kkbev5ag",
+        "link_token": "kkbev5ag",
+        "merchant": false,
+        "contact_name": "א",
+        "merchant_name": null,
+        "record_id": 48650697,
+        "subcat_id": "2",
+        "currency": "₪",
+        "currency_text": "₪",
+        "price": "3,500 ₪",
+        "deal_info": null,
+        "date": "2022-12-05 10:16:49",
+        "date_added": "2022-12-05 09:56:29",
+        "updated_at": "עודכן היום",
+        "IsVisibleForReco": false,
+        "ad_type": "ad",
+        "can_change_layout": 1,
+        "can_hide": 0,
+        "default_layout": "system",
+        "external": [],
+        "is_hidden": 0,
+        "is_liked": 0,
+        "is_trade_in_button": false,
+        "like_count": 0,
+        "line_1_text_color": "",
+        "line_2_text_color": "808080",
+        "promotional_ad": 0,
+        "remove_on_unlike": false,
+        "type": "ad",
+        "uid": null,
+        "address_more": null,
+        "broker_avatar": "",
+        "hood_id": 773,
+        "office_about": null,
+        "office_logo_url": null,
+        "square_meters": 60,
+        "HomeTypeID_text": "דירה",
+        "neighborhood": "רמת ורבר",
+        "AssetClassificationID_text": "משופץ",
+        "Rooms_text": 3.5,
+        "abovePrice": "3000"
+    },
+    {
+        "type": "advanced_ad"
+    },
+    {
+        "line_1": "2 חדרים",
+        "line_2": "קומה 1",
+        "line_3": "50 מ״ר",
+        "row_1": "יעקב אחווה 44",
+        "row_2": "דירה, קרית דוד אלעזר, פתח תקווה",
+        "row_3": [
+            "2 חדרים",
+            "50 מ״ר",
+            "קומה 1"
+        ],
+        "row_4": [
+            {
+                "key": "rooms",
+                "label": "חדרים",
+                "value": 2
+            },
+            {
+                "key": "floor",
+                "label": "קומה",
+                "value": 1
+            },
+            {
+                "key": "SquareMeter",
+                "label": "מ\"ר",
+                "value": 50
+            }
+        ],
+        "row_5": null,
+        "search_text": "שם מוכר ציון נכס להשכרה מסוג דירה מספר חדרים 2 בקומה 1 בכתובת יעקב אחווה 44 קרית דוד אלעזר פתח תקווה אזור פתח תקווה והסביבה מרכז הנכס כולל ריהוט מיזוג מרפסת משופצת מצב הנכס משופץ מספר תשלומים 12 כניסה מיידית תאור לקוח דירה יפיפיה, שקטה, 2 מזגנים, מרפסת עם פרגולה, דוד שמש חדר שינה, ארון, מקרר, דוד שמש ",
+        "title_1": "יעקב אחווה 44",
+        "title_2": "דירה",
+        "images": {
+            "Image1": {
+                "src": "https://img.yad2.co.il/Pic/202212/04/2_2/o/y2_1_04473_20221204173548.jpeg"
+            },
+            "Image2": {
+                "src": "https://img.yad2.co.il/Pic/202212/04/2_2/o/y2_2_02991_20221204173552.jpeg"
+            },
+            "Image3": {
+                "src": "https://img.yad2.co.il/Pic/202212/04/2_2/o/y2_3_05024_20221204173556.jpeg"
+            },
+            "Image4": {
+                "src": "https://img.yad2.co.il/Pic/202212/04/2_2/o/y2_4_08558_20221204173600.jpeg"
+            },
+            "Image5": {
+                "src": "https://img.yad2.co.il/Pic/202212/04/2_2/o/y2_5_01826_20221204173605.jpeg"
+            },
+            "Image6": {
+                "src": "https://img.yad2.co.il/Pic/202212/04/2_2/o/y2_6_03454_20221204173609.jpeg"
+            },
+            "Image7": {
+                "src": "https://img.yad2.co.il/Pic/202212/04/2_2/o/y2_7_09137_20221204173612.jpeg"
+            },
+            "Image8": {
+                "src": "https://img.yad2.co.il/Pic/202212/04/2_2/o/y2_8_02506_20221204173616.jpeg"
+            }
+        },
+        "images_count": 8,
+        "img_url": "https://img.yad2.co.il/Pic/202212/04/2_2/o/y2_1_04473_20221204173548.jpeg",
+        "images_urls": [
+            "https://img.yad2.co.il/Pic/202212/04/2_2/o/y2_1_04473_20221204173548.jpeg",
+            "https://img.yad2.co.il/Pic/202212/04/2_2/o/y2_2_02991_20221204173552.jpeg",
+            "https://img.yad2.co.il/Pic/202212/04/2_2/o/y2_3_05024_20221204173556.jpeg",
+            "https://img.yad2.co.il/Pic/202212/04/2_2/o/y2_4_08558_20221204173600.jpeg",
+            "https://img.yad2.co.il/Pic/202212/04/2_2/o/y2_5_01826_20221204173605.jpeg",
+            "https://img.yad2.co.il/Pic/202212/04/2_2/o/y2_6_03454_20221204173609.jpeg",
+            "https://img.yad2.co.il/Pic/202212/04/2_2/o/y2_7_09137_20221204173612.jpeg",
+            "https://img.yad2.co.il/Pic/202212/04/2_2/o/y2_8_02506_20221204173616.jpeg"
+        ],
+        "mp4_video_url": null,
+        "video_url": null,
+        "PrimaryArea": "hamerkaz_area",
+        "PrimaryAreaID": 2,
+        "AreaID_text": "אזור פתח תקווה והסביבה",
+        "SecondaryArea": "hamerkaz_area",
+        "area_id": 4,
+        "city": "פתח תקווה",
+        "city_code": 7900,
+        "street": "יעקב אחווה",
+        "coordinates": {
+            "latitude": 32.086809,
+            "longitude": 34.905724
+        },
+        "geohash": "sv8yd31x4qdr",
+        "ad_highlight_type": "none",
+        "background_color": "f0f0f0",
+        "highlight_text": "",
+        "order_type_id": 1,
+        "ad_number": 82497843,
+        "cat_id": 2,
+        "customer_id": 5398961,
+        "feed_source": "private",
+        "id": "4tswjl28",
+        "link_token": "4tswjl28",
+        "merchant": false,
+        "contact_name": "ציון",
+        "merchant_name": null,
+        "record_id": 48644506,
+        "subcat_id": "2",
+        "currency": "₪",
+        "currency_text": "₪",
+        "price": "3,500 ₪",
+        "deal_info": null,
+        "date": "2022-12-05 06:29:29",
+        "date_added": "2022-12-04 17:35:40",
+        "updated_at": "עודכן היום",
+        "IsVisibleForReco": false,
+        "ad_type": "ad",
+        "can_change_layout": 1,
+        "can_hide": 0,
+        "default_layout": "system",
+        "external": [],
+        "is_hidden": 0,
+        "is_liked": 0,
+        "is_trade_in_button": false,
+        "like_count": 0,
+        "line_1_text_color": "",
+        "line_2_text_color": "808080",
+        "promotional_ad": 0,
+        "remove_on_unlike": false,
+        "type": "ad",
+        "uid": null,
+        "address_more": null,
+        "broker_avatar": "",
+        "hood_id": 770,
+        "office_about": null,
+        "office_logo_url": null,
+        "square_meters": 50,
+        "HomeTypeID_text": "דירה",
+        "neighborhood": "קרית דוד אלעזר",
+        "AssetClassificationID_text": "משופץ",
+        "Rooms_text": 2,
+        "abovePrice": "3000"
+    },
+    {
+        "line_1": "2 חדרים",
+        "line_2": "קומת קרקע",
+        "line_3": "60 מ״ר",
+        "row_1": "אבימלך 2",
+        "row_2": "מרתף/פרטר, בלינסון, פתח תקווה",
+        "row_3": [
+            "2 חדרים",
+            "60 מ״ר",
+            "קומת קרקע"
+        ],
+        "row_4": [
+            {
+                "key": "rooms",
+                "label": "חדרים",
+                "value": 2
+            },
+            {
+                "key": "floor",
+                "label": "קומה",
+                "value": "קרקע"
+            },
+            {
+                "key": "SquareMeter",
+                "label": "מ\"ר",
+                "value": 60
+            }
+        ],
+        "row_5": null,
+        "search_text": "שם מוכר שרון נכס להשכרה מסוג מרתף/פרטר מספר חדרים 2 בכתובת אבימלך 2 בלינסון פתח תקווה אזור פתח תקווה והסביבה מרכז הנכס כולל ריהוט מיזוג מצב הנכס חדש (גרו בנכס) השכרה לטווח ארוך מספר תשלומים 12 תאור לקוח יחידת דיור יפהיפיה מרווחת ומוארת הנמצאת במרתף של בית פרטי (עם כניסה נפרדת) בשכונת בילינסון השקטה באווירה כפרית ארון קיר ענק\nמזווה\nמיטה עם שתי שידות\nמזרון\nמזנון\nמקרר ",
+        "title_1": "אבימלך 2",
+        "title_2": "מרתף/פרטר",
+        "images": {
+            "Image1": {
+                "src": "https://img.yad2.co.il/Pic/202211/14/2_2/o/y2_1_01680_20221114123213.jpeg"
+            },
+            "Image2": {
+                "src": "https://img.yad2.co.il/Pic/202211/14/2_2/o/y2_3_03650_20221114123216.jpeg"
+            },
+            "Image3": {
+                "src": "https://img.yad2.co.il/Pic/202211/14/2_2/o/y2_4_02362_20221114123218.jpeg"
+            },
+            "Image4": {
+                "src": "https://img.yad2.co.il/Pic/202211/14/2_2/o/y2_5_08340_20221114123221.jpeg"
+            },
+            "Image5": {
+                "src": "https://img.yad2.co.il/Pic/202211/14/2_2/o/y2_6_07694_20221114123223.jpeg"
+            }
+        },
+        "images_count": 5,
+        "img_url": "https://img.yad2.co.il/Pic/202211/14/2_2/o/y2_1_01680_20221114123213.jpeg",
+        "images_urls": [
+            "https://img.yad2.co.il/Pic/202211/14/2_2/o/y2_1_01680_20221114123213.jpeg",
+            "https://img.yad2.co.il/Pic/202211/14/2_2/o/y2_3_03650_20221114123216.jpeg",
+            "https://img.yad2.co.il/Pic/202211/14/2_2/o/y2_4_02362_20221114123218.jpeg",
+            "https://img.yad2.co.il/Pic/202211/14/2_2/o/y2_5_08340_20221114123221.jpeg",
+            "https://img.yad2.co.il/Pic/202211/14/2_2/o/y2_6_07694_20221114123223.jpeg"
+        ],
+        "mp4_video_url": null,
+        "video_url": null,
+        "PrimaryArea": "hamerkaz_area",
+        "PrimaryAreaID": 2,
+        "AreaID_text": "אזור פתח תקווה והסביבה",
+        "SecondaryArea": "hamerkaz_area",
+        "area_id": 4,
+        "city": "פתח תקווה",
+        "city_code": 7900,
+        "street": "אבימלך",
+        "coordinates": {
+            "latitude": 32.078703,
+            "longitude": 34.918643
+        },
+        "geohash": "sv8y6xdzzrem",
+        "ad_highlight_type": "none",
+        "background_color": "f0f0f0",
+        "highlight_text": "",
+        "order_type_id": 1,
+        "ad_number": 42103071,
+        "cat_id": 2,
+        "customer_id": 6158104,
+        "feed_source": "private",
+        "id": "4wlpa3z3",
+        "link_token": "4wlpa3z3",
+        "merchant": false,
+        "contact_name": "שרון",
+        "merchant_name": null,
+        "record_id": 48474009,
+        "subcat_id": "2",
+        "currency": "₪",
+        "currency_text": "₪",
+        "price": "3,500 ₪",
+        "deal_info": null,
+        "date": "2022-12-04 11:27:37",
+        "date_added": "2022-11-14 12:32:12",
+        "updated_at": "עודכן ב 04/12/2022",
+        "IsVisibleForReco": false,
+        "ad_type": "ad",
+        "can_change_layout": 1,
+        "can_hide": 0,
+        "default_layout": "system",
+        "external": [],
+        "is_hidden": 0,
+        "is_liked": 0,
+        "is_trade_in_button": false,
+        "like_count": 0,
+        "line_1_text_color": "",
+        "line_2_text_color": "808080",
+        "promotional_ad": 0,
+        "remove_on_unlike": false,
+        "type": "ad",
+        "uid": null,
+        "address_more": null,
+        "broker_avatar": "",
+        "hood_id": 217,
+        "office_about": null,
+        "office_logo_url": null,
+        "square_meters": 60,
+        "HomeTypeID_text": "מרתף/פרטר",
+        "neighborhood": "בלינסון",
+        "AssetClassificationID_text": "חדש (גרו בנכס)",
+        "Rooms_text": 2,
+        "abovePrice": "3000"
+    },
+    {
+        "line_1": "3 חדרים",
+        "line_2": "קומה 3",
+        "line_3": "60 מ״ר",
+        "row_1": "אסתר המלכה 2",
+        "row_2": "דירה, יוספטל, פתח תקווה",
+        "row_3": [
+            "3 חדרים",
+            "60 מ״ר",
+            "קומה 3"
+        ],
+        "row_4": [
+            {
+                "key": "rooms",
+                "label": "חדרים",
+                "value": 3
+            },
+            {
+                "key": "floor",
+                "label": "קומה",
+                "value": 3
+            },
+            {
+                "key": "SquareMeter",
+                "label": "מ\"ר",
+                "value": 60
+            }
+        ],
+        "row_5": null,
+        "search_text": "שם מוכר שרה נכס להשכרה מסוג דירה מספר חדרים 3 בקומה 3 בכתובת אסתר המלכה 2 יוספטל פתח תקווה אזור פתח תקווה והסביבה מרכז הנכס כולל סורגים מיזוג משופצת מצב הנכס משופץ מספר תשלומים 12 כניסה מיידית תאור לקוח דירה משופצת עם מטבח חדש , אמבטיה,\n3 חדרים מרווחים.\nיש ארון גדול אחד\nחוזה לשנה ",
+        "title_1": "אסתר המלכה 2",
+        "title_2": "דירה",
+        "images": {
+            "Image1": {
+                "src": "https://img.yad2.co.il/Pic/202211/29/2_2/o/y2_2_06076_20221129105736.jpeg"
+            },
+            "Image2": {
+                "src": "https://img.yad2.co.il/Pic/202211/29/2_2/o/y2_3_01895_20221129105741.jpeg"
+            },
+            "Image3": {
+                "src": "https://img.yad2.co.il/Pic/202211/29/2_2/o/y2_4_07420_20221129105743.jpeg"
+            },
+            "Image4": {
+                "src": "https://img.yad2.co.il/Pic/202211/29/2_2/o/y2_5_05781_20221129105747.jpeg"
+            }
+        },
+        "images_count": 4,
+        "img_url": "https://img.yad2.co.il/Pic/202211/29/2_2/o/y2_2_06076_20221129105736.jpeg",
+        "images_urls": [
+            "https://img.yad2.co.il/Pic/202211/29/2_2/o/y2_2_06076_20221129105736.jpeg",
+            "https://img.yad2.co.il/Pic/202211/29/2_2/o/y2_3_01895_20221129105741.jpeg",
+            "https://img.yad2.co.il/Pic/202211/29/2_2/o/y2_4_07420_20221129105743.jpeg",
+            "https://img.yad2.co.il/Pic/202211/29/2_2/o/y2_5_05781_20221129105747.jpeg"
+        ],
+        "mp4_video_url": null,
+        "video_url": null,
+        "PrimaryArea": "hamerkaz_area",
+        "PrimaryAreaID": 2,
+        "AreaID_text": "אזור פתח תקווה והסביבה",
+        "SecondaryArea": "hamerkaz_area",
+        "area_id": 4,
+        "city": "פתח תקווה",
+        "city_code": 7900,
+        "street": "אסתר המלכה",
+        "coordinates": {
+            "latitude": 32.093264,
+            "longitude": 34.905197
+        },
+        "geohash": "sv8yd63hy412",
+        "ad_highlight_type": "none",
+        "background_color": "f0f0f0",
+        "highlight_text": "",
+        "order_type_id": 1,
+        "ad_number": 86137588,
+        "cat_id": 2,
+        "customer_id": 5126046,
+        "feed_source": "private",
+        "id": "jjb380jn",
+        "link_token": "jjb380jn",
+        "merchant": false,
+        "contact_name": "שרה",
+        "merchant_name": null,
+        "record_id": 48597659,
+        "subcat_id": "2",
+        "currency": "₪",
+        "currency_text": "₪",
+        "price": "3,500 ₪",
+        "deal_info": null,
+        "date": "2022-12-04 11:03:02",
+        "date_added": "2022-11-29 10:40:06",
+        "updated_at": "עודכן ב 04/12/2022",
+        "IsVisibleForReco": false,
+        "ad_type": "ad",
+        "can_change_layout": 1,
+        "can_hide": 0,
+        "default_layout": "system",
+        "external": [],
+        "is_hidden": 0,
+        "is_liked": 0,
+        "is_trade_in_button": false,
+        "like_count": 0,
+        "line_1_text_color": "",
+        "line_2_text_color": "808080",
+        "promotional_ad": 0,
+        "remove_on_unlike": false,
+        "type": "ad",
+        "uid": null,
+        "address_more": null,
+        "broker_avatar": "",
+        "hood_id": 751,
+        "office_about": null,
+        "office_logo_url": null,
+        "square_meters": 60,
+        "HomeTypeID_text": "דירה",
+        "neighborhood": "יוספטל",
+        "AssetClassificationID_text": "משופץ",
+        "Rooms_text": 3,
+        "abovePrice": "3000"
+    },
+    {
+        "type": "middle_strip"
+    },
+    {
+        "line_1": "2 חדרים",
+        "line_2": "קומה 3",
+        "line_3": "100 מ״ר",
+        "row_1": "יוסף ספיר 40",
+        "row_2": "יחידת דיור, שיפר, פתח תקווה",
+        "row_3": [
+            "2 חדרים",
+            "100 מ״ר",
+            "קומה 3"
+        ],
+        "row_4": [
+            {
+                "key": "rooms",
+                "label": "חדרים",
+                "value": 2
+            },
+            {
+                "key": "floor",
+                "label": "קומה",
+                "value": 3
+            },
+            {
+                "key": "SquareMeter",
+                "label": "מ\"ר",
+                "value": 100
+            }
+        ],
+        "row_5": null,
+        "search_text": "שם מוכר גיל נכס להשכרה מסוג יחידת דיור מספר חדרים 2 בקומה 3 בכתובת יוסף ספיר 40 שיפר פתח תקווה אזור פתח תקווה והסביבה מרכז הנכס כולל חניה מיזוג מרפסת מצב הנכס במצב שמור מספר תשלומים 12 כולל בעלי חיים כניסה מיידית תאור לקוח יחידת דיור שבנויה על הגג מרוצף של כ- 80 מטר.\nחדר שינה, מטבח , וחדר אירוח.\nלא מרוהטת . יש רק שולחן אוכל + 4 כסאות.\nחניה מקורה .\nהמחיר כולל ארנונה. וועד בית .. ",
+        "title_1": "יוסף ספיר 40",
+        "title_2": "יחידת דיור",
+        "images": {
+            "Image1": {
+                "src": "https://img.yad2.co.il/Pic/202211/22/2_2/o/y2_1_07135_20221122140547.jpeg"
+            },
+            "Image2": {
+                "src": "https://img.yad2.co.il/Pic/202211/22/2_2/o/y2_2_04977_20221122140554.jpeg"
+            },
+            "Image3": {
+                "src": "https://img.yad2.co.il/Pic/202211/22/2_2/o/y2_3_02013_20221122140601.jpeg"
+            },
+            "Image4": {
+                "src": "https://img.yad2.co.il/Pic/202211/22/2_2/o/y2_4_03934_20221122140607.jpeg"
+            },
+            "Image5": {
+                "src": "https://img.yad2.co.il/Pic/202211/22/2_2/o/y2_5_07005_20221122140615.jpeg"
+            },
+            "Image6": {
+                "src": "https://img.yad2.co.il/Pic/202211/22/2_2/o/y2_6_07612_20221122140622.jpeg"
+            }
+        },
+        "images_count": 6,
+        "img_url": "https://img.yad2.co.il/Pic/202211/22/2_2/o/y2_1_07135_20221122140547.jpeg",
+        "images_urls": [
+            "https://img.yad2.co.il/Pic/202211/22/2_2/o/y2_1_07135_20221122140547.jpeg",
+            "https://img.yad2.co.il/Pic/202211/22/2_2/o/y2_2_04977_20221122140554.jpeg",
+            "https://img.yad2.co.il/Pic/202211/22/2_2/o/y2_3_02013_20221122140601.jpeg",
+            "https://img.yad2.co.il/Pic/202211/22/2_2/o/y2_4_03934_20221122140607.jpeg",
+            "https://img.yad2.co.il/Pic/202211/22/2_2/o/y2_5_07005_20221122140615.jpeg",
+            "https://img.yad2.co.il/Pic/202211/22/2_2/o/y2_6_07612_20221122140622.jpeg"
+        ],
+        "mp4_video_url": null,
+        "video_url": null,
+        "PrimaryArea": "hamerkaz_area",
+        "PrimaryAreaID": 2,
+        "AreaID_text": "אזור פתח תקווה והסביבה",
+        "SecondaryArea": "hamerkaz_area",
+        "area_id": 4,
+        "city": "פתח תקווה",
+        "city_code": 7900,
+        "street": "יוסף ספיר",
+        "coordinates": {
+            "latitude": 32.096974,
+            "longitude": 34.892939
+        },
+        "geohash": "sv8yd5062mt5",
+        "ad_highlight_type": "none",
+        "background_color": "f0f0f0",
+        "highlight_text": "",
+        "order_type_id": 1,
+        "ad_number": 95142749,
+        "cat_id": 2,
+        "customer_id": 4584295,
+        "feed_source": "private",
+        "id": "0coo2oei",
+        "link_token": "0coo2oei",
+        "merchant": false,
+        "contact_name": "גיל",
+        "merchant_name": null,
+        "record_id": 48490849,
+        "subcat_id": "2",
+        "currency": "₪",
+        "currency_text": "₪",
+        "price": "3,500 ₪",
+        "deal_info": null,
+        "date": "2022-11-29 08:47:52",
+        "date_added": "2022-11-16 10:14:41",
+        "updated_at": "עודכן ב 29/11/2022",
+        "IsVisibleForReco": false,
+        "ad_type": "ad",
+        "can_change_layout": 1,
+        "can_hide": 0,
+        "default_layout": "system",
+        "external": [],
+        "is_hidden": 0,
+        "is_liked": 0,
+        "is_trade_in_button": false,
+        "like_count": 0,
+        "line_1_text_color": "",
+        "line_2_text_color": "808080",
+        "promotional_ad": 0,
+        "remove_on_unlike": false,
+        "type": "ad",
+        "uid": null,
+        "address_more": null,
+        "broker_avatar": "",
+        "hood_id": 777,
+        "office_about": null,
+        "office_logo_url": null,
+        "square_meters": 100,
+        "HomeTypeID_text": "יחידת דיור",
+        "neighborhood": "שיפר",
+        "AssetClassificationID_text": "במצב שמור",
+        "Rooms_text": 2,
+        "abovePrice": "3000"
+    },
+    {
+        "title": "",
+        "type": "title"
+    },
+    {
+        "line_1": "2 חדרים",
+        "line_2": "קומה 1",
+        "line_3": "Vhouse שיווק נדל''ן",
+        "row_1": "בר כוכבא",
+        "row_2": "דירה, קרול, פתח תקווה",
+        "row_3": [
+            "2 חדרים",
+            "30 מ״ר",
+            "קומה 1"
+        ],
+        "row_4": [
+            {
+                "key": "rooms",
+                "label": "חדרים",
+                "value": 2
+            },
+            {
+                "key": "floor",
+                "label": "קומה",
+                "value": 1
+            },
+            {
+                "key": "SquareMeter",
+                "label": "מ\"ר",
+                "value": 30
+            }
+        ],
+        "row_5": null,
+        "search_text": "שם מוכר Vhouse שיווק נדל''ן Vhouse שיווק נדל''ן ולדי נכס להשכרה מסוג דירה מספר חדרים 2 בקומה 1 בכתובת בר כוכבא קרול פתח תקווה אזור פתח תקווה והסביבה מרכז הנכס כולל ריהוט מיזוג משופצת מצב הנכס משופץ השכרה לטווח ארוך מספר תשלומים 13 כולל בעלי חיים כניסה מיידית תאור לקוח יחידה דיור כולל מסים . מיטה ומזרון. ספה .ארון . טלוויזיה מקרר כיריים  הכול חדש .ואינטרנת . לא כולל חשמל סוכנות Vhouse שיווק נדל''ן ",
+        "title_1": "בר כוכבא",
+        "title_2": "דירה",
+        "images": {
+            "Image1": {
+                "src": "https://img.yad2.co.il/Pic/202211/14/2_6/o/y2_1_hYGuTeoZ3k_20221114.jpg"
+            },
+            "Image2": {
+                "src": "https://img.yad2.co.il/Pic/202211/14/2_6/o/y2_2_t79b7kXLTT_20221114.jpg"
+            },
+            "Image3": {
+                "src": "https://img.yad2.co.il/Pic/202211/14/2_6/o/y2_3_ruXSBx8FZ__20221114.jpg"
+            },
+            "Image4": {
+                "src": "https://img.yad2.co.il/Pic/202211/14/2_6/o/y2_4_B5tlrlrhzQ_20221114.jpg"
+            }
+        },
+        "images_count": 4,
+        "img_url": "https://img.yad2.co.il/Pic/202211/14/2_6/o/y2_1_hYGuTeoZ3k_20221114.jpg",
+        "images_urls": [
+            "https://img.yad2.co.il/Pic/202211/14/2_6/o/y2_1_hYGuTeoZ3k_20221114.jpg",
+            "https://img.yad2.co.il/Pic/202211/14/2_6/o/y2_2_t79b7kXLTT_20221114.jpg",
+            "https://img.yad2.co.il/Pic/202211/14/2_6/o/y2_3_ruXSBx8FZ__20221114.jpg",
+            "https://img.yad2.co.il/Pic/202211/14/2_6/o/y2_4_B5tlrlrhzQ_20221114.jpg"
+        ],
+        "mp4_video_url": null,
+        "video_url": null,
+        "PrimaryArea": "hamerkaz_area",
+        "PrimaryAreaID": 2,
+        "AreaID_text": "אזור פתח תקווה והסביבה",
+        "SecondaryArea": "hamerkaz_area",
+        "area_id": 4,
+        "city": "פתח תקווה",
+        "city_code": 7900,
+        "street": "בר כוכבא",
+        "coordinates": {
+            "latitude": 32.0937513947368,
+            "longitude": 34.8856155131579
+        },
+        "geohash": "sv8y9f6ztubk",
+        "ad_highlight_type": "none",
+        "background_color": "f0f0f0",
+        "highlight_text": "",
+        "order_type_id": 1,
+        "ad_number": 98440208,
+        "cat_id": 2,
+        "customer_id": 5786536,
+        "feed_source": "commercial",
+        "id": "mp1ve4re",
+        "link_token": "mp1ve4re",
+        "merchant": true,
+        "contact_name": "ולדי",
+        "merchant_name": "Vhouse שיווק נדל''ן",
+        "record_id": 48424092,
+        "subcat_id": "6",
+        "currency": "₪",
+        "currency_text": "₪",
+        "price": "3,100 ₪",
+        "deal_info": null,
+        "date": "2022-12-05 11:42:31",
+        "date_added": "2022-11-08 09:32:46",
+        "updated_at": "Vhouse שיווק נדל''ן",
+        "IsVisibleForReco": false,
+        "ad_type": "ad",
+        "can_change_layout": 1,
+        "can_hide": 0,
+        "default_layout": "system",
+        "external": [],
+        "is_hidden": 0,
+        "is_liked": 0,
+        "is_trade_in_button": false,
+        "like_count": 0,
+        "line_1_text_color": "",
+        "line_2_text_color": "808080",
+        "promotional_ad": 0,
+        "remove_on_unlike": false,
+        "type": "ad",
+        "uid": null,
+        "address_more": null,
+        "broker_avatar": "",
+        "hood_id": 766,
+        "office_about": null,
+        "office_logo_url": "//img.yad2.co.il/Pic/TivMiniSite/logo100_5_1_03013_20191212141221-l.jpg?t=1670233675538",
+        "square_meters": 30,
+        "HomeTypeID_text": "דירה",
+        "neighborhood": "קרול",
+        "AssetClassificationID_text": "משופץ",
+        "Rooms_text": 2,
+        "abovePrice": "3000"
+    },
+    {
+        "line_1": "2.5 חדרים",
+        "line_2": "קומה 1",
+        "line_3": "י.ד נדלן",
+        "row_1": "פתח תקווה",
+        "row_2": "דירה, פתח תקווה",
+        "row_3": [
+            "2.5 חדרים",
+            "50 מ״ר",
+            "קומה 1"
+        ],
+        "row_4": [
+            {
+                "key": "rooms",
+                "label": "חדרים",
+                "value": 2.5
+            },
+            {
+                "key": "floor",
+                "label": "קומה",
+                "value": 1
+            },
+            {
+                "key": "SquareMeter",
+                "label": "מ\"ר",
+                "value": 50
+            }
+        ],
+        "row_5": null,
+        "search_text": "שם מוכר י.ד נדלן י.ד נדלן ינון ,יעקב נכס להשכרה מסוג דירה מספר חדרים 2.5 בקומה 1 בכתובת פתח תקווה אזור פתח תקווה והסביבה מרכז הנכס כולל חניה מיזוג גישה לנכים מרפסת מצב הנכס משופץ מספר תשלומים 12 כניסה מיידית תאור לקוח בשכונת כפר אברהם ,דירת 2.5 חדרים ,משופצת ומסודרת. כניסה מיידית!!!! סוכנות י.ד נדלן ",
+        "title_1": "פתח תקווה",
+        "title_2": "דירה",
+        "images": {
+            "Image1": {
+                "src": "https://img.yad2.co.il/Pic/202206/21/2_6/o/y2_2_9nFh4R3GNS_20220621.jpg"
+            },
+            "Image2": {
+                "src": "https://img.yad2.co.il/Pic/202206/21/2_6/o/y2_2_5YWGPStRmc_20220621.jpg"
+            },
+            "Image3": {
+                "src": "https://img.yad2.co.il/Pic/202206/21/2_6/o/y2_3__FXZC6AaLz_20220621.jpg"
+            },
+            "Image4": {
+                "src": "https://img.yad2.co.il/Pic/202206/21/2_6/o/y2_4_rfXJqXr9Nr_20220621.jpg"
+            },
+            "Image5": {
+                "src": "https://img.yad2.co.il/Pic/202206/21/2_6/o/y2_5_QYf_SFFEgL_20220621.jpg"
+            },
+            "Image6": {
+                "src": "https://img.yad2.co.il/Pic/202206/21/2_6/o/y2_6_2VTjFhbT6s_20220621.jpg"
+            }
+        },
+        "images_count": 6,
+        "img_url": "https://img.yad2.co.il/Pic/202206/21/2_6/o/y2_2_9nFh4R3GNS_20220621.jpg",
+        "images_urls": [
+            "https://img.yad2.co.il/Pic/202206/21/2_6/o/y2_2_9nFh4R3GNS_20220621.jpg",
+            "https://img.yad2.co.il/Pic/202206/21/2_6/o/y2_2_5YWGPStRmc_20220621.jpg",
+            "https://img.yad2.co.il/Pic/202206/21/2_6/o/y2_3__FXZC6AaLz_20220621.jpg",
+            "https://img.yad2.co.il/Pic/202206/21/2_6/o/y2_4_rfXJqXr9Nr_20220621.jpg",
+            "https://img.yad2.co.il/Pic/202206/21/2_6/o/y2_5_QYf_SFFEgL_20220621.jpg",
+            "https://img.yad2.co.il/Pic/202206/21/2_6/o/y2_6_2VTjFhbT6s_20220621.jpg"
+        ],
+        "mp4_video_url": null,
+        "video_url": null,
+        "PrimaryArea": "hamerkaz_area",
+        "PrimaryAreaID": 2,
+        "AreaID_text": "אזור פתח תקווה והסביבה",
+        "SecondaryArea": "hamerkaz_area",
+        "area_id": 4,
+        "city": "פתח תקווה",
+        "city_code": 7900,
+        "coordinates": {
+            "latitude": 32.084951,
+            "longitude": 34.886825
+        },
+        "geohash": "sv8y9bgu3uq5",
+        "ad_highlight_type": "none",
+        "background_color": "f0f0f0",
+        "highlight_text": "",
+        "order_type_id": 1,
+        "ad_number": 63336062,
+        "cat_id": 2,
+        "customer_id": 2746821,
+        "feed_source": "commercial",
+        "id": "8gw8ik7y",
+        "link_token": "8gw8ik7y",
+        "merchant": true,
+        "contact_name": "ינון ,יעקב",
+        "merchant_name": "י.ד נדלן",
+        "record_id": 47299928,
+        "subcat_id": "6",
+        "currency": "₪",
+        "currency_text": "₪",
+        "price": "3,200 ₪",
+        "deal_info": null,
+        "date": "2022-12-05 10:46:09",
+        "date_added": "2022-06-21 17:24:04",
+        "updated_at": "י.ד נדלן",
+        "IsVisibleForReco": false,
+        "ad_type": "ad",
+        "can_change_layout": 1,
+        "can_hide": 0,
+        "default_layout": "system",
+        "external": [],
+        "is_hidden": 0,
+        "is_liked": 0,
+        "is_trade_in_button": false,
+        "like_count": 0,
+        "line_1_text_color": "",
+        "line_2_text_color": "808080",
+        "promotional_ad": 0,
+        "remove_on_unlike": false,
+        "type": "ad",
+        "uid": null,
+        "address_more": null,
+        "broker_avatar": "",
+        "hood_id": 771,
+        "office_about": null,
+        "office_logo_url": null,
+        "square_meters": 50,
+        "HomeTypeID_text": "דירה",
+        "AssetClassificationID_text": "משופץ",
+        "Rooms_text": 2.5,
+        "abovePrice": "3000"
+    },
+    {
+        "line_1": "2 חדרים",
+        "line_2": "קומה 3",
+        "line_3": "דירות גואטה",
+        "row_1": "צה\"ל",
+        "row_2": "דירה, בר יהודה, פתח תקווה",
+        "row_3": [
+            "2 חדרים",
+            "55 מ״ר",
+            "קומה 3"
+        ],
+        "row_4": [
+            {
+                "key": "rooms",
+                "label": "חדרים",
+                "value": 2
+            },
+            {
+                "key": "floor",
+                "label": "קומה",
+                "value": 3
+            },
+            {
+                "key": "SquareMeter",
+                "label": "מ\"ר",
+                "value": 55
+            }
+        ],
+        "row_5": null,
+        "search_text": "שם מוכר דירות גואטה דירות גואטה שביט נכס להשכרה מסוג דירה מספר חדרים 2 בקומה 3 בכתובת צה\"ל בר יהודה פתח תקווה אזור פתח תקווה והסביבה מרכז הנכס כולל חניה מיזוג מצב הנכס במצב שמור מספר תשלומים 1 כניסה מיידית תאור לקוח נכס מספר: 34204, בצהל 2 חד  דירה נעימה ומוארת +מטבח חדיש לכניסה מיידית במיקום מרכזי קרובה לתחבורה ציבורית והיציאה מהעיר   \nבלעדי לדירות גואטה חב דירות גואטה מתמחה בשיווק נדלן בפתח תקווה והסביבה ומהווה דור המשך למשפחה העוסקת בענף  משנת 1964 ומעורה היטב בפעילות הנדלן באזור * 10 סוכני נדלן חרוצים ומנוסים בעלי רישיון ממשרד המשפטים\r\n*מרכז קשרים ענף עם רשימת לקוחות פוטנציאלים\r\n*שימוש במערכות טכנולוגיות חדישות לאיתור וקידום הנכס סוכנות דירות גואטה ",
+        "title_1": "צה\"ל",
+        "title_2": "דירה",
+        "images": {
+            "Image1": {
+                "src": "https://img.yad2.co.il/Pic/202212/03/2_6/o/o2_6_1_05147_20221203085534.jpg"
+            },
+            "Image2": {
+                "src": "https://img.yad2.co.il/Pic/202212/03/2_6/o/o2_6_2_01033_20221203085535.jpg"
+            }
+        },
+        "images_count": 2,
+        "img_url": "https://img.yad2.co.il/Pic/202212/03/2_6/o/o2_6_1_05147_20221203085534.jpg",
+        "images_urls": [
+            "https://img.yad2.co.il/Pic/202212/03/2_6/o/o2_6_1_05147_20221203085534.jpg",
+            "https://img.yad2.co.il/Pic/202212/03/2_6/o/o2_6_2_01033_20221203085535.jpg"
+        ],
+        "mp4_video_url": null,
+        "video_url": null,
+        "PrimaryArea": "hamerkaz_area",
+        "PrimaryAreaID": 2,
+        "AreaID_text": "אזור פתח תקווה והסביבה",
+        "SecondaryArea": "hamerkaz_area",
+        "area_id": 4,
+        "city": "פתח תקווה",
+        "city_code": 7900,
+        "street": "צה\"ל",
+        "coordinates": {
+            "latitude": 32.0865452368421,
+            "longitude": 34.8704451578947
+        },
+        "geohash": "sv8y93pvsm83",
+        "ad_highlight_type": "none",
+        "background_color": "f0f0f0",
+        "highlight_text": "",
+        "order_type_id": 1,
+        "ad_number": 42898409,
+        "cat_id": 2,
+        "customer_id": 482074,
+        "feed_source": "commercial",
+        "id": "vxursmie",
+        "link_token": "vxursmie",
+        "merchant": true,
+        "contact_name": "שביט",
+        "merchant_name": "דירות גואטה",
+        "record_id": 48630493,
+        "subcat_id": "6",
+        "currency": "₪",
+        "currency_text": "₪",
+        "price": "3,200 ₪",
+        "deal_info": null,
+        "date": "2022-12-05 09:42:19",
+        "date_added": "2022-12-03 08:55:33",
+        "updated_at": "דירות גואטה",
+        "IsVisibleForReco": false,
+        "ad_type": "ad",
+        "can_change_layout": 1,
+        "can_hide": 0,
+        "default_layout": "system",
+        "external": [],
+        "is_hidden": 0,
+        "is_liked": 0,
+        "is_trade_in_button": false,
+        "like_count": 0,
+        "line_1_text_color": "",
+        "line_2_text_color": "808080",
+        "promotional_ad": 0,
+        "remove_on_unlike": false,
+        "type": "ad",
+        "uid": null,
+        "address_more": null,
+        "broker_avatar": "",
+        "hood_id": 746,
+        "office_about": "חב דירות גואטה מתמחה בשיווק נדלן בפתח תקווה והסביבה ומהווה דור המשך למשפחה העוסקת בענף  משנת 1964 ומעורה היטב בפעילות הנדלן באזור * 10 סוכני נדלן חרוצים ומנוסים בעלי רישיון ממשרד המשפטים\r\n*מרכז קשרים ענף עם רשימת לקוחות פוטנציאלים\r\n*שימוש במערכות טכנולוגיות חדישות לאיתור וקידום הנכס",
+        "office_logo_url": "//img.yad2.co.il/Pic/TivMiniSite/y2_1_07803_20211214092924.jpeg?t=1670226271571",
+        "square_meters": 55,
+        "HomeTypeID_text": "דירה",
+        "neighborhood": "בר יהודה",
+        "AssetClassificationID_text": "במצב שמור",
+        "Rooms_text": 2,
+        "abovePrice": "3000"
+    },
+    {
+        "line_1": "2 חדרים",
+        "line_2": "קומה 3",
+        "line_3": "נדל\"ן סנטר",
+        "row_1": "צה\"ל 60",
+        "row_2": "דירה, בר יהודה, פתח תקווה",
+        "row_3": [
+            "2 חדרים",
+            "50 מ״ר",
+            "קומה 3"
+        ],
+        "row_4": [
+            {
+                "key": "rooms",
+                "label": "חדרים",
+                "value": 2
+            },
+            {
+                "key": "floor",
+                "label": "קומה",
+                "value": 3
+            },
+            {
+                "key": "SquareMeter",
+                "label": "מ\"ר",
+                "value": 50
+            }
+        ],
+        "row_5": null,
+        "search_text": "שם מוכר נדל\"ן סנטר נדל\"ן סנטר איציק סמגין נכס להשכרה מסוג דירה מספר חדרים 2 בקומה 3 בכתובת צה\"ל 60 בר יהודה פתח תקווה אזור פתח תקווה והסביבה מרכז הנכס כולל מיזוג מצב הנכס במצב שמור השכרה לטווח ארוך מספר תשלומים 13 כניסה מיידית תאור לקוח בכפר גנים א בצהל 60 דירת 2 חדרים במקור כ 50 מר בקומה 3/3 עורפית במקום שקט וירוק קרוב לתחבורה ציבורית רכבת קלה מרכזי קניות שיווק נכסים מצריך ידע נרחב בשוק הנדלן, יכולת אפיון, פילוח והבנה מלאה בצרכי הלקוח ומעל לכל צוות יועצי נדלן מנוסה, בעל הסמכה מקצועית והתמחות אזורית.  נדל\"ן סנטר - הינו משרד התיווך המוביל בפתח תקווה ומטפל באופן בלעדי בנכסים ואינם מוצעים בשוק הפרטי ו/או על ידי גורמים אחרים בשוק. המשרד עובד על פי סטנדרטים בינלאומיים וליווי אישי לכל אחד מלקוחותינו. צוות יועצי הנדלן שלנו איכותיים בעלי יושר, מקצועיות ובעלי הסמכה לבצע עבודתם בצורה מקצועית, אתית, אחראית ויעילה, עם ניסיון של שנים במכירות ושיווק נכסי נדלן. סוכנות נדל\"ן סנטר ",
+        "title_1": "צה\"ל 60",
+        "title_2": "דירה",
+        "images": {
+            "Image1": {
+                "src": "https://img.yad2.co.il/Pic/202210/28/2_6/o/y2_4_xeN9mWgjyJ_20221028.jpg"
+            },
+            "Image2": {
+                "src": "https://img.yad2.co.il/Pic/202210/28/2_6/o/y2_1_tqwk2WpSr7_20221028.jpg"
+            },
+            "Image3": {
+                "src": "https://img.yad2.co.il/Pic/202210/28/2_6/o/y2_7_szafhpJflh_20221028.jpg"
+            },
+            "Image4": {
+                "src": "https://img.yad2.co.il/Pic/202210/28/2_6/o/y2_2_dj4cqKhIa__20221028.jpg"
+            },
+            "Image5": {
+                "src": "https://img.yad2.co.il/Pic/202210/28/2_6/o/y2_3_K5dKzY_YT4_20221028.jpg"
+            },
+            "Image6": {
+                "src": "https://img.yad2.co.il/Pic/202210/28/2_6/o/y2_5_KtEHTGnDNF_20221028.jpg"
+            },
+            "Image7": {
+                "src": "https://img.yad2.co.il/Pic/202210/28/2_6/o/y2_6_MfQUUFKFch_20221028.jpg"
+            },
+            "Image8": {
+                "src": "https://img.yad2.co.il/Pic/202210/28/2_6/o/y2_8_GhlLJLVHWs_20221028.jpg"
+            },
+            "Image9": {
+                "src": "https://img.yad2.co.il/Pic/202210/28/2_6/o/y2_9_HJLO7RnVjf_20221028.jpg"
+            }
+        },
+        "images_count": 9,
+        "img_url": "https://img.yad2.co.il/Pic/202210/28/2_6/o/y2_4_xeN9mWgjyJ_20221028.jpg",
+        "images_urls": [
+            "https://img.yad2.co.il/Pic/202210/28/2_6/o/y2_4_xeN9mWgjyJ_20221028.jpg",
+            "https://img.yad2.co.il/Pic/202210/28/2_6/o/y2_1_tqwk2WpSr7_20221028.jpg",
+            "https://img.yad2.co.il/Pic/202210/28/2_6/o/y2_7_szafhpJflh_20221028.jpg",
+            "https://img.yad2.co.il/Pic/202210/28/2_6/o/y2_2_dj4cqKhIa__20221028.jpg",
+            "https://img.yad2.co.il/Pic/202210/28/2_6/o/y2_3_K5dKzY_YT4_20221028.jpg",
+            "https://img.yad2.co.il/Pic/202210/28/2_6/o/y2_5_KtEHTGnDNF_20221028.jpg",
+            "https://img.yad2.co.il/Pic/202210/28/2_6/o/y2_6_MfQUUFKFch_20221028.jpg",
+            "https://img.yad2.co.il/Pic/202210/28/2_6/o/y2_8_GhlLJLVHWs_20221028.jpg",
+            "https://img.yad2.co.il/Pic/202210/28/2_6/o/y2_9_HJLO7RnVjf_20221028.jpg"
+        ],
+        "mp4_video_url": null,
+        "video_url": null,
+        "PrimaryArea": "hamerkaz_area",
+        "PrimaryAreaID": 2,
+        "AreaID_text": "אזור פתח תקווה והסביבה",
+        "SecondaryArea": "hamerkaz_area",
+        "area_id": 4,
+        "city": "פתח תקווה",
+        "city_code": 7900,
+        "street": "צה\"ל",
+        "coordinates": {
+            "latitude": 32.083683,
+            "longitude": 34.869866
+        },
+        "geohash": "sv8y92xkyzbx",
+        "ad_highlight_type": "none",
+        "background_color": "f0f0f0",
+        "highlight_text": "",
+        "order_type_id": 1,
+        "ad_number": 77753037,
+        "cat_id": 2,
+        "customer_id": 7072507,
+        "feed_source": "commercial",
+        "id": "jzli6qrw",
+        "link_token": "jzli6qrw",
+        "merchant": true,
+        "contact_name": "איציק סמגין",
+        "merchant_name": "נדל\"ן סנטר",
+        "record_id": 48338093,
+        "subcat_id": "6",
+        "currency": "₪",
+        "currency_text": "₪",
+        "price": "3,200 ₪",
+        "deal_info": null,
+        "date": "2022-12-05 09:18:18",
+        "date_added": "2022-10-28 13:02:10",
+        "updated_at": "נדל\"ן סנטר",
+        "IsVisibleForReco": false,
+        "ad_type": "ad",
+        "can_change_layout": 1,
+        "can_hide": 0,
+        "default_layout": "system",
+        "external": [],
+        "is_hidden": 0,
+        "is_liked": 0,
+        "is_trade_in_button": false,
+        "like_count": 0,
+        "line_1_text_color": "",
+        "line_2_text_color": "808080",
+        "promotional_ad": 0,
+        "remove_on_unlike": false,
+        "type": "ad",
+        "uid": null,
+        "address_more": null,
+        "broker_avatar": "https://img.yad2.co.il/Pic/202206/27/2_6/o/y2_1_06713_20220627123656.jpeg",
+        "hood_id": 746,
+        "office_about": "שיווק נכסים מצריך ידע נרחב בשוק הנדלן, יכולת אפיון, פילוח והבנה מלאה בצרכי הלקוח ומעל לכל צוות יועצי נדלן מנוסה, בעל הסמכה מקצועית והתמחות אזורית.  נדל\"ן סנטר - הינו משרד התיווך המוביל בפתח תקווה ומטפל באופן בלעדי בנכסים ואינם מוצעים בשוק הפרטי ו/או על ידי גורמים אחרים בשוק. המשרד עובד על פי סטנדרטים בינלאומיים וליווי אישי לכל אחד מלקוחותינו. צוות יועצי הנדלן שלנו איכותיים בעלי יושר, מקצועיות ובעלי הסמכה לבצע עבודתם בצורה מקצועית, אתית, אחראית ויעילה, עם ניסיון של שנים במכירות ושיווק נכסי נדלן.",
+        "office_logo_url": "//img.yad2.co.il/Pic/TivMiniSite/ab3e0ffa-e662-4617-a9be-e32fb427e7a6.jpg?t=1670224735435",
+        "square_meters": 50,
+        "HomeTypeID_text": "דירה",
+        "neighborhood": "בר יהודה",
+        "AssetClassificationID_text": "במצב שמור",
+        "Rooms_text": 2,
+        "abovePrice": "3000"
+    },
+    {
+        "type": "advanced_ad"
+    },
+    {
+        "line_1": "2 חדרים",
+        "line_2": "קומה 3",
+        "line_3": "אינפיניטי עוצמה",
+        "row_1": "לב המושבה / מרכז העיר",
+        "row_2": "דירה, לב המושבה / מרכז העיר, פתח תקווה",
+        "row_3": [
+            "2 חדרים",
+            "62 מ״ר",
+            "קומה 3"
+        ],
+        "row_4": [
+            {
+                "key": "rooms",
+                "label": "חדרים",
+                "value": 2
+            },
+            {
+                "key": "floor",
+                "label": "קומה",
+                "value": 3
+            },
+            {
+                "key": "SquareMeter",
+                "label": "מ\"ר",
+                "value": 62
+            }
+        ],
+        "row_5": null,
+        "search_text": "שם מוכר אינפיניטי עוצמה אינפיניטי עוצמה צוות אביגד 1 נכס להשכרה מסוג דירה מספר חדרים 2 בקומה 3 בכתובת לב המושבה / מרכז העיר פתח תקווה אזור פתח תקווה והסביבה מרכז הנכס כולל ריהוט מיזוג מרפסת מצב הנכס במצב שמור מספר תשלומים 13 כולל בעלי חיים כניסה מיידית תאור לקוח דירה שמורה 2 חדרים +מרפסת ענקית!!\nמיקום מרכזי קרוב לתחבורה ציבורית, מרכזי קניות, ועוד..כניסה מיידית מחיר גמיש ארון, שולחן סלון, מזנון, שולחן אוכל סוכנות אינפיניטי עוצמה ",
+        "title_1": "לב המושבה / מרכז העיר",
+        "title_2": "דירה",
+        "images": {
+            "Image1": {
+                "src": "https://img.yad2.co.il/Pic/202210/26/2_6/o/y2_1_eNNzngVxq5_20221026.jpg"
+            },
+            "Image2": {
+                "src": "https://img.yad2.co.il/Pic/202210/26/2_6/o/y2_2_SIsYpzB7IG_20221026.jpg"
+            },
+            "Image3": {
+                "src": "https://img.yad2.co.il/Pic/202210/26/2_6/o/y2_3_v0KQBseStg_20221026.jpg"
+            },
+            "Image4": {
+                "src": "https://img.yad2.co.il/Pic/202210/26/2_6/o/y2_4_UIJQcDyQYu_20221026.jpg"
+            },
+            "Image5": {
+                "src": "https://img.yad2.co.il/Pic/202210/26/2_6/o/y2_5_1sS3y_0Q3t_20221026.jpg"
+            },
+            "Image6": {
+                "src": "https://img.yad2.co.il/Pic/202210/26/2_6/o/y2_6_AiadzzVJ7A_20221026.jpg"
+            }
+        },
+        "images_count": 6,
+        "img_url": "https://img.yad2.co.il/Pic/202210/26/2_6/o/y2_1_eNNzngVxq5_20221026.jpg",
+        "images_urls": [
+            "https://img.yad2.co.il/Pic/202210/26/2_6/o/y2_1_eNNzngVxq5_20221026.jpg",
+            "https://img.yad2.co.il/Pic/202210/26/2_6/o/y2_2_SIsYpzB7IG_20221026.jpg",
+            "https://img.yad2.co.il/Pic/202210/26/2_6/o/y2_3_v0KQBseStg_20221026.jpg",
+            "https://img.yad2.co.il/Pic/202210/26/2_6/o/y2_4_UIJQcDyQYu_20221026.jpg",
+            "https://img.yad2.co.il/Pic/202210/26/2_6/o/y2_5_1sS3y_0Q3t_20221026.jpg",
+            "https://img.yad2.co.il/Pic/202210/26/2_6/o/y2_6_AiadzzVJ7A_20221026.jpg"
+        ],
+        "mp4_video_url": null,
+        "video_url": null,
+        "PrimaryArea": "hamerkaz_area",
+        "PrimaryAreaID": 2,
+        "AreaID_text": "אזור פתח תקווה והסביבה",
+        "SecondaryArea": "hamerkaz_area",
+        "area_id": 4,
+        "city": "פתח תקווה",
+        "city_code": 7900,
+        "coordinates": {
+            "latitude": 32.090304,
+            "longitude": 34.883511
+        },
+        "geohash": "sv8y9cc7sdpp",
+        "ad_highlight_type": "none",
+        "background_color": "f0f0f0",
+        "highlight_text": "בלעדי",
+        "order_type_id": 1,
+        "ad_number": 77367430,
+        "cat_id": 2,
+        "customer_id": 2889110,
+        "feed_source": "commercial",
+        "id": "0vox3f6w",
+        "link_token": "0vox3f6w",
+        "merchant": true,
+        "contact_name": "צוות אביגד 1",
+        "merchant_name": "אינפיניטי עוצמה",
+        "record_id": 48320570,
+        "subcat_id": "6",
+        "currency": "₪",
+        "currency_text": "₪",
+        "price": "3,300 ₪",
+        "deal_info": null,
+        "date": "2022-12-05 08:24:28",
+        "date_added": "2022-10-26 11:08:34",
+        "updated_at": "אינפיניטי עוצמה",
+        "IsVisibleForReco": false,
+        "ad_type": "ad",
+        "can_change_layout": 1,
+        "can_hide": 0,
+        "default_layout": "system",
+        "external": [],
+        "is_hidden": 0,
+        "is_liked": 0,
+        "is_trade_in_button": false,
+        "like_count": 0,
+        "line_1_text_color": "",
+        "line_2_text_color": "808080",
+        "promotional_ad": 0,
+        "remove_on_unlike": false,
+        "type": "ad",
+        "uid": null,
+        "address_more": null,
+        "broker_avatar": "",
+        "hood_id": 2001002,
+        "office_about": null,
+        "office_logo_url": "//img.yad2.co.il/Pic/TivMiniSite/208a9a55-a828-40f3-ac33-4fbae98d227b.png?t=1670221506137",
+        "square_meters": 62,
+        "HomeTypeID_text": "דירה",
+        "neighborhood": "לב המושבה / מרכז העיר",
+        "AssetClassificationID_text": "במצב שמור",
+        "Rooms_text": 2,
+        "abovePrice": "3000"
+    },
+    {
+        "line_1": "2 חדרים",
+        "line_2": "קומה 4",
+        "line_3": "אריאל נכסים",
+        "row_1": "זיגלבוים",
+        "row_2": "דירה, לב המושבה / מרכז העיר, פתח תקווה",
+        "row_3": [
+            "2 חדרים",
+            "70 מ״ר",
+            "קומה 4"
+        ],
+        "row_4": [
+            {
+                "key": "rooms",
+                "label": "חדרים",
+                "value": 2
+            },
+            {
+                "key": "floor",
+                "label": "קומה",
+                "value": 4
+            },
+            {
+                "key": "SquareMeter",
+                "label": "מ\"ר",
+                "value": 70
+            }
+        ],
+        "row_5": null,
+        "search_text": "שם מוכר אריאל נכסים אריאל נכסים ליאור נכס להשכרה מסוג דירה מספר חדרים 2 בקומה 4 בכתובת זיגלבוים לב המושבה / מרכז העיר פתח תקווה אזור פתח תקווה והסביבה מרכז הנכס כולל מיזוג מזגן תדיראן משופצת מצב הנכס משופץ השכרה לטווח ארוך מספר תשלומים 13 כולל בעלי חיים תאור לקוח דירה שקטה ברחוב ללא מוצא במרכז קרובה להכול משופצת ויפה גדולה ומטופחת משופצת רחוב ללא מוצא 32 שנה ותק ונסיון סוכנות אריאל נכסים ",
+        "title_1": "זיגלבוים",
+        "title_2": "דירה",
+        "images": {
+            "Image1": {
+                "src": "https://img.yad2.co.il/Pic/202210/31/2_6/o/y2_1_8rLHuQYCki_20221031.jpg"
+            },
+            "Image2": {
+                "src": "https://img.yad2.co.il/Pic/202210/31/2_6/o/y2_2_xVibsmqfvI_20221031.jpg"
+            },
+            "Image3": {
+                "src": "https://img.yad2.co.il/Pic/202210/31/2_6/o/y2_3_tyleYrioFl_20221031.jpg"
+            },
+            "Image4": {
+                "src": "https://img.yad2.co.il/Pic/202210/31/2_6/o/y2_4_Bg0skZG8Mp_20221031.jpg"
+            },
+            "Image5": {
+                "src": "https://img.yad2.co.il/Pic/202210/31/2_6/o/y2_5_2JYP4jEHPI_20221031.jpg"
+            }
+        },
+        "images_count": 5,
+        "img_url": "https://img.yad2.co.il/Pic/202210/31/2_6/o/y2_1_8rLHuQYCki_20221031.jpg",
+        "images_urls": [
+            "https://img.yad2.co.il/Pic/202210/31/2_6/o/y2_1_8rLHuQYCki_20221031.jpg",
+            "https://img.yad2.co.il/Pic/202210/31/2_6/o/y2_2_xVibsmqfvI_20221031.jpg",
+            "https://img.yad2.co.il/Pic/202210/31/2_6/o/y2_3_tyleYrioFl_20221031.jpg",
+            "https://img.yad2.co.il/Pic/202210/31/2_6/o/y2_4_Bg0skZG8Mp_20221031.jpg",
+            "https://img.yad2.co.il/Pic/202210/31/2_6/o/y2_5_2JYP4jEHPI_20221031.jpg"
+        ],
+        "mp4_video_url": null,
+        "video_url": null,
+        "PrimaryArea": "hamerkaz_area",
+        "PrimaryAreaID": 2,
+        "AreaID_text": "אזור פתח תקווה והסביבה",
+        "SecondaryArea": "hamerkaz_area",
+        "area_id": 4,
+        "city": "פתח תקווה",
+        "city_code": 7900,
+        "street": "זיגלבוים",
+        "coordinates": {
+            "latitude": 32.0919824444444,
+            "longitude": 34.8799904444445
+        },
+        "geohash": "sv8y9dnv6eju",
+        "ad_highlight_type": "none",
+        "background_color": "f0f0f0",
+        "highlight_text": "",
+        "order_type_id": 1,
+        "ad_number": 54214334,
+        "cat_id": 2,
+        "customer_id": 189259,
+        "feed_source": "commercial",
+        "id": "35wsmo7c",
+        "link_token": "35wsmo7c",
+        "merchant": true,
+        "contact_name": "ליאור",
+        "merchant_name": "אריאל נכסים",
+        "record_id": 48364984,
+        "subcat_id": "6",
+        "currency": "₪",
+        "currency_text": "₪",
+        "price": "3,350 ₪",
+        "deal_info": null,
+        "date": "2022-12-05 08:39:39",
+        "date_added": "2022-10-31 19:36:30",
+        "updated_at": "אריאל נכסים",
+        "IsVisibleForReco": false,
+        "ad_type": "ad",
+        "can_change_layout": 1,
+        "can_hide": 0,
+        "default_layout": "system",
+        "external": [],
+        "is_hidden": 0,
+        "is_liked": 0,
+        "is_trade_in_button": false,
+        "like_count": 0,
+        "line_1_text_color": "",
+        "line_2_text_color": "808080",
+        "promotional_ad": 0,
+        "remove_on_unlike": false,
+        "type": "ad",
+        "uid": null,
+        "address_more": "משופצת רחוב ללא מוצא",
+        "broker_avatar": "",
+        "hood_id": 2001002,
+        "office_about": "32 שנה ותק ונסיון",
+        "office_logo_url": "//img.yad2.co.il/Pic/TivMiniSite/4c23142e-c837-4a57-adec-8a6d05f1cc55.png?t=1670222405173",
+        "square_meters": 70,
+        "HomeTypeID_text": "דירה",
+        "neighborhood": "לב המושבה / מרכז העיר",
+        "AssetClassificationID_text": "משופץ",
+        "Rooms_text": 2,
+        "abovePrice": "3000"
+    },
+    {
+        "line_1": "2 חדרים",
+        "line_2": "קומה 4",
+        "line_3": "אריאל נכסים",
+        "row_1": "זיגלבוים",
+        "row_2": "דירה, לב המושבה / מרכז העיר, פתח תקווה",
+        "row_3": [
+            "2 חדרים",
+            "70 מ״ר",
+            "קומה 4"
+        ],
+        "row_4": [
+            {
+                "key": "rooms",
+                "label": "חדרים",
+                "value": 2
+            },
+            {
+                "key": "floor",
+                "label": "קומה",
+                "value": 4
+            },
+            {
+                "key": "SquareMeter",
+                "label": "מ\"ר",
+                "value": 70
+            }
+        ],
+        "row_5": null,
+        "search_text": "שם מוכר אריאל נכסים אריאל נכסים יריב נכס להשכרה מסוג דירה מספר חדרים 2 בקומה 4 בכתובת זיגלבוים לב המושבה / מרכז העיר פתח תקווה אזור פתח תקווה והסביבה מרכז הנכס כולל מיזוג מזגן תדיראן משופצת מצב הנכס משופץ השכרה לטווח ארוך מספר תשלומים 13 כולל בעלי חיים תאור לקוח דירה שקטה ברחוב ללא מוצא במרכז קרובה להכול משופצת ויפה גדולה ומטופחת משופצת רחוב ללא מוצא 32 שנה ותק ונסיון סוכנות אריאל נכסים ",
+        "title_1": "זיגלבוים",
+        "title_2": "דירה",
+        "images": {
+            "Image1": {
+                "src": "https://img.yad2.co.il/Pic/202210/31/2_6/o/y2_1_8ZeIRBT4A4_20221031.jpg"
+            },
+            "Image2": {
+                "src": "https://img.yad2.co.il/Pic/202210/31/2_6/o/y2_2_oJm2bDIM4v_20221031.jpg"
+            },
+            "Image3": {
+                "src": "https://img.yad2.co.il/Pic/202210/31/2_6/o/y2_3_tS9xTnkBRH_20221031.jpg"
+            },
+            "Image4": {
+                "src": "https://img.yad2.co.il/Pic/202210/31/2_6/o/y2_4_SUlBUaNCE9_20221031.jpg"
+            },
+            "Image5": {
+                "src": "https://img.yad2.co.il/Pic/202210/31/2_6/o/y2_5_wn0tavlDEb_20221031.jpg"
+            }
+        },
+        "images_count": 5,
+        "img_url": "https://img.yad2.co.il/Pic/202210/31/2_6/o/y2_1_8ZeIRBT4A4_20221031.jpg",
+        "images_urls": [
+            "https://img.yad2.co.il/Pic/202210/31/2_6/o/y2_1_8ZeIRBT4A4_20221031.jpg",
+            "https://img.yad2.co.il/Pic/202210/31/2_6/o/y2_2_oJm2bDIM4v_20221031.jpg",
+            "https://img.yad2.co.il/Pic/202210/31/2_6/o/y2_3_tS9xTnkBRH_20221031.jpg",
+            "https://img.yad2.co.il/Pic/202210/31/2_6/o/y2_4_SUlBUaNCE9_20221031.jpg",
+            "https://img.yad2.co.il/Pic/202210/31/2_6/o/y2_5_wn0tavlDEb_20221031.jpg"
+        ],
+        "mp4_video_url": null,
+        "video_url": null,
+        "PrimaryArea": "hamerkaz_area",
+        "PrimaryAreaID": 2,
+        "AreaID_text": "אזור פתח תקווה והסביבה",
+        "SecondaryArea": "hamerkaz_area",
+        "area_id": 4,
+        "city": "פתח תקווה",
+        "city_code": 7900,
+        "street": "זיגלבוים",
+        "coordinates": {
+            "latitude": 32.0919824444444,
+            "longitude": 34.8799904444445
+        },
+        "geohash": "sv8y9dnv6eju",
+        "ad_highlight_type": "none",
+        "background_color": "f0f0f0",
+        "highlight_text": "",
+        "order_type_id": 1,
+        "ad_number": 59660439,
+        "cat_id": 2,
+        "customer_id": 189259,
+        "feed_source": "commercial",
+        "id": "pfjagtgz",
+        "link_token": "pfjagtgz",
+        "merchant": true,
+        "contact_name": "יריב",
+        "merchant_name": "אריאל נכסים",
+        "record_id": 48364954,
+        "subcat_id": "6",
+        "currency": "₪",
+        "currency_text": "₪",
+        "price": "3,350 ₪",
+        "deal_info": null,
+        "date": "2022-12-05 08:19:11",
+        "date_added": "2022-10-31 19:33:03",
+        "updated_at": "אריאל נכסים",
+        "IsVisibleForReco": false,
+        "ad_type": "ad",
+        "can_change_layout": 1,
+        "can_hide": 0,
+        "default_layout": "system",
+        "external": [],
+        "is_hidden": 0,
+        "is_liked": 0,
+        "is_trade_in_button": false,
+        "like_count": 0,
+        "line_1_text_color": "",
+        "line_2_text_color": "808080",
+        "promotional_ad": 0,
+        "remove_on_unlike": false,
+        "type": "ad",
+        "uid": null,
+        "address_more": "משופצת רחוב ללא מוצא",
+        "broker_avatar": "",
+        "hood_id": 2001002,
+        "office_about": "32 שנה ותק ונסיון",
+        "office_logo_url": "//img.yad2.co.il/Pic/TivMiniSite/4c23142e-c837-4a57-adec-8a6d05f1cc55.png?t=1670221194280",
+        "square_meters": 70,
+        "HomeTypeID_text": "דירה",
+        "neighborhood": "לב המושבה / מרכז העיר",
+        "AssetClassificationID_text": "משופץ",
+        "Rooms_text": 2,
+        "abovePrice": "3000"
+    },
+    {
+        "line_1": "3 חדרים",
+        "line_2": "קומה 3",
+        "line_3": "הר סלול נדל''ן",
+        "row_1": "אסתר המלכה",
+        "row_2": "דירה, יוספטל, פתח תקווה",
+        "row_3": [
+            "3 חדרים",
+            "60 מ״ר",
+            "קומה 3"
+        ],
+        "row_4": [
+            {
+                "key": "rooms",
+                "label": "חדרים",
+                "value": 3
+            },
+            {
+                "key": "floor",
+                "label": "קומה",
+                "value": 3
+            },
+            {
+                "key": "SquareMeter",
+                "label": "מ\"ר",
+                "value": 60
+            }
+        ],
+        "row_5": null,
+        "search_text": "שם מוכר הר סלול נדל''ן הר סלול נדל''ן מרדכי פרל נכס להשכרה מסוג דירה מספר חדרים 3 בקומה 3 בכתובת אסתר המלכה יוספטל פתח תקווה אזור פתח תקווה והסביבה מרכז הנכס כולל ריהוט סורגים מיזוג מזגן תדיראן משופצת מצב הנכס משופץ השכרה לטווח ארוך מספר תשלומים 12 כניסה מיידית תאור לקוח דירת שלושה חדרים משופצת ומסודרת\n בקרבת תחבורה ציבורית חניה בשפע מתחת לבניין \nכניסה מיידית חברת הר סלול נדל\"ן הינה חברה בעלת מוניטין לשיווק ותיווך נדל\"ן המשווקת את כל סוגי הנכסים: דירות, בתים, דירות יוקרה, משרדים ,מבני תעשייה, מסחר, חנויות, מחסנים, קרקעות לבנייה עצמית ולרוויה.\nצוות המשרד בהר סלול נדל\"ן מקצועיים ועם סטנדרטים גבוהים של שירות, בעלי ידע רב בתחום הנדל\"ן והשיווק,  \n\nצוות יועצי הנדל\"ן של הר סלול נדל\"ן ידאגו לעסקת הנדל\"ן הטובה ביותר עבורך.\nנסנן עבורך פניות רלוונטיות בלבד, נדאג למכור את הנכס שלך במחיר המקסימלי ונעשה זאת בתהליך היעיל ביותר שפגשת.\n סוכנות הר סלול נדל''ן ",
+        "title_1": "אסתר המלכה",
+        "title_2": "דירה",
+        "images": {
+            "Image1": {
+                "src": "https://img.yad2.co.il/Pic/202211/17/2_6/o/y2_5_eAoaVD_vuZ_20221117.jpg"
+            },
+            "Image2": {
+                "src": "https://img.yad2.co.il/Pic/202211/17/2_6/o/y2_2_SYGZD4r_7t_20221117.jpg"
+            },
+            "Image3": {
+                "src": "https://img.yad2.co.il/Pic/202211/17/2_6/o/y2_3_09IGU9CUds_20221117.jpg"
+            },
+            "Image4": {
+                "src": "https://img.yad2.co.il/Pic/202211/17/2_6/o/y2_4_yfxi6Oz4xC_20221117.jpg"
+            },
+            "Image5": {
+                "src": "https://img.yad2.co.il/Pic/202211/17/2_6/o/y2_1_ocEvi85hvF_20221117.jpg"
+            }
+        },
+        "images_count": 5,
+        "img_url": "https://img.yad2.co.il/Pic/202211/17/2_6/o/y2_5_eAoaVD_vuZ_20221117.jpg",
+        "images_urls": [
+            "https://img.yad2.co.il/Pic/202211/17/2_6/o/y2_5_eAoaVD_vuZ_20221117.jpg",
+            "https://img.yad2.co.il/Pic/202211/17/2_6/o/y2_2_SYGZD4r_7t_20221117.jpg",
+            "https://img.yad2.co.il/Pic/202211/17/2_6/o/y2_3_09IGU9CUds_20221117.jpg",
+            "https://img.yad2.co.il/Pic/202211/17/2_6/o/y2_4_yfxi6Oz4xC_20221117.jpg",
+            "https://img.yad2.co.il/Pic/202211/17/2_6/o/y2_1_ocEvi85hvF_20221117.jpg"
+        ],
+        "mp4_video_url": null,
+        "video_url": null,
+        "PrimaryArea": "hamerkaz_area",
+        "PrimaryAreaID": 2,
+        "AreaID_text": "אזור פתח תקווה והסביבה",
+        "SecondaryArea": "hamerkaz_area",
+        "area_id": 4,
+        "city": "פתח תקווה",
+        "city_code": 7900,
+        "street": "אסתר המלכה",
+        "coordinates": {
+            "latitude": 32.0934812380952,
+            "longitude": 34.9053112857143
+        },
+        "geohash": "sv8yd63q0dw8",
+        "ad_highlight_type": "none",
+        "background_color": "f0f0f0",
+        "highlight_text": "",
+        "order_type_id": 1,
+        "ad_number": 92265439,
+        "cat_id": 2,
+        "customer_id": 7173039,
+        "feed_source": "commercial",
+        "id": "rs08hg2q",
+        "link_token": "rs08hg2q",
+        "merchant": true,
+        "contact_name": "מרדכי פרל",
+        "merchant_name": "הר סלול נדל''ן",
+        "record_id": 48500983,
+        "subcat_id": "6",
+        "currency": "₪",
+        "currency_text": "₪",
+        "price": "3,500 ₪",
+        "deal_info": null,
+        "date": "2022-12-05 10:12:40",
+        "date_added": "2022-11-17 11:23:18",
+        "updated_at": "הר סלול נדל''ן",
+        "IsVisibleForReco": false,
+        "ad_type": "ad",
+        "can_change_layout": 1,
+        "can_hide": 0,
+        "default_layout": "system",
+        "external": [],
+        "is_hidden": 0,
+        "is_liked": 0,
+        "is_trade_in_button": false,
+        "like_count": 0,
+        "line_1_text_color": "",
+        "line_2_text_color": "808080",
+        "promotional_ad": 0,
+        "remove_on_unlike": false,
+        "type": "ad",
+        "uid": null,
+        "address_more": null,
+        "broker_avatar": "",
+        "hood_id": 751,
+        "office_about": "חברת הר סלול נדל\"ן הינה חברה בעלת מוניטין לשיווק ותיווך נדל\"ן המשווקת את כל סוגי הנכסים: דירות, בתים, דירות יוקרה, משרדים ,מבני תעשייה, מסחר, חנויות, מחסנים, קרקעות לבנייה עצמית ולרוויה.\nצוות המשרד בהר סלול נדל\"ן מקצועיים ועם סטנדרטים גבוהים של שירות, בעלי ידע רב בתחום הנדל\"ן והשיווק,  \n\nצוות יועצי הנדל\"ן של הר סלול נדל\"ן ידאגו לעסקת הנדל\"ן הטובה ביותר עבורך.\nנסנן עבורך פניות רלוונטיות בלבד, נדאג למכור את הנכס שלך במחיר המקסימלי ונעשה זאת בתהליך היעיל ביותר שפגשת.\n",
+        "office_logo_url": "//img.yad2.co.il/Pic/TivMiniSite/32e63a1b-5def-42e3-a4ab-812a4b4276d3.png?t=1670228138057",
+        "square_meters": 60,
+        "HomeTypeID_text": "דירה",
+        "neighborhood": "יוספטל",
+        "AssetClassificationID_text": "משופץ",
+        "Rooms_text": 3,
+        "abovePrice": "3000"
+    },
+    {
+        "type": "advanced_ad"
+    },
+    {
+        "line_1": "2 חדרים",
+        "line_2": "קומה 1",
+        "line_3": "חיבורים",
+        "row_1": "יעקב קרול",
+        "row_2": "דירה, פתח תקווה",
+        "row_3": [
+            "2 חדרים",
+            "35 מ״ר",
+            "קומה 1"
+        ],
+        "row_4": [
+            {
+                "key": "rooms",
+                "label": "חדרים",
+                "value": 2
+            },
+            {
+                "key": "floor",
+                "label": "קומה",
+                "value": 1
+            },
+            {
+                "key": "SquareMeter",
+                "label": "מ\"ר",
+                "value": 35
+            }
+        ],
+        "row_5": null,
+        "search_text": "שם מוכר חיבורים חיבורים דורון נכסים נכס להשכרה מסוג דירה מספר חדרים 2 בקומה 1 בכתובת יעקב קרול פתח תקווה אזור פתח תקווה והסביבה מרכז הנכס כולל ריהוט מיזוג משופצת מצב הנכס משופץ מספר תשלומים 12 תאור לקוח דירה מקסימה מרווחת ושקטה  ,קרוב לקניון הגדול ,קרוב לעיר \nתחבורה ציבורית בשפע.\nכולל מיסים מים וועד יש בדירה סלון ,מקרר, מיטה, טלויזיות 50 אינץ בסלון ובחדר שינה ,ארון .פינת אוכל קטנה סוכנות חיבורים ",
+        "title_1": "יעקב קרול",
+        "title_2": "דירה",
+        "images": {
+            "Image1": {
+                "src": "https://img.yad2.co.il/Pic/202212/04/2_6/o/y2_1_lk_4g3dSd6_20221204.png"
+            },
+            "Image2": {
+                "src": "https://img.yad2.co.il/Pic/202212/04/2_6/o/y2_3_o78dSxeGry_20221204.jpg"
+            }
+        },
+        "images_count": 2,
+        "img_url": "https://img.yad2.co.il/Pic/202212/04/2_6/o/y2_1_lk_4g3dSd6_20221204.png",
+        "images_urls": [
+            "https://img.yad2.co.il/Pic/202212/04/2_6/o/y2_1_lk_4g3dSd6_20221204.png",
+            "https://img.yad2.co.il/Pic/202212/04/2_6/o/y2_3_o78dSxeGry_20221204.jpg"
+        ],
+        "mp4_video_url": null,
+        "video_url": null,
+        "PrimaryArea": "hamerkaz_area",
+        "PrimaryAreaID": 2,
+        "AreaID_text": "אזור פתח תקווה והסביבה",
+        "SecondaryArea": "hamerkaz_area",
+        "area_id": 4,
+        "city": "פתח תקווה",
+        "city_code": 7900,
+        "street": "יעקב קרול",
+        "coordinates": {
+            "latitude": 32.0920072105263,
+            "longitude": 34.8780073157895
+        },
+        "geohash": "sv8y9djmkrxp",
+        "ad_highlight_type": "none",
+        "background_color": "f0f0f0",
+        "highlight_text": "",
+        "order_type_id": 1,
+        "ad_number": 96246707,
+        "cat_id": 2,
+        "customer_id": 2220049,
+        "feed_source": "commercial",
+        "id": "ejyuh5m3",
+        "link_token": "ejyuh5m3",
+        "merchant": true,
+        "contact_name": "דורון נכסים",
+        "merchant_name": "חיבורים",
+        "record_id": 48639959,
+        "subcat_id": "6",
+        "currency": "₪",
+        "currency_text": "₪",
+        "price": "3,500 ₪",
+        "deal_info": null,
+        "date": "2022-12-05 07:21:31",
+        "date_added": "2022-12-04 10:57:22",
+        "updated_at": "חיבורים",
+        "IsVisibleForReco": false,
+        "ad_type": "ad",
+        "can_change_layout": 1,
+        "can_hide": 0,
+        "default_layout": "system",
+        "external": [],
+        "is_hidden": 0,
+        "is_liked": 0,
+        "is_trade_in_button": false,
+        "like_count": 0,
+        "line_1_text_color": "",
+        "line_2_text_color": "808080",
+        "promotional_ad": 0,
+        "remove_on_unlike": false,
+        "type": "ad",
+        "uid": null,
+        "address_more": null,
+        "broker_avatar": "",
+        "hood_id": 2001002,
+        "office_about": null,
+        "office_logo_url": null,
+        "square_meters": 35,
+        "HomeTypeID_text": "דירה",
+        "AssetClassificationID_text": "משופץ",
+        "Rooms_text": 2,
+        "abovePrice": "3000"
+    },
+    {
+        "line_1": "3 חדרים",
+        "line_2": "קומה 2",
+        "line_3": "UNIX ESTATES",
+        "row_1": "פתח תקווה",
+        "row_2": "דירה, פתח תקווה",
+        "row_3": [
+            "3 חדרים",
+            "65 מ״ר",
+            "קומה 2"
+        ],
+        "row_4": [
+            {
+                "key": "rooms",
+                "label": "חדרים",
+                "value": 3
+            },
+            {
+                "key": "floor",
+                "label": "קומה",
+                "value": 2
+            },
+            {
+                "key": "SquareMeter",
+                "label": "מ\"ר",
+                "value": 65
+            }
+        ],
+        "row_5": null,
+        "search_text": "שם מוכר UNIX ESTATES UNIX ESTATES טל בובליל נכס להשכרה מסוג דירה מספר חדרים 3 בקומה 2 בכתובת פתח תקווה אזור פתח תקווה והסביבה מרכז הנכס כולל חניה מיזוג מצב הנכס דרוש שיפוץ השכרה לטווח ארוך מספר תשלומים 12 כולל בעלי חיים כניסה מיידית תאור לקוח להשכרה לטווח ארוך. דירת 3 חדרים באיזור פסטורלי ונעים. מתאים למשפחות צעירות או לזוג/בודד. 65 מטר. שיפוץ יבוצע למטבח ע\"י בעל הדירה. Welcome to UNIX ESTATES - My Dream Home\r\nכל אחד חולם על בית החלומות שלו בישראל. כל אחת חולמת להקים את הבית המושלם למשפחתה. כל משפחה רוצה לצבור חוויות לכל החיים בביתם. \r\n\r\nבדיוק בשביל זה אנחנו כאן. בשביל להגשים לכם את בית חלומותיכם. \r\nצוות החברה מעניק מעטפת אישית ומלאה לעשרות הלקוחות שלנו המעוניינים לקנות את הנכס החדש עבור משפחתם. כמו כן אנחנו מלווים בתשומת לב את כל לקוחותינו המעוניינים למכור את נכסיהם ומסייעים להם להשתדרג ולהתקדם לנכס מתאים יותר עבור משפחתם. \r\n\r\nUNIX - הינו משרד תיווך והשקעות נדל\"ן המעמיד את הצרכים, הרצונות והחלומות שלכם מעל הכל.\r\n\r\nUNIX - שיווק נכסי יוקרה והשקעות נדל\"ן סוכנות UNIX ESTATES ",
+        "title_1": "פתח תקווה",
+        "title_2": "דירה",
+        "images": {
+            "Image1": {
+                "src": "https://img.yad2.co.il/Pic/202210/13/2_6/o/y2_1_992145_20221013.jpeg"
+            },
+            "Image2": {
+                "src": "https://img.yad2.co.il/Pic/202210/13/2_6/o/y2_2_995405_20221013.jpeg"
+            }
+        },
+        "images_count": 2,
+        "img_url": "https://img.yad2.co.il/Pic/202210/13/2_6/o/y2_1_992145_20221013.jpeg",
+        "images_urls": [
+            "https://img.yad2.co.il/Pic/202210/13/2_6/o/y2_1_992145_20221013.jpeg",
+            "https://img.yad2.co.il/Pic/202210/13/2_6/o/y2_2_995405_20221013.jpeg"
+        ],
+        "mp4_video_url": null,
+        "video_url": null,
+        "PrimaryArea": "hamerkaz_area",
+        "PrimaryAreaID": 2,
+        "AreaID_text": "אזור פתח תקווה והסביבה",
+        "SecondaryArea": "hamerkaz_area",
+        "area_id": 4,
+        "city": "פתח תקווה",
+        "city_code": 7900,
+        "coordinates": {
+            "latitude": 32.084951,
+            "longitude": 34.886825
+        },
+        "geohash": "sv8y9bgu3uq5",
+        "ad_highlight_type": "none",
+        "background_color": "f0f0f0",
+        "highlight_text": "",
+        "order_type_id": 1,
+        "ad_number": 76891181,
+        "cat_id": 2,
+        "customer_id": 7441074,
+        "feed_source": "commercial",
+        "id": "p325fn8m",
+        "link_token": "p325fn8m",
+        "merchant": true,
+        "contact_name": "טל בובליל",
+        "merchant_name": "UNIX ESTATES",
+        "record_id": 48549266,
+        "subcat_id": "6",
+        "currency": "₪",
+        "currency_text": "₪",
+        "price": "3,600 ₪",
+        "deal_info": null,
+        "date": "2022-12-05 12:24:27",
+        "date_added": "2022-10-13 17:28:27",
+        "updated_at": "UNIX ESTATES",
+        "IsVisibleForReco": false,
+        "ad_type": "ad",
+        "can_change_layout": 1,
+        "can_hide": 0,
+        "default_layout": "system",
+        "external": [],
+        "is_hidden": 0,
+        "is_liked": 0,
+        "is_trade_in_button": false,
+        "like_count": 0,
+        "line_1_text_color": "",
+        "line_2_text_color": "808080",
+        "promotional_ad": 0,
+        "remove_on_unlike": false,
+        "type": "ad",
+        "uid": null,
+        "address_more": null,
+        "broker_avatar": "https://img.yad2.co.il/Pic/202208/31/2_6/o/y2_1_08197_20220831183902.jpeg",
+        "hood_id": 216,
+        "office_about": "Welcome to UNIX ESTATES - My Dream Home\r\nכל אחד חולם על בית החלומות שלו בישראל. כל אחת חולמת להקים את הבית המושלם למשפחתה. כל משפחה רוצה לצבור חוויות לכל החיים בביתם. \r\n\r\nבדיוק בשביל זה אנחנו כאן. בשביל להגשים לכם את בית חלומותיכם. \r\nצוות החברה מעניק מעטפת אישית ומלאה לעשרות הלקוחות שלנו המעוניינים לקנות את הנכס החדש עבור משפחתם. כמו כן אנחנו מלווים בתשומת לב את כל לקוחותינו המעוניינים למכור את נכסיהם ומסייעים להם להשתדרג ולהתקדם לנכס מתאים יותר עבור משפחתם. \r\n\r\nUNIX - הינו משרד תיווך והשקעות נדל\"ן המעמיד את הצרכים, הרצונות והחלומות שלכם מעל הכל.\r\n\r\nUNIX - שיווק נכסי יוקרה והשקעות נדל\"ן",
+        "office_logo_url": "//img.yad2.co.il/Pic/TivMiniSite/y2_1_07721_20220913145603.jpeg?t=1670235935137",
+        "square_meters": 65,
+        "HomeTypeID_text": "דירה",
+        "AssetClassificationID_text": "דרוש שיפוץ",
+        "Rooms_text": 3,
+        "abovePrice": "3000"
+    },
+    {
+        "line_1": "3 חדרים",
+        "line_2": "קומה 2",
+        "line_3": "אנגלו סכסון פתח תקווה",
+        "row_1": "ברל כצנלסון",
+        "row_2": "דירה, רמת ורבר, פתח תקווה",
+        "row_3": [
+            "3 חדרים",
+            "60 מ״ר",
+            "קומה 2"
+        ],
+        "row_4": [
+            {
+                "key": "rooms",
+                "label": "חדרים",
+                "value": 3
+            },
+            {
+                "key": "floor",
+                "label": "קומה",
+                "value": 2
+            },
+            {
+                "key": "SquareMeter",
+                "label": "מ\"ר",
+                "value": 60
+            }
+        ],
+        "row_5": null,
+        "search_text": "שם מוכר אנגלו סכסון פתח תקווה אנגלו סכסון פתח תקווה דורון גבאי נכס להשכרה מסוג דירה מספר חדרים 3 בקומה 2 בכתובת ברל כצנלסון רמת ורבר פתח תקווה אזור פתח תקווה והסביבה מרכז הנכס כולל מיזוג מצב הנכס במצב שמור השכרה לטווח ארוך מספר תשלומים 1 כניסה מיידית תאור לקוח נכס מספר: 2580,   דירה להשכרה \n3 חדרים 60 מ'  דוד שמש מזגנים \nחזית קומה 2\nקרוב מרכז קניות בתי ספר גני ילדים\nתחבורה ציבורית 3600 שח\nכצלנסון רמת ורבר סניף אנגלו-סכסון פתח תקווה פועל החל משנות ה-70 של המאה ה-20 ומלווה את צמיחתה של פתח תקווה כעיר מועדפת למגורים וכאזור מבוקש לעסקים מסוגים שונים - היי-טק, ביטוח ופיננסים, תקשורת ועוד.סניף אנגלו-סכסון פתח תקווה מצטיין בצוות מגובש ואווירה משפחתית ותומכת. לקוחותינו נהנים מייעוץ מקצועי ומליווי אישי לכל אורך הדרך. צוות אנגלו-סכסון פתח תקווה מונה מקצוענים בוגרי בי\"ס לנדל\"ן המתמחים בשיווק נדל\"ן למגורים יד שנייה, פרויקטים חדשים ומגרשים לבנייה וכמו-כן בנדל\"ן למשרדים, תעשיה, משרדים וקרקעות חקלאיות.\n סוכנות אנגלו סכסון פתח תקווה ",
+        "title_1": "ברל כצנלסון",
+        "title_2": "דירה",
+        "images": {
+            "Image1": {
+                "src": "https://img.yad2.co.il/Pic/202211/15/2_6/o/o2_6_1_09895_20221115125218.jpg"
+            },
+            "Image2": {
+                "src": "https://img.yad2.co.il/Pic/202211/15/2_6/o/o2_6_2_06584_20221115125219.jpg"
+            },
+            "Image3": {
+                "src": "https://img.yad2.co.il/Pic/202211/15/2_6/o/o2_6_3_09278_20221115125219.jpg"
+            },
+            "Image4": {
+                "src": "https://img.yad2.co.il/Pic/202211/15/2_6/o/o2_6_4_09097_20221115125220.jpg"
+            },
+            "Image5": {
+                "src": "https://img.yad2.co.il/Pic/202211/15/2_6/o/o2_6_5_03473_20221115125220.jpg"
+            }
+        },
+        "images_count": 5,
+        "img_url": "https://img.yad2.co.il/Pic/202211/15/2_6/o/o2_6_1_09895_20221115125218.jpg",
+        "images_urls": [
+            "https://img.yad2.co.il/Pic/202211/15/2_6/o/o2_6_1_09895_20221115125218.jpg",
+            "https://img.yad2.co.il/Pic/202211/15/2_6/o/o2_6_2_06584_20221115125219.jpg",
+            "https://img.yad2.co.il/Pic/202211/15/2_6/o/o2_6_3_09278_20221115125219.jpg",
+            "https://img.yad2.co.il/Pic/202211/15/2_6/o/o2_6_4_09097_20221115125220.jpg",
+            "https://img.yad2.co.il/Pic/202211/15/2_6/o/o2_6_5_03473_20221115125220.jpg"
+        ],
+        "mp4_video_url": null,
+        "video_url": null,
+        "PrimaryArea": "hamerkaz_area",
+        "PrimaryAreaID": 2,
+        "AreaID_text": "אזור פתח תקווה והסביבה",
+        "SecondaryArea": "hamerkaz_area",
+        "area_id": 4,
+        "city": "פתח תקווה",
+        "city_code": 7900,
+        "street": "ברל כצנלסון",
+        "coordinates": {
+            "latitude": 32.08786036,
+            "longitude": 34.87561758
+        },
+        "geohash": "sv8y997tkf9q",
+        "ad_highlight_type": "none",
+        "background_color": "f0f0f0",
+        "highlight_text": "בלעדי",
+        "order_type_id": 1,
+        "ad_number": 88149290,
+        "cat_id": 2,
+        "customer_id": 4880432,
+        "feed_source": "commercial",
+        "id": "v6dc0dr0",
+        "link_token": "v6dc0dr0",
+        "merchant": true,
+        "contact_name": "דורון גבאי",
+        "merchant_name": "אנגלו סכסון פתח תקווה",
+        "record_id": 48465981,
+        "subcat_id": "6",
+        "currency": "₪",
+        "currency_text": "₪",
+        "price": "3,600 ₪",
+        "deal_info": null,
+        "date": "2022-12-05 10:42:26",
+        "date_added": "2022-11-13 15:22:57",
+        "updated_at": "אנגלו סכסון פתח תקווה",
+        "IsVisibleForReco": false,
+        "ad_type": "ad",
+        "can_change_layout": 1,
+        "can_hide": 0,
+        "default_layout": "system",
+        "external": [],
+        "is_hidden": 0,
+        "is_liked": 0,
+        "is_trade_in_button": false,
+        "like_count": 0,
+        "line_1_text_color": "",
+        "line_2_text_color": "808080",
+        "promotional_ad": 0,
+        "remove_on_unlike": false,
+        "type": "ad",
+        "uid": null,
+        "address_more": null,
+        "broker_avatar": "",
+        "hood_id": 773,
+        "office_about": "סניף אנגלו-סכסון פתח תקווה פועל החל משנות ה-70 של המאה ה-20 ומלווה את צמיחתה של פתח תקווה כעיר מועדפת למגורים וכאזור מבוקש לעסקים מסוגים שונים - היי-טק, ביטוח ופיננסים, תקשורת ועוד.סניף אנגלו-סכסון פתח תקווה מצטיין בצוות מגובש ואווירה משפחתית ותומכת. לקוחותינו נהנים מייעוץ מקצועי ומליווי אישי לכל אורך הדרך. צוות אנגלו-סכסון פתח תקווה מונה מקצוענים בוגרי בי\"ס לנדל\"ן המתמחים בשיווק נדל\"ן למגורים יד שנייה, פרויקטים חדשים ומגרשים לבנייה וכמו-כן בנדל\"ן למשרדים, תעשיה, משרדים וקרקעות חקלאיות.\n",
+        "office_logo_url": "//img.yad2.co.il/Pic/TivMiniSite/2eccd602-4921-49ab-8f9c-d2ebf536500f.jpeg?t=1670230360663",
+        "square_meters": 60,
+        "HomeTypeID_text": "דירה",
+        "neighborhood": "רמת ורבר",
+        "AssetClassificationID_text": "במצב שמור",
+        "Rooms_text": 3,
+        "abovePrice": "3000"
+    },
+    {
+        "line_1": "3 חדרים",
+        "line_2": "קומה 1",
+        "line_3": "אנגלו סכסון פתח תקווה",
+        "row_1": "בנימין מינץ",
+        "row_2": "דירה, אחדות, פתח תקווה",
+        "row_3": [
+            "3 חדרים",
+            "65 מ״ר",
+            "קומה 1"
+        ],
+        "row_4": [
+            {
+                "key": "rooms",
+                "label": "חדרים",
+                "value": 3
+            },
+            {
+                "key": "floor",
+                "label": "קומה",
+                "value": 1
+            },
+            {
+                "key": "SquareMeter",
+                "label": "מ\"ר",
+                "value": 65
+            }
+        ],
+        "row_5": null,
+        "search_text": "שם מוכר אנגלו סכסון פתח תקווה אנגלו סכסון פתח תקווה מוטי פסל נכס להשכרה מסוג דירה מספר חדרים 3 בקומה 1 בכתובת בנימין מינץ אחדות פתח תקווה אזור פתח תקווה והסביבה מרכז הנכס כולל סורגים מיזוג מצב הנכס במצב שמור מספר תשלומים 1 כניסה מיידית תאור לקוח נכס מספר: 2538, להשכרה כניסה מיידית.ברחוב מינץ פתח תקווה\nדירת 3 חדרים קומה ראשונה \nממוזגת ומרווחת. סניף אנגלו-סכסון פתח תקווה פועל החל משנות ה-70 של המאה ה-20 ומלווה את צמיחתה של פתח תקווה כעיר מועדפת למגורים וכאזור מבוקש לעסקים מסוגים שונים - היי-טק, ביטוח ופיננסים, תקשורת ועוד.סניף אנגלו-סכסון פתח תקווה מצטיין בצוות מגובש ואווירה משפחתית ותומכת. לקוחותינו נהנים מייעוץ מקצועי ומליווי אישי לכל אורך הדרך. צוות אנגלו-סכסון פתח תקווה מונה מקצוענים בוגרי בי\"ס לנדל\"ן המתמחים בשיווק נדל\"ן למגורים יד שנייה, פרויקטים חדשים ומגרשים לבנייה וכמו-כן בנדל\"ן למשרדים, תעשיה, משרדים וקרקעות חקלאיות.\n סוכנות אנגלו סכסון פתח תקווה ",
+        "title_1": "בנימין מינץ",
+        "title_2": "דירה",
+        "images": {
+            "Image1": {
+                "src": "https://img.yad2.co.il/Pic/202209/28/2_6/o/o2_6_1_02893_20220928141654.jpg"
+            }
+        },
+        "images_count": 1,
+        "img_url": "https://img.yad2.co.il/Pic/202209/28/2_6/o/o2_6_1_02893_20220928141654.jpg",
+        "images_urls": [
+            "https://img.yad2.co.il/Pic/202209/28/2_6/o/o2_6_1_02893_20220928141654.jpg"
+        ],
+        "mp4_video_url": null,
+        "video_url": null,
+        "PrimaryArea": "hamerkaz_area",
+        "PrimaryAreaID": 2,
+        "AreaID_text": "אזור פתח תקווה והסביבה",
+        "SecondaryArea": "hamerkaz_area",
+        "area_id": 4,
+        "city": "פתח תקווה",
+        "city_code": 7900,
+        "street": "בנימין מינץ",
+        "coordinates": {
+            "latitude": 32.0742592931034,
+            "longitude": 34.8904079137931
+        },
+        "geohash": "sv8y3yyqj7mc",
+        "ad_highlight_type": "none",
+        "background_color": "f0f0f0",
+        "highlight_text": "",
+        "order_type_id": 1,
+        "ad_number": 87577499,
+        "cat_id": 2,
+        "customer_id": 4880432,
+        "feed_source": "commercial",
+        "id": "45svpk4q",
+        "link_token": "45svpk4q",
+        "merchant": true,
+        "contact_name": "מוטי פסל",
+        "merchant_name": "אנגלו סכסון פתח תקווה",
+        "record_id": 48114674,
+        "subcat_id": "6",
+        "currency": "₪",
+        "currency_text": "₪",
+        "price": "3,600 ₪",
+        "deal_info": null,
+        "date": "2022-12-05 08:39:35",
+        "date_added": "2022-09-28 14:16:52",
+        "updated_at": "אנגלו סכסון פתח תקווה",
+        "IsVisibleForReco": false,
+        "ad_type": "ad",
+        "can_change_layout": 1,
+        "can_hide": 0,
+        "default_layout": "system",
+        "external": [],
+        "is_hidden": 0,
+        "is_liked": 0,
+        "is_trade_in_button": false,
+        "like_count": 0,
+        "line_1_text_color": "",
+        "line_2_text_color": "808080",
+        "promotional_ad": 0,
+        "remove_on_unlike": false,
+        "type": "ad",
+        "uid": null,
+        "address_more": null,
+        "broker_avatar": "",
+        "hood_id": 216,
+        "office_about": "סניף אנגלו-סכסון פתח תקווה פועל החל משנות ה-70 של המאה ה-20 ומלווה את צמיחתה של פתח תקווה כעיר מועדפת למגורים וכאזור מבוקש לעסקים מסוגים שונים - היי-טק, ביטוח ופיננסים, תקשורת ועוד.סניף אנגלו-סכסון פתח תקווה מצטיין בצוות מגובש ואווירה משפחתית ותומכת. לקוחותינו נהנים מייעוץ מקצועי ומליווי אישי לכל אורך הדרך. צוות אנגלו-סכסון פתח תקווה מונה מקצוענים בוגרי בי\"ס לנדל\"ן המתמחים בשיווק נדל\"ן למגורים יד שנייה, פרויקטים חדשים ומגרשים לבנייה וכמו-כן בנדל\"ן למשרדים, תעשיה, משרדים וקרקעות חקלאיות.\n",
+        "office_logo_url": "//img.yad2.co.il/Pic/TivMiniSite/2eccd602-4921-49ab-8f9c-d2ebf536500f.jpeg?t=1670222405688",
+        "square_meters": 65,
+        "HomeTypeID_text": "דירה",
+        "neighborhood": "אחדות",
+        "AssetClassificationID_text": "במצב שמור",
+        "Rooms_text": 3,
+        "abovePrice": "3000"
+    },
+    {
+        "type": "advanced_ad"
+    },
+    {
+        "line_1": "2 חדרים",
+        "line_2": "קומת קרקע",
+        "line_3": "עידן שלום נכסים",
+        "row_1": "קרית מטלון",
+        "row_2": "יחידת דיור, קרית מטלון, פתח תקווה",
+        "row_3": [
+            "2 חדרים",
+            "40 מ״ר",
+            "קומת קרקע"
+        ],
+        "row_4": [
+            {
+                "key": "rooms",
+                "label": "חדרים",
+                "value": 2
+            },
+            {
+                "key": "floor",
+                "label": "קומה",
+                "value": "קרקע"
+            },
+            {
+                "key": "SquareMeter",
+                "label": "מ\"ר",
+                "value": 40
+            }
+        ],
+        "row_5": null,
+        "search_text": "שם מוכר עידן שלום נכסים עידן שלום נכסים עידן שלום נכס להשכרה מסוג יחידת דיור מספר חדרים 2 בכתובת קרית מטלון פתח תקווה אזור פתח תקווה והסביבה מרכז הנכס כולל דלתות פנדור ממ\"ד מיזוג מזגן תדיראן גישה לנכים משופצת מצב הנכס משופץ השכרה לטווח ארוך מספר תשלומים 12 כולל בעלי חיים כניסה מיידית תאור לקוח בשכונת קרית מטלון יחידת דיור פרטית  2 חדרים  שקטה , ממוזגת , דוד שמש ,גינה 20 מטר , כיווני אוויר דרום ומערב 3700 ש\"ח המחיר כולל ארנונה .\nפינוי 15.12.22 עידן שלום נכסים משרד לתיווך ושיווק נכסים ,תוכלו להתרשם ממגוון נכסים ! אמינות ומקצועיות מעל הכל . סוכנות עידן שלום נכסים ",
+        "title_1": "קרית מטלון",
+        "title_2": "יחידת דיור",
+        "images": {
+            "Image1": {
+                "src": "https://img.yad2.co.il/Pic/202101/18/2_6/o/o2_6_1_08806_20210118200132.jpg"
+            },
+            "Image2": {
+                "src": "https://img.yad2.co.il/Pic/202101/18/2_6/o/o2_6_2_03470_20210118200127.jpg"
+            },
+            "Image3": {
+                "src": "https://img.yad2.co.il/Pic/202101/18/2_6/o/o2_6_3_07879_20210118200157.jpg"
+            },
+            "Image4": {
+                "src": "https://img.yad2.co.il/Pic/202101/18/2_6/o/o2_6_4_03196_20210118200100.jpg"
+            },
+            "Image5": {
+                "src": "https://img.yad2.co.il/Pic/202101/18/2_6/o/o2_6_5_05562_20210118200100.jpg"
+            }
+        },
+        "images_count": 5,
+        "img_url": "https://img.yad2.co.il/Pic/202101/18/2_6/o/o2_6_1_08806_20210118200132.jpg",
+        "images_urls": [
+            "https://img.yad2.co.il/Pic/202101/18/2_6/o/o2_6_1_08806_20210118200132.jpg",
+            "https://img.yad2.co.il/Pic/202101/18/2_6/o/o2_6_2_03470_20210118200127.jpg",
+            "https://img.yad2.co.il/Pic/202101/18/2_6/o/o2_6_3_07879_20210118200157.jpg",
+            "https://img.yad2.co.il/Pic/202101/18/2_6/o/o2_6_4_03196_20210118200100.jpg",
+            "https://img.yad2.co.il/Pic/202101/18/2_6/o/o2_6_5_05562_20210118200100.jpg"
+        ],
+        "mp4_video_url": null,
+        "video_url": null,
+        "PrimaryArea": "hamerkaz_area",
+        "PrimaryAreaID": 2,
+        "AreaID_text": "אזור פתח תקווה והסביבה",
+        "SecondaryArea": "hamerkaz_area",
+        "area_id": 4,
+        "city": "פתח תקווה",
+        "city_code": 7900,
+        "coordinates": {
+            "latitude": 32.089468,
+            "longitude": 34.849875
+        },
+        "geohash": "sv8y918ysyqh",
+        "ad_highlight_type": "none",
+        "background_color": "f0f0f0",
+        "highlight_text": "",
+        "order_type_id": 1,
+        "ad_number": 84767770,
+        "cat_id": 2,
+        "customer_id": 3214485,
+        "feed_source": "commercial",
+        "id": "t103oxwi",
+        "link_token": "t103oxwi",
+        "merchant": true,
+        "contact_name": "עידן שלום",
+        "merchant_name": "עידן שלום נכסים",
+        "record_id": 42767572,
+        "subcat_id": "6",
+        "currency": "₪",
+        "currency_text": "₪",
+        "price": "3,700 ₪",
+        "deal_info": null,
+        "date": "2022-12-05 11:48:42",
+        "date_added": "2020-11-05 18:40:30",
+        "updated_at": "עידן שלום נכסים",
+        "IsVisibleForReco": false,
+        "ad_type": "ad",
+        "can_change_layout": 1,
+        "can_hide": 0,
+        "default_layout": "system",
+        "external": [],
+        "is_hidden": 0,
+        "is_liked": 0,
+        "is_trade_in_button": false,
+        "like_count": 0,
+        "line_1_text_color": "",
+        "line_2_text_color": "808080",
+        "promotional_ad": 0,
+        "remove_on_unlike": false,
+        "type": "ad",
+        "uid": null,
+        "address_more": null,
+        "broker_avatar": "",
+        "hood_id": 772,
+        "office_about": "עידן שלום נכסים משרד לתיווך ושיווק נכסים ,תוכלו להתרשם ממגוון נכסים ! אמינות ומקצועיות מעל הכל .",
+        "office_logo_url": "//img.yad2.co.il/Pic/TivMiniSite/logo100_2_7_713066_20190515150504-l.jpg?t=1670234034558",
+        "square_meters": 40,
+        "HomeTypeID_text": "יחידת דיור",
+        "neighborhood": "קרית מטלון",
+        "AssetClassificationID_text": "משופץ",
+        "Rooms_text": 2,
+        "abovePrice": "3000"
+    },
+    {
+        "line_1": "3 חדרים",
+        "line_2": "קומה 1",
+        "line_3": "עידן שלום נכסים",
+        "row_1": "פתח תקווה",
+        "row_2": "דירה, פתח תקווה",
+        "row_3": [
+            "3 חדרים",
+            "60 מ״ר",
+            "קומה 1"
+        ],
+        "row_4": [
+            {
+                "key": "rooms",
+                "label": "חדרים",
+                "value": 3
+            },
+            {
+                "key": "floor",
+                "label": "קומה",
+                "value": 1
+            },
+            {
+                "key": "SquareMeter",
+                "label": "מ\"ר",
+                "value": 60
+            }
+        ],
+        "row_5": null,
+        "search_text": "שם מוכר עידן שלום נכסים עידן שלום נכסים עידן נכס להשכרה מסוג דירה מספר חדרים 3 בקומה 1 בכתובת פתח תקווה אזור פתח תקווה והסביבה מרכז הנכס כולל סורגים מיזוג מזגן תדיראן משופצת מצב הנכס משופץ מספר תשלומים 12 כניסה מיידית תאור לקוח בס\"ד דירת 3 חד' בקומה 1 מתוך 3 , משופצת , דוד שמש, שקטה, ממזוגת , כניסה מידית עידן שלום נכסים משרד לתיווך ושיווק נכסים ,תוכלו להתרשם ממגוון נכסים ! אמינות ומקצועיות מעל הכל . סוכנות עידן שלום נכסים ",
+        "title_1": "פתח תקווה",
+        "title_2": "דירה",
+        "images": {
+            "Image1": {
+                "src": "https://img.yad2.co.il/Pic/202211/09/2_6/o/y2_2_991238_20221109.jpeg"
+            },
+            "Image2": {
+                "src": "https://img.yad2.co.il/Pic/202211/09/2_6/o/y2_9_992975_20221109.jpeg"
+            },
+            "Image3": {
+                "src": "https://img.yad2.co.il/Pic/202211/09/2_6/o/y2_5_998157_20221109.jpeg"
+            },
+            "Image4": {
+                "src": "https://img.yad2.co.il/Pic/202211/09/2_6/o/y2_1_GqSSf_992597_20221109.jpeg"
+            },
+            "Image5": {
+                "src": "https://img.yad2.co.il/Pic/202211/09/2_6/o/y2_9_991767_20221109.jpeg"
+            },
+            "Image6": {
+                "src": "https://img.yad2.co.il/Pic/202211/09/2_6/o/y2_3_995502_20221109.jpeg"
+            },
+            "Image7": {
+                "src": "https://img.yad2.co.il/Pic/202211/09/2_6/o/y2_10_Gtzn_998546_20221109.jpeg"
+            },
+            "Image8": {
+                "src": "https://img.yad2.co.il/Pic/202211/09/2_6/o/y2_6_997112_20221109.jpeg"
+            },
+            "Image9": {
+                "src": "https://img.yad2.co.il/Pic/202211/09/2_6/o/y2_8_998144_20221109.jpeg"
+            }
+        },
+        "images_count": 9,
+        "img_url": "https://img.yad2.co.il/Pic/202211/09/2_6/o/y2_2_991238_20221109.jpeg",
+        "images_urls": [
+            "https://img.yad2.co.il/Pic/202211/09/2_6/o/y2_2_991238_20221109.jpeg",
+            "https://img.yad2.co.il/Pic/202211/09/2_6/o/y2_9_992975_20221109.jpeg",
+            "https://img.yad2.co.il/Pic/202211/09/2_6/o/y2_5_998157_20221109.jpeg",
+            "https://img.yad2.co.il/Pic/202211/09/2_6/o/y2_1_GqSSf_992597_20221109.jpeg",
+            "https://img.yad2.co.il/Pic/202211/09/2_6/o/y2_9_991767_20221109.jpeg",
+            "https://img.yad2.co.il/Pic/202211/09/2_6/o/y2_3_995502_20221109.jpeg",
+            "https://img.yad2.co.il/Pic/202211/09/2_6/o/y2_10_Gtzn_998546_20221109.jpeg",
+            "https://img.yad2.co.il/Pic/202211/09/2_6/o/y2_6_997112_20221109.jpeg",
+            "https://img.yad2.co.il/Pic/202211/09/2_6/o/y2_8_998144_20221109.jpeg"
+        ],
+        "mp4_video_url": null,
+        "video_url": null,
+        "PrimaryArea": "hamerkaz_area",
+        "PrimaryAreaID": 2,
+        "AreaID_text": "אזור פתח תקווה והסביבה",
+        "SecondaryArea": "hamerkaz_area",
+        "area_id": 4,
+        "city": "פתח תקווה",
+        "city_code": 7900,
+        "coordinates": {
+            "latitude": 32.084951,
+            "longitude": 34.886825
+        },
+        "geohash": "sv8y9bgu3uq5",
+        "ad_highlight_type": "none",
+        "background_color": "f0f0f0",
+        "highlight_text": "",
+        "order_type_id": 1,
+        "ad_number": 75560211,
+        "cat_id": 2,
+        "customer_id": 3214485,
+        "feed_source": "commercial",
+        "id": "8k25g81v",
+        "link_token": "8k25g81v",
+        "merchant": true,
+        "contact_name": "עידן",
+        "merchant_name": "עידן שלום נכסים",
+        "record_id": 48439651,
+        "subcat_id": "6",
+        "currency": "₪",
+        "currency_text": "₪",
+        "price": "3,799 ₪",
+        "deal_info": null,
+        "date": "2022-12-05 09:48:34",
+        "date_added": "2022-10-25 19:15:35",
+        "updated_at": "עידן שלום נכסים",
+        "IsVisibleForReco": false,
+        "ad_type": "ad",
+        "can_change_layout": 1,
+        "can_hide": 0,
+        "default_layout": "system",
+        "external": [],
+        "is_hidden": 0,
+        "is_liked": 0,
+        "is_trade_in_button": false,
+        "like_count": 0,
+        "line_1_text_color": "",
+        "line_2_text_color": "808080",
+        "promotional_ad": 0,
+        "remove_on_unlike": false,
+        "type": "ad",
+        "uid": null,
+        "address_more": null,
+        "broker_avatar": "",
+        "hood_id": 751,
+        "office_about": "עידן שלום נכסים משרד לתיווך ושיווק נכסים ,תוכלו להתרשם ממגוון נכסים ! אמינות ומקצועיות מעל הכל .",
+        "office_logo_url": "//img.yad2.co.il/Pic/TivMiniSite/logo100_2_7_713066_20190515150504-l.jpg?t=1670226648260",
+        "square_meters": 60,
+        "HomeTypeID_text": "דירה",
+        "AssetClassificationID_text": "משופץ",
+        "Rooms_text": 3,
+        "abovePrice": "3000"
+    },
+    {
+        "line_1": "2 חדרים",
+        "line_2": "קומה 1",
+        "line_3": "חץ נדל\"ן",
+        "row_1": "מיכל לייב כץ",
+        "row_2": "דירה, פתח תקווה",
+        "row_3": [
+            "2 חדרים",
+            "50 מ״ר",
+            "קומה 1"
+        ],
+        "row_4": [
+            {
+                "key": "rooms",
+                "label": "חדרים",
+                "value": 2
+            },
+            {
+                "key": "floor",
+                "label": "קומה",
+                "value": 1
+            },
+            {
+                "key": "SquareMeter",
+                "label": "מ\"ר",
+                "value": 50
+            }
+        ],
+        "row_5": null,
+        "search_text": "שם מוכר חץ נדל\"ן חץ נדל\"ן איגור צנק נכס להשכרה מסוג דירה מספר חדרים 2 בקומה 1 בכתובת מיכל לייב כץ פתח תקווה אזור פתח תקווה והסביבה מרכז הנכס כולל מיזוג משופצת מצב הנכס משופץ השכרה לטווח ארוך מספר תשלומים 12 כולל בעלי חיים תאור לקוח דירה 2 חדרים (לא מחולקת) משופצת ויפה מזגנים דוד שמש 16 שנות נסיון בשיווק וניהול נדל\"ן בפ\"ת , גוש דן ואריאל. מחלקת ייעוץ משכנאות וליווי פיננסי.  סוכנות חץ נדל\"ן ",
+        "title_1": "מיכל לייב כץ",
+        "title_2": "דירה",
+        "images": {
+            "Image1": {
+                "src": "https://img.yad2.co.il/Pic/202211/24/2_6/o/y2_1_g6wyyLY52H_20221124.jpg"
+            },
+            "Image2": {
+                "src": "https://img.yad2.co.il/Pic/202211/24/2_6/o/y2_2_1Wn4LMklxw_20221124.jpg"
+            },
+            "Image3": {
+                "src": "https://img.yad2.co.il/Pic/202211/24/2_6/o/y2_3_0wNy67ujjs_20221124.jpg"
+            },
+            "Image4": {
+                "src": "https://img.yad2.co.il/Pic/202211/24/2_6/o/y2_4_3dg7onxv0s_20221124.jpg"
+            }
+        },
+        "images_count": 4,
+        "img_url": "https://img.yad2.co.il/Pic/202211/24/2_6/o/y2_1_g6wyyLY52H_20221124.jpg",
+        "images_urls": [
+            "https://img.yad2.co.il/Pic/202211/24/2_6/o/y2_1_g6wyyLY52H_20221124.jpg",
+            "https://img.yad2.co.il/Pic/202211/24/2_6/o/y2_2_1Wn4LMklxw_20221124.jpg",
+            "https://img.yad2.co.il/Pic/202211/24/2_6/o/y2_3_0wNy67ujjs_20221124.jpg",
+            "https://img.yad2.co.il/Pic/202211/24/2_6/o/y2_4_3dg7onxv0s_20221124.jpg"
+        ],
+        "mp4_video_url": null,
+        "video_url": null,
+        "PrimaryArea": "hamerkaz_area",
+        "PrimaryAreaID": 2,
+        "AreaID_text": "אזור פתח תקווה והסביבה",
+        "SecondaryArea": "hamerkaz_area",
+        "area_id": 4,
+        "city": "פתח תקווה",
+        "city_code": 7900,
+        "street": "מיכל לייב כץ",
+        "coordinates": {
+            "latitude": 32.0758399223301,
+            "longitude": 34.8848919029126
+        },
+        "geohash": "sv8y3z4rkcuw",
+        "ad_highlight_type": "none",
+        "background_color": "f0f0f0",
+        "highlight_text": "",
+        "order_type_id": 1,
+        "ad_number": 61075352,
+        "cat_id": 2,
+        "customer_id": 50584,
+        "feed_source": "commercial",
+        "id": "87bf6e2b",
+        "link_token": "87bf6e2b",
+        "merchant": true,
+        "contact_name": "איגור צנק",
+        "merchant_name": "חץ נדל\"ן",
+        "record_id": 48561988,
+        "subcat_id": "6",
+        "currency": "₪",
+        "currency_text": "₪",
+        "price": "3,800 ₪",
+        "deal_info": null,
+        "date": "2022-12-05 12:01:20",
+        "date_added": "2022-11-24 18:50:58",
+        "updated_at": "חץ נדל\"ן",
+        "IsVisibleForReco": false,
+        "ad_type": "ad",
+        "can_change_layout": 1,
+        "can_hide": 0,
+        "default_layout": "system",
+        "external": [],
+        "is_hidden": 0,
+        "is_liked": 0,
+        "is_trade_in_button": false,
+        "like_count": 0,
+        "line_1_text_color": "",
+        "line_2_text_color": "808080",
+        "promotional_ad": 0,
+        "remove_on_unlike": false,
+        "type": "ad",
+        "uid": null,
+        "address_more": null,
+        "broker_avatar": "",
+        "hood_id": 754,
+        "office_about": "16 שנות נסיון בשיווק וניהול נדל\"ן בפ\"ת , גוש דן ואריאל. מחלקת ייעוץ משכנאות וליווי פיננסי. ",
+        "office_logo_url": "//img.yad2.co.il/Pic/TivMiniSite/e42c9c71-bc05-4c8b-8635-24afed84c586.png?t=1670234641927",
+        "square_meters": 50,
+        "HomeTypeID_text": "דירה",
+        "AssetClassificationID_text": "משופץ",
+        "Rooms_text": 2,
+        "abovePrice": "3000"
+    },
+    {
+        "line_1": "3 חדרים",
+        "line_2": "קומה 1",
+        "line_3": "י.ב. נכסים",
+        "row_1": "ברל כצנלסון",
+        "row_2": "דירה, פתח תקווה",
+        "row_3": [
+            "3 חדרים",
+            "60 מ״ר",
+            "קומה 1"
+        ],
+        "row_4": [
+            {
+                "key": "rooms",
+                "label": "חדרים",
+                "value": 3
+            },
+            {
+                "key": "floor",
+                "label": "קומה",
+                "value": 1
+            },
+            {
+                "key": "SquareMeter",
+                "label": "מ\"ר",
+                "value": 60
+            }
+        ],
+        "row_5": null,
+        "search_text": "שם מוכר י.ב. נכסים י.ב. נכסים י.ב. נכסים נכס להשכרה מסוג דירה מספר חדרים 3 בקומה 1 בכתובת ברל כצנלסון פתח תקווה אזור פתח תקווה והסביבה מרכז הנכס כולל ריהוט מיזוג מזגן תדיראן מצב הנכס במצב שמור השכרה לטווח ארוך מספר תשלומים 13 כניסה מיידית תאור לקוח דירה במיקום מרכזי נוחה ליציאה לכיוון תל אביב, קרובה לבית חולים בלינסון ושניידר, מרחק הליכה למרכז העיר\nריהוט חלקי, כניסה מיידית בהזדמנות! ארון קיר בחדר שינה, מיטה זוגית, מזנון וספרייה בסלון סוכנות י.ב. נכסים ",
+        "title_1": "ברל כצנלסון",
+        "title_2": "דירה",
+        "images": {
+            "Image1": {
+                "src": "https://img.yad2.co.il/Pic/202211/20/2_6/o/y2_1_U3KIgSWczt_20221120.jpg"
+            },
+            "Image2": {
+                "src": "https://img.yad2.co.il/Pic/202211/20/2_6/o/y2_2_6troqEEobu_20221120.jpg"
+            },
+            "Image3": {
+                "src": "https://img.yad2.co.il/Pic/202211/20/2_6/o/y2_3_Y3rf36qkVY_20221120.jpg"
+            },
+            "Image4": {
+                "src": "https://img.yad2.co.il/Pic/202211/20/2_6/o/y2_4_nBBB5FgIQp_20221120.jpg"
+            },
+            "Image5": {
+                "src": "https://img.yad2.co.il/Pic/202211/20/2_6/o/y2_5_7pFNIBeN8__20221120.jpg"
+            }
+        },
+        "images_count": 5,
+        "img_url": "https://img.yad2.co.il/Pic/202211/20/2_6/o/y2_1_U3KIgSWczt_20221120.jpg",
+        "images_urls": [
+            "https://img.yad2.co.il/Pic/202211/20/2_6/o/y2_1_U3KIgSWczt_20221120.jpg",
+            "https://img.yad2.co.il/Pic/202211/20/2_6/o/y2_2_6troqEEobu_20221120.jpg",
+            "https://img.yad2.co.il/Pic/202211/20/2_6/o/y2_3_Y3rf36qkVY_20221120.jpg",
+            "https://img.yad2.co.il/Pic/202211/20/2_6/o/y2_4_nBBB5FgIQp_20221120.jpg",
+            "https://img.yad2.co.il/Pic/202211/20/2_6/o/y2_5_7pFNIBeN8__20221120.jpg"
+        ],
+        "mp4_video_url": null,
+        "video_url": null,
+        "PrimaryArea": "hamerkaz_area",
+        "PrimaryAreaID": 2,
+        "AreaID_text": "אזור פתח תקווה והסביבה",
+        "SecondaryArea": "hamerkaz_area",
+        "area_id": 4,
+        "city": "פתח תקווה",
+        "city_code": 7900,
+        "street": "ברל כצנלסון",
+        "coordinates": {
+            "latitude": 32.08786036,
+            "longitude": 34.87561758
+        },
+        "geohash": "sv8y997tkf9q",
+        "ad_highlight_type": "none",
+        "background_color": "f0f0f0",
+        "highlight_text": "",
+        "order_type_id": 1,
+        "ad_number": 74800797,
+        "cat_id": 2,
+        "customer_id": 979581,
+        "feed_source": "commercial",
+        "id": "gi3cyv6z",
+        "link_token": "gi3cyv6z",
+        "merchant": true,
+        "contact_name": "י.ב. נכסים",
+        "merchant_name": "י.ב. נכסים",
+        "record_id": 48258186,
+        "subcat_id": "6",
+        "currency": "₪",
+        "currency_text": "₪",
+        "price": "3,800 ₪",
+        "deal_info": null,
+        "date": "2022-12-05 11:36:30",
+        "date_added": "2022-10-19 10:22:59",
+        "updated_at": "י.ב. נכסים",
+        "IsVisibleForReco": false,
+        "ad_type": "ad",
+        "can_change_layout": 1,
+        "can_hide": 0,
+        "default_layout": "system",
+        "external": [],
+        "is_hidden": 0,
+        "is_liked": 0,
+        "is_trade_in_button": false,
+        "like_count": 0,
+        "line_1_text_color": "",
+        "line_2_text_color": "808080",
+        "promotional_ad": 0,
+        "remove_on_unlike": false,
+        "type": "ad",
+        "uid": null,
+        "address_more": "בהזדמנות!",
+        "broker_avatar": "",
+        "hood_id": 773,
+        "office_about": null,
+        "office_logo_url": null,
+        "square_meters": 60,
+        "HomeTypeID_text": "דירה",
+        "AssetClassificationID_text": "במצב שמור",
+        "Rooms_text": 3,
+        "abovePrice": "3000"
+    },
+    {
+        "type": "advanced_ad"
+    },
+    {
+        "line_1": "3 חדרים",
+        "line_2": "קומה 1",
+        "line_3": "עידן שלום נכסים",
+        "row_1": "יוספטל",
+        "row_2": "דירה, יוספטל, פתח תקווה",
+        "row_3": [
+            "3 חדרים",
+            "60 מ״ר",
+            "קומה 1"
+        ],
+        "row_4": [
+            {
+                "key": "rooms",
+                "label": "חדרים",
+                "value": 3
+            },
+            {
+                "key": "floor",
+                "label": "קומה",
+                "value": 1
+            },
+            {
+                "key": "SquareMeter",
+                "label": "מ\"ר",
+                "value": 60
+            }
+        ],
+        "row_5": null,
+        "search_text": "שם מוכר עידן שלום נכסים עידן שלום נכסים עידן שלום נכס להשכרה מסוג דירה מספר חדרים 3 בקומה 1 בכתובת יוספטל פתח תקווה אזור פתח תקווה והסביבה מרכז הנכס כולל ריהוט מיזוג משופצת מצב הנכס משופץ מספר תשלומים 12 כניסה מיידית תאור לקוח בס\"ד דירת 3 חד' בקומה 1 מתוך 3 , משופצת , דוד שמש, שקטה, ממזוגת , כניסה מידית עידן שלום נכסים משרד לתיווך ושיווק נכסים ,תוכלו להתרשם ממגוון נכסים ! אמינות ומקצועיות מעל הכל . סוכנות עידן שלום נכסים ",
+        "title_1": "יוספטל",
+        "title_2": "דירה",
+        "images": {
+            "Image1": {
+                "src": "https://img.yad2.co.il/Pic/202210/25/2_6/o/y2_3_8_stpF1_991922_20221025.jpeg"
+            },
+            "Image2": {
+                "src": "https://img.yad2.co.il/Pic/202210/25/2_6/o/y2_7_994658_20221025.jpeg"
+            },
+            "Image3": {
+                "src": "https://img.yad2.co.il/Pic/202210/25/2_6/o/y2_5_992439_20221025.jpeg"
+            },
+            "Image4": {
+                "src": "https://img.yad2.co.il/Pic/202210/25/2_6/o/y2_1_uFulddNr_993592_20221025.jpeg"
+            },
+            "Image5": {
+                "src": "https://img.yad2.co.il/Pic/202210/25/2_6/o/y2_2_995244_20221025.jpeg"
+            },
+            "Image6": {
+                "src": "https://img.yad2.co.il/Pic/202210/25/2_6/o/y2_4_996585_20221025.jpeg"
+            },
+            "Image7": {
+                "src": "https://img.yad2.co.il/Pic/202210/25/2_6/o/y2_6_995969_20221025.jpeg"
+            }
+        },
+        "images_count": 7,
+        "img_url": "https://img.yad2.co.il/Pic/202210/25/2_6/o/y2_3_8_stpF1_991922_20221025.jpeg",
+        "images_urls": [
+            "https://img.yad2.co.il/Pic/202210/25/2_6/o/y2_3_8_stpF1_991922_20221025.jpeg",
+            "https://img.yad2.co.il/Pic/202210/25/2_6/o/y2_7_994658_20221025.jpeg",
+            "https://img.yad2.co.il/Pic/202210/25/2_6/o/y2_5_992439_20221025.jpeg",
+            "https://img.yad2.co.il/Pic/202210/25/2_6/o/y2_1_uFulddNr_993592_20221025.jpeg",
+            "https://img.yad2.co.il/Pic/202210/25/2_6/o/y2_2_995244_20221025.jpeg",
+            "https://img.yad2.co.il/Pic/202210/25/2_6/o/y2_4_996585_20221025.jpeg",
+            "https://img.yad2.co.il/Pic/202210/25/2_6/o/y2_6_995969_20221025.jpeg"
+        ],
+        "mp4_video_url": null,
+        "video_url": null,
+        "PrimaryArea": "hamerkaz_area",
+        "PrimaryAreaID": 2,
+        "AreaID_text": "אזור פתח תקווה והסביבה",
+        "SecondaryArea": "hamerkaz_area",
+        "area_id": 4,
+        "city": "פתח תקווה",
+        "city_code": 7900,
+        "coordinates": {
+            "latitude": 32.093548,
+            "longitude": 34.90479
+        },
+        "geohash": "sv8yd62ykwcy",
+        "ad_highlight_type": "none",
+        "background_color": "f0f0f0",
+        "highlight_text": "",
+        "order_type_id": 1,
+        "ad_number": 54758799,
+        "cat_id": 2,
+        "customer_id": 3214485,
+        "feed_source": "commercial",
+        "id": "xs98p61b",
+        "link_token": "xs98p61b",
+        "merchant": true,
+        "contact_name": "עידן שלום",
+        "merchant_name": "עידן שלום נכסים",
+        "record_id": 48439658,
+        "subcat_id": "6",
+        "currency": "₪",
+        "currency_text": "₪",
+        "price": "3,800 ₪",
+        "deal_info": null,
+        "date": "2022-12-05 10:33:20",
+        "date_added": "2022-10-25 19:12:43",
+        "updated_at": "עידן שלום נכסים",
+        "IsVisibleForReco": false,
+        "ad_type": "ad",
+        "can_change_layout": 1,
+        "can_hide": 0,
+        "default_layout": "system",
+        "external": [],
+        "is_hidden": 0,
+        "is_liked": 0,
+        "is_trade_in_button": false,
+        "like_count": 0,
+        "line_1_text_color": "",
+        "line_2_text_color": "808080",
+        "promotional_ad": 0,
+        "remove_on_unlike": false,
+        "type": "ad",
+        "uid": null,
+        "address_more": null,
+        "broker_avatar": "",
+        "hood_id": 751,
+        "office_about": "עידן שלום נכסים משרד לתיווך ושיווק נכסים ,תוכלו להתרשם ממגוון נכסים ! אמינות ומקצועיות מעל הכל .",
+        "office_logo_url": "//img.yad2.co.il/Pic/TivMiniSite/logo100_2_7_713066_20190515150504-l.jpg?t=1670229590137",
+        "square_meters": 60,
+        "HomeTypeID_text": "דירה",
+        "neighborhood": "יוספטל",
+        "AssetClassificationID_text": "משופץ",
+        "Rooms_text": 3,
+        "abovePrice": "3000"
+    },
+    {
+        "line_1": "3 חדרים",
+        "line_2": "קומה 3",
+        "line_3": "נייברס נכסים",
+        "row_1": "יקותיאל אדם",
+        "row_2": "דירה, קרית דוד אלעזר, פתח תקווה",
+        "row_3": [
+            "3 חדרים",
+            "65 מ״ר",
+            "קומה 3"
+        ],
+        "row_4": [
+            {
+                "key": "rooms",
+                "label": "חדרים",
+                "value": 3
+            },
+            {
+                "key": "floor",
+                "label": "קומה",
+                "value": 3
+            },
+            {
+                "key": "SquareMeter",
+                "label": "מ\"ר",
+                "value": 65
+            }
+        ],
+        "row_5": null,
+        "search_text": "שם מוכר נייברס נכסים נייברס נכסים רובי נכס להשכרה מסוג דירה מספר חדרים 3 בקומה 3 בכתובת יקותיאל אדם קרית דוד אלעזר פתח תקווה אזור פתח תקווה והסביבה מרכז הנכס כולל מיזוג מזגן תדיראן מצב הנכס משופץ מספר תשלומים 12 כולל בעלי חיים כניסה מיידית תאור לקוח דירה להשכרה בצומת סרקין פתח תקווה ברחוב יקותיאל אדם\nדירת 3 חדרים קומה 4 ללא  כניסה מיידיתמזגנים בדירהועד בית חניות בשפע בבניין וברחוב\nסורגים קרוב לבתי ספר וגני ילדים, נגיש לתחבורה ציבורית קרוב למרכזי קניות מחיר מציאה סוכנות נייברס נכסים ",
+        "title_1": "יקותיאל אדם",
+        "title_2": "דירה",
+        "images": {
+            "Image1": {
+                "src": "https://img.yad2.co.il/Pic/202210/25/2_6/o/y2_1_993226_20221025.jpeg"
+            },
+            "Image2": {
+                "src": "https://img.yad2.co.il/Pic/202210/25/2_6/o/y2_2_997883_20221025.jpeg"
+            },
+            "Image3": {
+                "src": "https://img.yad2.co.il/Pic/202210/25/2_6/o/y2_3_995662_20221025.jpeg"
+            },
+            "Image4": {
+                "src": "https://img.yad2.co.il/Pic/202210/25/2_6/o/y2_4_v9iD_994753_20221025.jpeg"
+            },
+            "Image5": {
+                "src": "https://img.yad2.co.il/Pic/202210/25/2_6/o/y2_5_996790_20221025.jpeg"
+            },
+            "Image6": {
+                "src": "https://img.yad2.co.il/Pic/202210/25/2_6/o/y2_6_994110_20221025.jpeg"
+            }
+        },
+        "images_count": 6,
+        "img_url": "https://img.yad2.co.il/Pic/202210/25/2_6/o/y2_1_993226_20221025.jpeg",
+        "images_urls": [
+            "https://img.yad2.co.il/Pic/202210/25/2_6/o/y2_1_993226_20221025.jpeg",
+            "https://img.yad2.co.il/Pic/202210/25/2_6/o/y2_2_997883_20221025.jpeg",
+            "https://img.yad2.co.il/Pic/202210/25/2_6/o/y2_3_995662_20221025.jpeg",
+            "https://img.yad2.co.il/Pic/202210/25/2_6/o/y2_4_v9iD_994753_20221025.jpeg",
+            "https://img.yad2.co.il/Pic/202210/25/2_6/o/y2_5_996790_20221025.jpeg",
+            "https://img.yad2.co.il/Pic/202210/25/2_6/o/y2_6_994110_20221025.jpeg"
+        ],
+        "mp4_video_url": null,
+        "video_url": null,
+        "PrimaryArea": "hamerkaz_area",
+        "PrimaryAreaID": 2,
+        "AreaID_text": "אזור פתח תקווה והסביבה",
+        "SecondaryArea": "hamerkaz_area",
+        "area_id": 4,
+        "city": "פתח תקווה",
+        "city_code": 7900,
+        "street": "יקותיאל אדם",
+        "coordinates": {
+            "latitude": 32.0834416,
+            "longitude": 34.9038676
+        },
+        "geohash": "sv8yd285x4fp",
+        "ad_highlight_type": "none",
+        "background_color": "f0f0f0",
+        "highlight_text": "",
+        "order_type_id": 1,
+        "ad_number": 52915896,
+        "cat_id": 2,
+        "customer_id": 6912298,
+        "feed_source": "commercial",
+        "id": "6c09hzob",
+        "link_token": "6c09hzob",
+        "merchant": true,
+        "contact_name": "רובי",
+        "merchant_name": "נייברס נכסים",
+        "record_id": 48316098,
+        "subcat_id": "6",
+        "currency": "₪",
+        "currency_text": "₪",
+        "price": "3,800 ₪",
+        "deal_info": null,
+        "date": "2022-12-05 09:39:20",
+        "date_added": "2022-08-21 13:42:09",
+        "updated_at": "נייברס נכסים",
+        "IsVisibleForReco": false,
+        "ad_type": "ad",
+        "can_change_layout": 1,
+        "can_hide": 0,
+        "default_layout": "system",
+        "external": [],
+        "is_hidden": 0,
+        "is_liked": 0,
+        "is_trade_in_button": false,
+        "like_count": 0,
+        "line_1_text_color": "",
+        "line_2_text_color": "808080",
+        "promotional_ad": 0,
+        "remove_on_unlike": false,
+        "type": "ad",
+        "uid": null,
+        "address_more": "מחיר מציאה",
+        "broker_avatar": "",
+        "hood_id": 770,
+        "office_about": null,
+        "office_logo_url": "//img.yad2.co.il/Pic/TivMiniSite/7c953d7c-2fda-4420-b902-a977ed3623dc.jpeg?t=1670226063131",
+        "square_meters": 65,
+        "HomeTypeID_text": "דירה",
+        "neighborhood": "קרית דוד אלעזר",
+        "AssetClassificationID_text": "משופץ",
+        "Rooms_text": 3,
+        "abovePrice": "3000"
+    }
+]
