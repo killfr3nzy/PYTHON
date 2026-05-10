@@ -1,30 +1,31 @@
 """Fetches traffic and municipal fines for an Israeli license plate.
 
-Two modes (config.PARSER_MODE):
+Three modes (config.PARSER_MODE):
 
-* `mock`  - returns a deterministic sample dataset. Use for demos, local
-            development, and when the live endpoints are blocked by captcha.
-* `live`  - hits the Israeli government services. The eservices.mot.gov.il
-            endpoint requires solving a captcha; integrate a service such as
-            2captcha or Anti-Captcha before using this mode in production.
+* `mock` — deterministic sample dataset for demos and tests.
+* `live` — Playwright drives the gov.il lookup form. The reCAPTCHA v2
+            token is obtained via a `CaptchaSolver` (see captcha.py).
+            The page is JS-rendered and tied to a personal ID — the
+            caller must pass `israeli_id` together with the plate.
 
-The live implementation is intentionally minimal: it issues the lookup request
-and surfaces a clear error if captcha or auth blocks the response. Wire your
-captcha solver into `_solve_captcha` to enable end-to-end automation.
+The live flow targets the public ticket-lookup page (configurable via
+`MOT_LOOKUP_URL`). Selectors are kept in `LIVE_SELECTORS` at the bottom
+of this file — adjust them after recording the actual flow with
+`python -m playwright codegen <url>`.
 """
 
 from __future__ import annotations
 
 import datetime as dt
+import logging
+import re
 from dataclasses import dataclass, field, asdict
 from typing import Iterable
 
-import requests
-
+from captcha import CaptchaError, create_solver
 from config import settings
 
-
-MOT_LOOKUP_URL = "https://eservices.mot.gov.il/RashotApi/api/Reports/CheckReportsByVehicleNumber"
+logger = logging.getLogger(__name__)
 
 
 @dataclass
@@ -64,18 +65,22 @@ class LookupResult:
         return sum(f.amount_ils for f in self.fines)
 
 
-def lookup(plate: str) -> LookupResult:
-    plate = _normalize_plate(plate)
+def lookup(plate: str, israeli_id: str | None = None) -> LookupResult:
+    plate = _normalize_digits(plate)
     if not plate:
         return LookupResult(plate=plate, error="Некорректный номер машины")
 
     if settings.parser_mode == "live":
-        return _lookup_live(plate)
+        israeli_id = _normalize_digits(israeli_id or "")
+        if not israeli_id:
+            return LookupResult(plate=plate, error="Для live-режима нужен ID (תעודת זהות)")
+        return _lookup_live(plate, israeli_id)
+
     return _lookup_mock(plate)
 
 
-def _normalize_plate(plate: str) -> str:
-    return "".join(ch for ch in plate if ch.isdigit())
+def _normalize_digits(value: str) -> str:
+    return "".join(ch for ch in (value or "") if ch.isdigit())
 
 
 def _lookup_mock(plate: str) -> LookupResult:
@@ -116,46 +121,97 @@ def _lookup_mock(plate: str) -> LookupResult:
     return LookupResult(plate=plate, fines=samples)
 
 
-def _lookup_live(plate: str) -> LookupResult:
-    captcha_token = _solve_captcha()
-    if not captcha_token:
+# ---------------------------------------------------------------------------
+# Live mode (Playwright)
+# ---------------------------------------------------------------------------
+
+LIVE_SELECTORS = {
+    # CSS selectors of the lookup form. Adjust after `playwright codegen`.
+    "plate_input": "input[name='vehicleNumber'], input#vehicle-number",
+    "id_input": "input[name='idNumber'], input#id-number",
+    "submit_button": "button[type='submit'], button#search",
+    "result_row": "table.results tr, div.fine-row",
+    "result_cells": "td, .cell",
+    # Some pages embed a hidden field that needs the captcha token injected.
+    "captcha_response": "textarea#g-recaptcha-response",
+}
+
+
+def _lookup_live(plate: str, israeli_id: str) -> LookupResult:
+    try:
+        from playwright.sync_api import sync_playwright
+    except ImportError:
+        return LookupResult(plate=plate, error="Playwright не установлен. См. requirements.txt")
+
+    if not settings.mot_site_key:
         return LookupResult(
             plate=plate,
-            error="Не удалось решить капчу. Подключите 2captcha/Anti-Captcha.",
+            error="MOT_SITE_KEY не задан в .env (нужен sitekey reCAPTCHA v2)",
         )
+
+    solver = create_solver()
     try:
-        response = requests.post(
-            MOT_LOOKUP_URL,
-            json={"vehicleNumber": plate, "captchaToken": captcha_token},
-            timeout=15,
-        )
-        response.raise_for_status()
-    except requests.RequestException as exc:
-        return LookupResult(plate=plate, error=f"Ошибка запроса к gov.il: {exc}")
+        token = solver.solve_recaptcha_v2(settings.mot_site_key, settings.mot_lookup_url)
+    except CaptchaError as exc:
+        return LookupResult(plate=plate, error=f"Капча: {exc}")
 
-    payload = response.json()
-    return LookupResult(plate=plate, fines=list(_parse_mot_payload(payload)))
+    try:
+        with sync_playwright() as p:
+            browser = p.chromium.launch(headless=settings.playwright_headless)
+            context = browser.new_context(locale="he-IL")
+            page = context.new_page()
+            page.goto(settings.mot_lookup_url, wait_until="networkidle")
+
+            page.fill(LIVE_SELECTORS["plate_input"], plate)
+            page.fill(LIVE_SELECTORS["id_input"], israeli_id)
+
+            page.evaluate(
+                "(token) => { const el = document.querySelector(arguments[1]) || "
+                "document.querySelector('textarea#g-recaptcha-response'); "
+                "if (el) { el.style.display=''; el.value = token; } }",
+                token,
+                LIVE_SELECTORS["captcha_response"],
+            )
+
+            page.click(LIVE_SELECTORS["submit_button"])
+            page.wait_for_load_state("networkidle", timeout=20_000)
+
+            fines = list(_extract_fines_from_page(page))
+            browser.close()
+            return LookupResult(plate=plate, fines=fines)
+    except Exception as exc:
+        logger.exception("live lookup failed")
+        return LookupResult(plate=plate, error=f"Playwright: {exc}")
 
 
-def _solve_captcha() -> str | None:
-    # TODO: integrate 2captcha / Anti-Captcha. Keep this stub explicit so the
-    # caller sees a clear error in `live` mode until the integration is wired.
-    return None
-
-
-def _parse_mot_payload(payload: dict) -> Iterable[Fine]:
-    for item in payload.get("reports", []):
-        try:
-            issued_at = dt.date.fromisoformat(item["date"][:10])
-        except (KeyError, ValueError):
+def _extract_fines_from_page(page) -> Iterable[Fine]:
+    rows = page.query_selector_all(LIVE_SELECTORS["result_row"])
+    for row in rows:
+        cells = [c.inner_text().strip() for c in row.query_selector_all(LIVE_SELECTORS["result_cells"])]
+        if len(cells) < 4:
             continue
-        yield Fine(
-            fine_id=str(item.get("reportNumber", "")),
-            issued_at=issued_at,
-            location=item.get("location", ""),
-            violation=item.get("violation", ""),
-            amount_ils=int(item.get("amount", 0)),
-            status=item.get("status", ""),
-            source="משרד התחבורה",
-            photo_url=item.get("photoUrl"),
-        )
+        try:
+            yield Fine(
+                fine_id=cells[0],
+                issued_at=_parse_he_date(cells[1]),
+                location=cells[2],
+                violation=cells[3],
+                amount_ils=_parse_amount(cells[4] if len(cells) > 4 else "0"),
+                status=cells[5] if len(cells) > 5 else "",
+                source="משרד התחבורה",
+            )
+        except (ValueError, IndexError) as exc:
+            logger.warning("skipped unparseable row %r: %s", cells, exc)
+
+
+def _parse_he_date(value: str) -> dt.date:
+    # Accepts dd/mm/yyyy or yyyy-mm-dd
+    if "/" in value:
+        d, m, y = value.split("/")
+        return dt.date(int(y), int(m), int(d))
+    return dt.date.fromisoformat(value[:10])
+
+
+def _parse_amount(value: str) -> int:
+    digits = re.sub(r"[^\d]", "", value)
+    return int(digits) if digits else 0

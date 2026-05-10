@@ -4,3 +4,4 @@ requests>=2.31.0
 python-dotenv>=1.0.0
 reportlab>=4.0.0
 python-bidi>=0.4.2
+playwright>=1.40.0

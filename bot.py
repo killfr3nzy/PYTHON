@@ -2,14 +2,16 @@
 
 Flow:
     /start -> bot asks for license plate
-    user sends plate -> parser.lookup -> Claude/template letters per fine
+    user sends plate -> bot asks for Israeli ID (only in live mode)
+    user sends ID    -> parser.lookup -> Claude/template letters per fine
     bot returns: summary message + .txt attachment per appealable fine
+
+In mock mode (PARSER_MODE=mock) the ID step is skipped.
 """
 
 from __future__ import annotations
 
 import asyncio
-import io
 import logging
 
 from aiogram import Bot, Dispatcher, F
@@ -29,6 +31,7 @@ logger = logging.getLogger(__name__)
 
 class Flow(StatesGroup):
     waiting_for_plate = State()
+    waiting_for_id = State()
 
 
 dp = Dispatcher(storage=MemoryStorage())
@@ -36,43 +39,68 @@ dp = Dispatcher(storage=MemoryStorage())
 
 @dp.message(Command("start"))
 async def cmd_start(message: Message, state: FSMContext) -> None:
+    await state.clear()
     await state.set_state(Flow.waiting_for_plate)
     await message.answer(
-        "שלום! Я проверю ваши штрафы за 2 минуты.\n\n"
+        "שלום! Я проверю ваши штрафы и подготовлю апелляции.\n\n"
         "Отправьте номер вашего автомобиля (только цифры, например 12345678)."
     )
 
 
 @dp.message(Command("help"))
 async def cmd_help(message: Message) -> None:
-    mode = "Claude API" if settings.use_claude else "шаблоны"
-    parser_mode = settings.parser_mode
-    await message.answer(
-        "Сервис автоматических апелляций по израильским штрафам.\n\n"
-        f"Режим генератора писем: {mode}\n"
-        f"Режим парсера: {parser_mode}\n\n"
-        "/start — проверить штрафы по номеру машины\n"
-        "/help — эта справка"
-    )
+    llm = "Claude API" if settings.use_claude else "шаблоны"
+    parts = [
+        "Сервис автоматических апелляций по израильским штрафам.",
+        "",
+        f"Генератор писем: {llm}",
+        f"Парсер: {settings.parser_mode}",
+        f"Капча: {settings.captcha_provider}",
+        "",
+        "/start — проверить штрафы",
+        "/help — эта справка",
+    ]
+    await message.answer("\n".join(parts))
 
 
 @dp.message(Flow.waiting_for_plate, F.text)
 async def handle_plate(message: Message, state: FSMContext) -> None:
     plate = message.text.strip()
+    await state.update_data(plate=plate)
+
+    if settings.parser_mode == "live":
+        await state.set_state(Flow.waiting_for_id)
+        await message.answer(
+            "Теперь отправьте номер удостоверения личности (תעודת זהות) — "
+            "9 цифр. Это нужно для запроса в gov.il. Данные не сохраняются."
+        )
+        return
+
+    await _run_lookup_and_reply(message, plate=plate, israeli_id=None)
+    await state.clear()
+
+
+@dp.message(Flow.waiting_for_id, F.text)
+async def handle_id(message: Message, state: FSMContext) -> None:
+    israeli_id = message.text.strip()
+    data = await state.get_data()
+    plate = data.get("plate", "")
+    await _run_lookup_and_reply(message, plate=plate, israeli_id=israeli_id)
+    await state.clear()
+
+
+async def _run_lookup_and_reply(message: Message, plate: str, israeli_id: str | None) -> None:
     await message.answer("🔍 Проверяю штрафы, это займёт до минуты...")
 
-    result = await asyncio.to_thread(lookup, plate)
+    result = await asyncio.to_thread(lookup, plate, israeli_id)
     if result.error:
         await message.answer(f"❌ {result.error}")
-        await state.clear()
         return
     if not result.fines:
         await message.answer("✅ Штрафов не найдено. Чисто!")
-        await state.clear()
         return
 
     await _send_report(message, result)
-    await state.clear()
 
 
 async def _send_report(message: Message, result: LookupResult) -> None:
