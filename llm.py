@@ -64,7 +64,7 @@ def _claude_letter(fine: Fine, analysis: Analysis, applicant_name: str) -> str:
 
     message = client.messages.create(
         model=settings.claude_model,
-        max_tokens=900,
+        max_tokens=2000,
         system=SYSTEM_PROMPT,
         messages=[{"role": "user", "content": user_prompt}],
     )
