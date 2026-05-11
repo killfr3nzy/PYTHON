@@ -4,6 +4,11 @@ This sandbox has no outbound internet (`host_not_allowed` for gov.il,
 2captcha.com, even google.com), so the live test must run on your own
 machine. Everything else is wired up.
 
+The bot queries all enabled municipal portals listed in `sources.py`
+(Jerusalem, Tel Aviv-Yafo, Haifa, Beer Sheva, Rishon LeZion, Netanya,
+Petah Tikva, Holon, and the national police). A failure in one source
+is recorded as a per-city warning but does not stop the rest.
+
 ## 1. Pull and install
 
 ```bash
@@ -27,28 +32,27 @@ MOT_SITE_KEY=    # <-- FILL THIS IN, see step 3
 PLAYWRIGHT_HEADLESS=false   # leave false for debugging
 ```
 
-## 3. Get the reCAPTCHA sitekey (one-time, ~2 min)
+## 3. Captcha (often not needed)
 
-1. Open https://jerinfogen.jerusalem.muni.il/findreport/default.aspx in
-   a regular browser.
-2. F12 → Elements → search HTML for `g-recaptcha`.
-3. Copy the `data-sitekey="6Le..."` value.
-4. Paste into `.env` as `MOT_SITE_KEY=6Le...`.
+Jerusalem's portal does not use reCAPTCHA — verified live. Leave
+`MOT_SITE_KEY` empty in `.env` and the solver step is skipped.
 
-If the page is NOT protected by reCAPTCHA v2, see step 6 for fallbacks.
+If a different city DOES use reCAPTCHA, add its sitekey to that source
+in `sources.py:ALL_SOURCES` (`site_key` field), not to `.env`.
 
-## 4. Verify selectors (5 min)
+## 4. Verify form structure (per source, 30 sec)
 
-The CSS selectors in `parser.py:LIVE_SELECTORS` are educated guesses.
-Confirm or fix them:
+Each Source in `sources.py` lists Hebrew labels Playwright will use to
+find the input fields. To verify any one of them against the live page:
 
 ```bash
-python -m playwright codegen https://jerinfogen.jerusalem.muni.il/findreport/default.aspx
+python discover.py
 ```
 
-A browser opens with click-to-record. Click the report-number field,
-plate field, ID field, and submit button. Copy the CSS selectors
-Playwright generates into `LIVE_SELECTORS`.
+Opens the configured `MOT_LOOKUP_URL` in a visible browser and prints
+JSON with every input field, its label, role, and placeholder. Use the
+output to update `fine_labels`/`plate_labels`/`id_labels` in `sources.py`
+if the actual page uses different wording.
 
 ## 5. Test from CLI (before involving the bot)
 

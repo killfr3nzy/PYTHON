@@ -124,12 +124,22 @@ async def _run_lookup_and_reply(
 
 
 async def _send_report(message: Message, result: LookupResult) -> None:
-    header = (
-        f"📋 Найдено штрафов: {len(result.fines)}\n"
-        f"💰 Общая сумма: {result.total_amount} ₪\n\n"
-        "Готовлю апелляционные письма..."
-    )
-    await message.answer(header)
+    header_lines = [
+        f"📋 Найдено штрафов: {len(result.fines)}",
+        f"💰 Общая сумма: {result.total_amount} ₪",
+    ]
+    if result.fines:
+        by_src = result.by_source
+        header_lines.append("\nПо городам:")
+        for src, fines in by_src.items():
+            total = sum(f.amount_ils for f in fines)
+            header_lines.append(f"  · {src}: {len(fines)} шт · {total} ₪")
+    if result.warnings:
+        header_lines.append("\n⚠️ Замечания:")
+        for w in result.warnings:
+            header_lines.append(f"  · {w}")
+    header_lines.append("\nГотовлю апелляционные письма...")
+    await message.answer("\n".join(header_lines))
 
     for idx, fine in enumerate(result.fines, start=1):
         analysis, letter = await asyncio.to_thread(build_appeal, fine)

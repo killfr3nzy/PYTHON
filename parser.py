@@ -1,21 +1,13 @@
-"""Fetches traffic and municipal fines.
-
-Real-world flow (per gov.il / municipal portals):
-  Jerusalem and Tel Aviv DO NOT expose a "list fines by plate" API.
-  To unlock the full list you must provide three things:
-      1. Vehicle plate number
-      2. Israeli ID (תעודת זהות)
-      3. At least one known fine number (from SMS / paper ticket)
-
-Once those are submitted, Jerusalem's portal returns every other fine
-tied to that (ID, plate) pair. Tel Aviv works similarly via tlvpay.
+"""Multi-source fine lookup.
 
 Modes (config.PARSER_MODE):
-  * `mock` — deterministic sample data for demos and tests.
-  * `live` — Playwright drives the configured municipal portal.
+  * `mock` — deterministic sample data, no network.
+  * `live` — Playwright drives each enabled municipal portal in turn,
+             accumulating fines into a single result.
 
-Captcha tokens are obtained via captcha.create_solver(). Selectors
-live in LIVE_SELECTORS; tune them with `playwright codegen <url>`.
+Sources live in `sources.py`. Each Source is queried independently — a
+failure in one city does not prevent the others from running, and the
+per-source error is recorded in `LookupResult.warnings`.
 """
 
 from __future__ import annotations
@@ -28,6 +20,7 @@ from typing import Iterable
 
 from captcha import CaptchaError, create_solver
 from config import settings
+from sources import Source, enabled_sources
 
 logger = logging.getLogger(__name__)
 
@@ -63,10 +56,18 @@ class LookupResult:
     plate: str
     fines: list[Fine] = field(default_factory=list)
     error: str | None = None
+    warnings: list[str] = field(default_factory=list)
 
     @property
     def total_amount(self) -> int:
         return sum(f.amount_ils for f in self.fines)
+
+    @property
+    def by_source(self) -> dict[str, list[Fine]]:
+        groups: dict[str, list[Fine]] = {}
+        for f in self.fines:
+            groups.setdefault(f.source, []).append(f)
+        return groups
 
 
 def lookup(plate: str, israeli_id: str | None = None, fine_number: str | None = None) -> LookupResult:
@@ -84,7 +85,7 @@ def lookup(plate: str, israeli_id: str | None = None, fine_number: str | None = 
                 plate=plate,
                 error="Нужен номер любого известного штрафа — без него gov.il не отдаёт список.",
             )
-        return _lookup_live(plate, israeli_id, fine_number)
+        return _lookup_live_all(plate, israeli_id, fine_number)
 
     return _lookup_mock(plate)
 
@@ -103,8 +104,7 @@ def _lookup_mock(plate: str) -> LookupResult:
             violation="חניה במקום אסור",
             amount_ils=250,
             status="לא שולם",
-            source="עיריית תל אביב",
-            photo_url=None,
+            source="עיריית תל אביב-יפו",
             notes="ללא תמונה במערכת",
         ),
         Fine(
@@ -132,74 +132,133 @@ def _lookup_mock(plate: str) -> LookupResult:
 
 
 # ---------------------------------------------------------------------------
-# Live mode (Playwright)
+# Live mode (Playwright, multi-source)
 # ---------------------------------------------------------------------------
 
-# Default target: Jerusalem municipal parking-report search.
-# Source: https://jerinfogen.jerusalem.muni.il/findreport/default.aspx
-LIVE_SELECTORS = {
-    # CSS selectors — adjust with `python -m playwright codegen <MOT_LOOKUP_URL>`.
-    "fine_number_input": "input[name='ReportNumber'], input#txtReportNumber",
-    "plate_input": "input[name='VehicleNumber'], input#txtVehicleNumber",
-    "id_input": "input[name='IdNumber'], input#txtIdNumber",
-    "submit_button": "input[type='submit'], button[type='submit']",
-    "result_row": "table#gvReports tr.row, tr.fine-row",
-    "result_cells": "td",
-    "captcha_response": "textarea#g-recaptcha-response",
-}
+PER_SOURCE_TIMEOUT_MS = 25_000
 
 
-def _lookup_live(plate: str, israeli_id: str, fine_number: str) -> LookupResult:
+def _lookup_live_all(plate: str, israeli_id: str, fine_number: str) -> LookupResult:
     try:
         from playwright.sync_api import sync_playwright
     except ImportError:
         return LookupResult(plate=plate, error="Playwright не установлен. См. requirements.txt")
 
-    token: str | None = None
-    if settings.mot_site_key:
-        solver = create_solver()
-        try:
-            token = solver.solve_recaptcha_v2(settings.mot_site_key, settings.mot_lookup_url)
-        except CaptchaError as exc:
-            return LookupResult(plate=plate, error=f"Капча: {exc}")
-    else:
-        logger.info("MOT_SITE_KEY is empty — skipping captcha solver")
+    aggregated: list[Fine] = []
+    warnings: list[str] = []
+    sources = enabled_sources()
 
     try:
         with sync_playwright() as p:
-            browser = p.chromium.launch(headless=settings.playwright_headless)
-            context = browser.new_context(locale="he-IL")
-            page = context.new_page()
-            page.goto(settings.mot_lookup_url, wait_until="networkidle")
-
-            page.fill(LIVE_SELECTORS["fine_number_input"], fine_number)
-            page.fill(LIVE_SELECTORS["plate_input"], plate)
-            page.fill(LIVE_SELECTORS["id_input"], israeli_id)
-
-            if token:
-                page.evaluate(
-                    "(args) => { const sel = args.selector; const tok = args.token; "
-                    "const el = document.querySelector(sel) "
-                    "  || document.querySelector('textarea#g-recaptcha-response'); "
-                    "if (el) { el.style.display=''; el.value = tok; } }",
-                    {"selector": LIVE_SELECTORS["captcha_response"], "token": token},
+            try:
+                browser = p.chromium.launch(headless=settings.playwright_headless)
+            except Exception as exc:
+                return LookupResult(
+                    plate=plate,
+                    error=f"Не удалось запустить Chromium: {exc}",
                 )
-
-            page.click(LIVE_SELECTORS["submit_button"])
-            page.wait_for_load_state("networkidle", timeout=20_000)
-
-            fines = list(_extract_fines_from_page(page))
-            browser.close()
-            return LookupResult(plate=plate, fines=fines)
+            try:
+                for source in sources:
+                    logger.info("Querying %s (%s)", source.name_ru, source.url)
+                    try:
+                        found = _lookup_one_source(browser, source, plate, israeli_id, fine_number)
+                        aggregated.extend(found)
+                        if not found:
+                            warnings.append(f"{source.name_ru}: штрафов не найдено")
+                    except Exception as exc:
+                        msg = f"{source.name_ru}: {exc}"
+                        logger.warning(msg)
+                        warnings.append(msg)
+            finally:
+                browser.close()
     except Exception as exc:
-        logger.exception("live lookup failed")
-        return LookupResult(plate=plate, error=f"Playwright: {exc}")
+        return LookupResult(plate=plate, error=f"Playwright runtime error: {exc}")
+
+    return LookupResult(plate=plate, fines=aggregated, warnings=warnings)
 
 
-def _extract_fines_from_page(page) -> Iterable[Fine]:
-    rows = page.query_selector_all(LIVE_SELECTORS["result_row"])
+def _lookup_one_source(
+    browser,
+    source: Source,
+    plate: str,
+    israeli_id: str,
+    fine_number: str,
+) -> list[Fine]:
+    token: str | None = None
+    if source.site_key:
+        solver = create_solver()
+        try:
+            token = solver.solve_recaptcha_v2(source.site_key, source.url)
+        except CaptchaError as exc:
+            raise RuntimeError(f"captcha: {exc}") from exc
+
+    context = browser.new_context(locale="he-IL")
+    page = context.new_page()
+    page.set_default_timeout(PER_SOURCE_TIMEOUT_MS)
+    try:
+        page.goto(source.url, wait_until="networkidle")
+
+        _fill_first_match(page, source.fine_labels, fine_number)
+        _fill_first_match(page, source.plate_labels, plate)
+        _fill_first_match(page, source.id_labels, israeli_id)
+
+        if token:
+            page.evaluate(
+                "(tok) => { const el = document.querySelector('textarea#g-recaptcha-response'); "
+                "if (el) { el.style.display=''; el.value = tok; } }",
+                token,
+            )
+
+        _click_first_match(page, source.submit_texts)
+        page.wait_for_load_state("networkidle", timeout=PER_SOURCE_TIMEOUT_MS)
+
+        return list(_extract_fines_from_page(page, source))
+    finally:
+        context.close()
+
+
+def _fill_first_match(page, labels: Iterable[str], value: str) -> None:
+    for label in labels:
+        loc = page.get_by_label(label, exact=False)
+        if loc.count() > 0:
+            loc.first.fill(value)
+            return
+        loc = page.get_by_placeholder(label, exact=False)
+        if loc.count() > 0:
+            loc.first.fill(value)
+            return
+    raise RuntimeError(f"не нашёл поле по меткам {list(labels)}")
+
+
+def _click_first_match(page, texts: Iterable[str]) -> None:
+    for text in texts:
+        loc = page.get_by_role("button", name=text)
+        if loc.count() > 0:
+            loc.first.click()
+            return
+        loc = page.get_by_text(text, exact=True)
+        if loc.count() > 0:
+            loc.first.click()
+            return
+    raise RuntimeError("не нашёл кнопку отправки формы")
+
+
+RESULT_ROW_SELECTORS = [
+    "table tbody tr:has(td)",
+    "[class*='result'] [class*='row']",
+    "[data-testid*='fine']",
+]
+
+
+def _extract_fines_from_page(page, source: Source) -> Iterable[Fine]:
+    rows = []
+    for selector in RESULT_ROW_SELECTORS:
+        rows = page.query_selector_all(selector)
+        if rows:
+            break
     for row in rows:
-        cells = [c.inner_text().strip() for c in row.query_selector_all(LIVE_SELECTORS["result_cells"])]
+        cells = [c.inner_text().strip() for c in row.query_selector_all("td, div, span")]
+        cells = [c for c in cells if c]
         if len(cells) < 4:
             continue
         try:
@@ -210,7 +269,7 @@ def _extract_fines_from_page(page) -> Iterable[Fine]:
                 violation=cells[3],
                 amount_ils=_parse_amount(cells[4] if len(cells) > 4 else "0"),
                 status=cells[5] if len(cells) > 5 else "",
-                source="עיריית ירושלים",
+                source=source.name_he,
             )
         except (ValueError, IndexError) as exc:
             logger.warning("skipped unparseable row %r: %s", cells, exc)
