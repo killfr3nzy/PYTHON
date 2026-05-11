@@ -155,17 +155,15 @@ def _lookup_live(plate: str, israeli_id: str, fine_number: str) -> LookupResult:
     except ImportError:
         return LookupResult(plate=plate, error="Playwright не установлен. См. requirements.txt")
 
-    if not settings.mot_site_key:
-        return LookupResult(
-            plate=plate,
-            error="MOT_SITE_KEY не задан в .env (sitekey reCAPTCHA целевой страницы)",
-        )
-
-    solver = create_solver()
-    try:
-        token = solver.solve_recaptcha_v2(settings.mot_site_key, settings.mot_lookup_url)
-    except CaptchaError as exc:
-        return LookupResult(plate=plate, error=f"Капча: {exc}")
+    token: str | None = None
+    if settings.mot_site_key:
+        solver = create_solver()
+        try:
+            token = solver.solve_recaptcha_v2(settings.mot_site_key, settings.mot_lookup_url)
+        except CaptchaError as exc:
+            return LookupResult(plate=plate, error=f"Капча: {exc}")
+    else:
+        logger.info("MOT_SITE_KEY is empty — skipping captcha solver")
 
     try:
         with sync_playwright() as p:
@@ -178,13 +176,14 @@ def _lookup_live(plate: str, israeli_id: str, fine_number: str) -> LookupResult:
             page.fill(LIVE_SELECTORS["plate_input"], plate)
             page.fill(LIVE_SELECTORS["id_input"], israeli_id)
 
-            page.evaluate(
-                "(args) => { const sel = args.selector; const tok = args.token; "
-                "const el = document.querySelector(sel) "
-                "  || document.querySelector('textarea#g-recaptcha-response'); "
-                "if (el) { el.style.display=''; el.value = tok; } }",
-                {"selector": LIVE_SELECTORS["captcha_response"], "token": token},
-            )
+            if token:
+                page.evaluate(
+                    "(args) => { const sel = args.selector; const tok = args.token; "
+                    "const el = document.querySelector(sel) "
+                    "  || document.querySelector('textarea#g-recaptcha-response'); "
+                    "if (el) { el.style.display=''; el.value = tok; } }",
+                    {"selector": LIVE_SELECTORS["captcha_response"], "token": token},
+                )
 
             page.click(LIVE_SELECTORS["submit_button"])
             page.wait_for_load_state("networkidle", timeout=20_000)
