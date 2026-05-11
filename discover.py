@@ -77,21 +77,23 @@ def main() -> int:
     from playwright.sync_api import sync_playwright
 
     url = settings.mot_lookup_url
-    print(f"▸ Opening {url}", file=sys.stderr)
+    headless = settings.playwright_headless
+    print(f"▸ Opening {url} (headless={headless})", file=sys.stderr)
 
     with sync_playwright() as p:
-        browser = p.chromium.launch(headless=False, args=["--lang=he-IL"])
+        browser = p.chromium.launch(headless=headless, args=["--lang=he-IL"])
         context = browser.new_context(locale="he-IL")
         page = context.new_page()
         page.goto(url, wait_until="networkidle", timeout=30_000)
         page.wait_for_timeout(2_000)
         result = page.evaluate(JS_INSPECT)
         print(json.dumps(result, ensure_ascii=False, indent=2))
-        print(
-            "\n▸ Browser stays open for inspection. Press Enter to close.",
-            file=sys.stderr,
-        )
-        input()
+        if not headless:
+            print(
+                "\n▸ Browser stays open for inspection. Press Enter to close.",
+                file=sys.stderr,
+            )
+            input()
         browser.close()
     return 0
 
