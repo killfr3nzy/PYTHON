@@ -135,6 +135,43 @@ def _lookup_mock(plate: str) -> LookupResult:
 
 PER_SOURCE_TIMEOUT_MS = 25_000
 
+# Real desktop Chrome UA. Akamai + Google reCAPTCHA score Playwright's default
+# UA (HeadlessChrome) far below human threshold and serve image challenges.
+USER_AGENT = (
+    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
+    "AppleWebKit/537.36 (KHTML, like Gecko) "
+    "Chrome/120.0.0.0 Safari/537.36"
+)
+
+# Minimal stealth payload: hide the most obvious automation fingerprints that
+# reCAPTCHA v3 / Akamai use to score sessions below the human threshold.
+# Comprehensive packages exist (playwright-stealth) but inline is enough for
+# the few flags that actually move the needle here.
+STEALTH_INIT_JS = r"""
+() => {
+  Object.defineProperty(navigator, 'webdriver', { get: () => undefined });
+  Object.defineProperty(navigator, 'languages', { get: () => ['he-IL', 'he', 'en-US', 'en'] });
+  Object.defineProperty(navigator, 'plugins', {
+    get: () => [
+      { name: 'PDF Viewer' },
+      { name: 'Chrome PDF Viewer' },
+      { name: 'Chromium PDF Viewer' },
+    ],
+  });
+  Object.defineProperty(navigator, 'platform', { get: () => 'MacIntel' });
+  Object.defineProperty(navigator, 'hardwareConcurrency', { get: () => 8 });
+  Object.defineProperty(navigator, 'deviceMemory', { get: () => 8 });
+  if (!window.chrome) window.chrome = { runtime: {}, app: { isInstalled: false } };
+  const origQuery = window.navigator.permissions && window.navigator.permissions.query;
+  if (origQuery) {
+    window.navigator.permissions.query = (p) =>
+      p.name === 'notifications'
+        ? Promise.resolve({ state: Notification.permission })
+        : origQuery(p);
+  }
+}
+"""
+
 
 def _lookup_live_all(plate: str, israeli_id: str, fine_number: str) -> LookupResult:
     try:
@@ -196,14 +233,19 @@ def _lookup_one_source(
             if source.captcha_kind == "recaptcha_v3":
                 token = solver.solve_recaptcha_v3(site_key, source.url, source.captcha_action)
             elif source.captcha_kind == "recaptcha_v2_invisible":
-                token = solver.solve_recaptcha_v2(site_key, source.url, invisible=True)
+                token = solver.solve_recaptcha_v2(site_key, source.url, invisible=True, user_agent=USER_AGENT)
             else:
-                token = solver.solve_recaptcha_v2(site_key, source.url)
+                token = solver.solve_recaptcha_v2(site_key, source.url, user_agent=USER_AGENT)
             logger.info("Captcha solved, token len=%d", len(token))
         except CaptchaError as exc:
             raise RuntimeError(f"captcha: {exc}") from exc
 
-    context = browser.new_context(locale="he-IL")
+    context = browser.new_context(
+        locale="he-IL",
+        user_agent=USER_AGENT,
+        viewport={"width": 1280, "height": 800},
+    )
+    context.add_init_script(STEALTH_INIT_JS)
     page = context.new_page()
     page.set_default_timeout(PER_SOURCE_TIMEOUT_MS)
     try:

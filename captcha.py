@@ -32,7 +32,7 @@ class CaptchaSolver(ABC):
     name: str = "abstract"
 
     @abstractmethod
-    def solve_recaptcha_v2(self, site_key: str, page_url: str, invisible: bool = False) -> str:
+    def solve_recaptcha_v2(self, site_key: str, page_url: str, invisible: bool = False, user_agent: str = "") -> str:
         """Return a g-recaptcha-response token. Pass invisible=True for v2 invisible."""
 
     def solve_recaptcha_v3(self, site_key: str, page_url: str, action: str = "") -> str:
@@ -49,7 +49,7 @@ class MockSolver(CaptchaSolver):
 
     name = "mock"
 
-    def solve_recaptcha_v2(self, site_key: str, page_url: str, invisible: bool = False) -> str:
+    def solve_recaptcha_v2(self, site_key: str, page_url: str, invisible: bool = False, user_agent: str = "") -> str:
         logger.info("MockSolver.solve_recaptcha_v2(%s, invisible=%s)", site_key, invisible)
         return "MOCK_TOKEN_" + site_key[:8]
 
@@ -71,7 +71,7 @@ class TwoCaptchaSolver(CaptchaSolver):
         self.poll_interval = poll_interval
         self.timeout = timeout
 
-    def solve_recaptcha_v2(self, site_key: str, page_url: str, invisible: bool = False) -> str:
+    def solve_recaptcha_v2(self, site_key: str, page_url: str, invisible: bool = False, user_agent: str = "") -> str:
         params = {
             "method": "userrecaptcha",
             "googlekey": site_key,
@@ -79,6 +79,8 @@ class TwoCaptchaSolver(CaptchaSolver):
         }
         if invisible:
             params["invisible"] = 1
+        if user_agent:
+            params["userAgent"] = user_agent
         job_id = self._submit(**params)
         return self._poll(job_id)
 
@@ -135,7 +137,7 @@ class AntiCaptchaSolver(CaptchaSolver):
         self.poll_interval = poll_interval
         self.timeout = timeout
 
-    def solve_recaptcha_v2(self, site_key: str, page_url: str, invisible: bool = False) -> str:
+    def solve_recaptcha_v2(self, site_key: str, page_url: str, invisible: bool = False, user_agent: str = "") -> str:
         task = {
             "type": "NoCaptchaTaskProxyless",
             "websiteURL": page_url,
@@ -143,6 +145,8 @@ class AntiCaptchaSolver(CaptchaSolver):
         }
         if invisible:
             task["isInvisible"] = True
+        if user_agent:
+            task["userAgent"] = user_agent
         job_id = self._create_task(task)
         return self._poll(job_id)
 
