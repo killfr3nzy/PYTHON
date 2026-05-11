@@ -35,6 +35,14 @@ class CaptchaSolver(ABC):
     def solve_recaptcha_v2(self, site_key: str, page_url: str) -> str:
         """Return a g-recaptcha-response token for the given (sitekey, URL)."""
 
+    def solve_recaptcha_v3(self, site_key: str, page_url: str, action: str = "") -> str:
+        """v3 returns a token with score; many sites only need the token.
+
+        Default implementation falls back to v2-style call — providers that
+        support v3 natively (2captcha, AntiCaptcha) override this.
+        """
+        return self.solve_recaptcha_v2(site_key, page_url)
+
 
 class MockSolver(CaptchaSolver):
     """Dev/test stub: returns a constant string, never hits the network."""
@@ -44,6 +52,10 @@ class MockSolver(CaptchaSolver):
     def solve_recaptcha_v2(self, site_key: str, page_url: str) -> str:
         logger.info("MockSolver.solve_recaptcha_v2(%s, %s)", site_key, page_url)
         return "MOCK_TOKEN_" + site_key[:8]
+
+    def solve_recaptcha_v3(self, site_key: str, page_url: str, action: str = "") -> str:
+        logger.info("MockSolver.solve_recaptcha_v3(%s, action=%s)", site_key, action)
+        return "MOCK_V3_TOKEN_" + site_key[:8]
 
 
 class TwoCaptchaSolver(CaptchaSolver):
@@ -60,21 +72,29 @@ class TwoCaptchaSolver(CaptchaSolver):
         self.timeout = timeout
 
     def solve_recaptcha_v2(self, site_key: str, page_url: str) -> str:
-        job_id = self._submit(site_key, page_url)
+        job_id = self._submit(
+            method="userrecaptcha",
+            googlekey=site_key,
+            pageurl=page_url,
+        )
         return self._poll(job_id)
 
-    def _submit(self, site_key: str, page_url: str) -> str:
-        r = requests.post(
-            f"{self.base}/in.php",
-            data={
-                "key": self.api_key,
-                "method": "userrecaptcha",
-                "googlekey": site_key,
-                "pageurl": page_url,
-                "json": 1,
-            },
-            timeout=15,
-        )
+    def solve_recaptcha_v3(self, site_key: str, page_url: str, action: str = "") -> str:
+        params = {
+            "method": "userrecaptcha",
+            "version": "v3",
+            "googlekey": site_key,
+            "pageurl": page_url,
+            "min_score": "0.3",
+        }
+        if action:
+            params["action"] = action
+        job_id = self._submit(**params)
+        return self._poll(job_id)
+
+    def _submit(self, **kwargs) -> str:
+        data = {"key": self.api_key, "json": 1, **kwargs}
+        r = requests.post(f"{self.base}/in.php", data=data, timeout=15)
         r.raise_for_status()
         payload = r.json()
         if payload.get("status") != 1:
@@ -100,7 +120,7 @@ class TwoCaptchaSolver(CaptchaSolver):
 
 
 class AntiCaptchaSolver(CaptchaSolver):
-    """https://anti-captcha.com — similar submit/poll flow, slightly different API."""
+    """https://anti-captcha.com — similar submit/poll flow."""
 
     name = "anti-captcha"
     base = "https://api.anti-captcha.com"
@@ -113,20 +133,29 @@ class AntiCaptchaSolver(CaptchaSolver):
         self.timeout = timeout
 
     def solve_recaptcha_v2(self, site_key: str, page_url: str) -> str:
-        job_id = self._submit(site_key, page_url)
+        job_id = self._create_task({
+            "type": "NoCaptchaTaskProxyless",
+            "websiteURL": page_url,
+            "websiteKey": site_key,
+        })
         return self._poll(job_id)
 
-    def _submit(self, site_key: str, page_url: str) -> str:
+    def solve_recaptcha_v3(self, site_key: str, page_url: str, action: str = "") -> str:
+        task = {
+            "type": "RecaptchaV3TaskProxyless",
+            "websiteURL": page_url,
+            "websiteKey": site_key,
+            "minScore": 0.3,
+        }
+        if action:
+            task["pageAction"] = action
+        job_id = self._create_task(task)
+        return self._poll(job_id)
+
+    def _create_task(self, task: dict) -> int:
         r = requests.post(
             f"{self.base}/createTask",
-            json={
-                "clientKey": self.api_key,
-                "task": {
-                    "type": "NoCaptchaTaskProxyless",
-                    "websiteURL": page_url,
-                    "websiteKey": site_key,
-                },
-            },
+            json={"clientKey": self.api_key, "task": task},
             timeout=15,
         )
         r.raise_for_status()

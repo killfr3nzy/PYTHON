@@ -33,6 +33,7 @@ from config import settings
 from llm import build_appeal
 from parser import Fine, LookupResult, lookup
 from pdf_appeal import render_appeal_pdf
+from sources import any_requires_id
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -180,11 +181,19 @@ async def handle_plate(message: Message, state: FSMContext) -> None:
     await state.update_data(plate=plate)
 
     if settings.parser_mode == "live":
-        await state.set_state(Flow.waiting_for_id)
+        if any_requires_id():
+            await state.set_state(Flow.waiting_for_id)
+            await message.answer(
+                "Теперь отправьте номер удостоверения личности (תעודת זהות) — "
+                "9 цифр. Это нужно для запроса в муниципальные базы. "
+                "Данные не сохраняются после ответа."
+            )
+            return
+        # No source needs the ID — skip straight to the fine number.
+        await state.set_state(Flow.waiting_for_fine_number)
         await message.answer(
-            "Теперь отправьте номер удостоверения личности (תעודת זהות) — "
-            "9 цифр. Это нужно для запроса в муниципальные базы. "
-            "Данные не сохраняются после ответа."
+            "Отправьте номер штрафа (מספר דוח) из SMS, бумажного уведомления "
+            "или прошлого отчёта."
         )
         return
 

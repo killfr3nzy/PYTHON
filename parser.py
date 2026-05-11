@@ -78,12 +78,10 @@ def lookup(plate: str, israeli_id: str | None = None, fine_number: str | None = 
     if settings.parser_mode == "live":
         israeli_id = _normalize_digits(israeli_id or "")
         fine_number = _normalize_digits(fine_number or "")
-        if not israeli_id:
-            return LookupResult(plate=plate, error="Для live-режима нужен ID (תעודת זהות)")
         if not fine_number:
             return LookupResult(
                 plate=plate,
-                error="Нужен номер любого известного штрафа — без него gov.il не отдаёт список.",
+                error="Нужен номер штрафа — муниципальные сайты не отдают список без него.",
             )
         return _lookup_live_all(plate, israeli_id, fine_number)
 
@@ -184,11 +182,20 @@ def _lookup_one_source(
     israeli_id: str,
     fine_number: str,
 ) -> list[Fine]:
+    if source.requires_id and not israeli_id:
+        raise RuntimeError("этот источник требует ID, но он не был передан")
+
+    # Per-source site_key (sources.py), with env fallback (MOT_SITE_KEY) for
+    # local overrides during testing.
+    site_key = source.site_key or settings.mot_site_key
     token: str | None = None
-    if source.site_key:
+    if site_key and source.captcha_kind != "none":
         solver = create_solver()
         try:
-            token = solver.solve_recaptcha_v2(source.site_key, source.url)
+            if source.captcha_kind == "recaptcha_v3":
+                token = solver.solve_recaptcha_v3(site_key, source.url, source.captcha_action)
+            else:
+                token = solver.solve_recaptcha_v2(site_key, source.url)
         except CaptchaError as exc:
             raise RuntimeError(f"captcha: {exc}") from exc
 
@@ -198,14 +205,19 @@ def _lookup_one_source(
     try:
         page.goto(source.url, wait_until="networkidle")
 
-        _fill_first_match(page, source.fine_labels, fine_number)
-        _fill_first_match(page, source.plate_labels, plate)
-        _fill_first_match(page, source.id_labels, israeli_id)
+        if source.fine_labels:
+            _fill_first_match(page, source.fine_labels, fine_number)
+        if source.plate_labels:
+            _fill_first_match(page, source.plate_labels, plate)
+        if source.id_labels and israeli_id:
+            _fill_first_match(page, source.id_labels, israeli_id)
 
         if token:
             page.evaluate(
-                "(tok) => { const el = document.querySelector('textarea#g-recaptcha-response'); "
-                "if (el) { el.style.display=''; el.value = tok; } }",
+                "(tok) => { "
+                "  const sel = 'textarea#g-recaptcha-response, input[name=\"g-recaptcha-response\"]'; "
+                "  document.querySelectorAll(sel).forEach((el) => { el.style.display=''; el.value = tok; }); "
+                "}",
                 token,
             )
 
