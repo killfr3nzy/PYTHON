@@ -11,6 +11,7 @@ without touching the filesystem.
 from __future__ import annotations
 
 import io
+import os
 from dataclasses import dataclass
 
 from bidi.algorithm import get_display
@@ -31,6 +32,21 @@ LINE_HEIGHT = 0.55 * cm
 BODY_FONT_SIZE = 11
 WRAP_CHARS = 85
 
+# Order matters — first matching pair wins.
+FONT_CANDIDATES = [
+    # Debian/Ubuntu (Playwright base image after `apt install fonts-dejavu-core`)
+    ("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf",
+     "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf"),
+    # Alpine / some minimal images
+    ("/usr/share/fonts/dejavu/DejaVuSans.ttf",
+     "/usr/share/fonts/dejavu/DejaVuSans-Bold.ttf"),
+    # macOS Homebrew or system fallback
+    ("/Library/Fonts/Arial Unicode.ttf",
+     "/Library/Fonts/Arial Unicode.ttf"),
+    ("/System/Library/Fonts/Supplemental/Arial Unicode.ttf",
+     "/System/Library/Fonts/Supplemental/Arial Unicode.ttf"),
+]
+
 _FONTS_REGISTERED = False
 
 
@@ -38,9 +54,17 @@ def _register_fonts() -> None:
     global _FONTS_REGISTERED
     if _FONTS_REGISTERED:
         return
-    pdfmetrics.registerFont(TTFont("DV", "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf"))
-    pdfmetrics.registerFont(TTFont("DV-B", "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf"))
-    _FONTS_REGISTERED = True
+    for regular, bold in FONT_CANDIDATES:
+        if os.path.isfile(regular) and os.path.isfile(bold):
+            pdfmetrics.registerFont(TTFont("DV", regular))
+            pdfmetrics.registerFont(TTFont("DV-B", bold))
+            _FONTS_REGISTERED = True
+            return
+    raise RuntimeError(
+        "Не найден шрифт с поддержкой иврита. "
+        "В Docker-образе выполните `apt install fonts-dejavu-core` "
+        "или подложите .ttf файл и добавьте его путь в FONT_CANDIDATES."
+    )
 
 
 def render_appeal_pdf(fine: Fine, letter: str, applicant_name: str = "____________") -> bytes:
