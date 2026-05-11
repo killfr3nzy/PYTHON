@@ -44,11 +44,10 @@ ALL_SOURCES: list[Source] = [
         fine_labels=("מספר דוח",),
         plate_labels=("מספר רכב",),
         submit_texts=("הצגת סכום",),
-        captcha_kind="recaptcha_v3",
-        captcha_action="submit",          # typical; refine after sniffing network
+        site_key="6LfSsG8sAAAAAHp9p4lvFSadQiUG8hvL4czrybQR",
+        captcha_kind="recaptcha_v2_invisible",
         requires_id=False,
         enabled=True,
-        # site_key set via env override (MOT_SITE_KEY) until we have the real value.
     ),
 
     # Disabled: Akamai blocks all clients with 403 Access Denied.

@@ -32,8 +32,8 @@ class CaptchaSolver(ABC):
     name: str = "abstract"
 
     @abstractmethod
-    def solve_recaptcha_v2(self, site_key: str, page_url: str) -> str:
-        """Return a g-recaptcha-response token for the given (sitekey, URL)."""
+    def solve_recaptcha_v2(self, site_key: str, page_url: str, invisible: bool = False) -> str:
+        """Return a g-recaptcha-response token. Pass invisible=True for v2 invisible."""
 
     def solve_recaptcha_v3(self, site_key: str, page_url: str, action: str = "") -> str:
         """v3 returns a token with score; many sites only need the token.
@@ -49,8 +49,8 @@ class MockSolver(CaptchaSolver):
 
     name = "mock"
 
-    def solve_recaptcha_v2(self, site_key: str, page_url: str) -> str:
-        logger.info("MockSolver.solve_recaptcha_v2(%s, %s)", site_key, page_url)
+    def solve_recaptcha_v2(self, site_key: str, page_url: str, invisible: bool = False) -> str:
+        logger.info("MockSolver.solve_recaptcha_v2(%s, invisible=%s)", site_key, invisible)
         return "MOCK_TOKEN_" + site_key[:8]
 
     def solve_recaptcha_v3(self, site_key: str, page_url: str, action: str = "") -> str:
@@ -71,12 +71,15 @@ class TwoCaptchaSolver(CaptchaSolver):
         self.poll_interval = poll_interval
         self.timeout = timeout
 
-    def solve_recaptcha_v2(self, site_key: str, page_url: str) -> str:
-        job_id = self._submit(
-            method="userrecaptcha",
-            googlekey=site_key,
-            pageurl=page_url,
-        )
+    def solve_recaptcha_v2(self, site_key: str, page_url: str, invisible: bool = False) -> str:
+        params = {
+            "method": "userrecaptcha",
+            "googlekey": site_key,
+            "pageurl": page_url,
+        }
+        if invisible:
+            params["invisible"] = 1
+        job_id = self._submit(**params)
         return self._poll(job_id)
 
     def solve_recaptcha_v3(self, site_key: str, page_url: str, action: str = "") -> str:
@@ -132,12 +135,15 @@ class AntiCaptchaSolver(CaptchaSolver):
         self.poll_interval = poll_interval
         self.timeout = timeout
 
-    def solve_recaptcha_v2(self, site_key: str, page_url: str) -> str:
-        job_id = self._create_task({
+    def solve_recaptcha_v2(self, site_key: str, page_url: str, invisible: bool = False) -> str:
+        task = {
             "type": "NoCaptchaTaskProxyless",
             "websiteURL": page_url,
             "websiteKey": site_key,
-        })
+        }
+        if invisible:
+            task["isInvisible"] = True
+        job_id = self._create_task(task)
         return self._poll(job_id)
 
     def solve_recaptcha_v3(self, site_key: str, page_url: str, action: str = "") -> str:

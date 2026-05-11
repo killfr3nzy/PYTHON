@@ -194,6 +194,8 @@ def _lookup_one_source(
         try:
             if source.captcha_kind == "recaptcha_v3":
                 token = solver.solve_recaptcha_v3(site_key, source.url, source.captcha_action)
+            elif source.captcha_kind == "recaptcha_v2_invisible":
+                token = solver.solve_recaptcha_v2(site_key, source.url, invisible=True)
             else:
                 token = solver.solve_recaptcha_v2(site_key, source.url)
         except CaptchaError as exc:
