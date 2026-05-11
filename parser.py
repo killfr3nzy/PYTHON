@@ -1,17 +1,21 @@
-"""Fetches traffic and municipal fines for an Israeli license plate.
+"""Fetches traffic and municipal fines.
 
-Three modes (config.PARSER_MODE):
+Real-world flow (per gov.il / municipal portals):
+  Jerusalem and Tel Aviv DO NOT expose a "list fines by plate" API.
+  To unlock the full list you must provide three things:
+      1. Vehicle plate number
+      2. Israeli ID (תעודת זהות)
+      3. At least one known fine number (from SMS / paper ticket)
 
-* `mock` — deterministic sample dataset for demos and tests.
-* `live` — Playwright drives the gov.il lookup form. The reCAPTCHA v2
-            token is obtained via a `CaptchaSolver` (see captcha.py).
-            The page is JS-rendered and tied to a personal ID — the
-            caller must pass `israeli_id` together with the plate.
+Once those are submitted, Jerusalem's portal returns every other fine
+tied to that (ID, plate) pair. Tel Aviv works similarly via tlvpay.
 
-The live flow targets the public ticket-lookup page (configurable via
-`MOT_LOOKUP_URL`). Selectors are kept in `LIVE_SELECTORS` at the bottom
-of this file — adjust them after recording the actual flow with
-`python -m playwright codegen <url>`.
+Modes (config.PARSER_MODE):
+  * `mock` — deterministic sample data for demos and tests.
+  * `live` — Playwright drives the configured municipal portal.
+
+Captcha tokens are obtained via captcha.create_solver(). Selectors
+live in LIVE_SELECTORS; tune them with `playwright codegen <url>`.
 """
 
 from __future__ import annotations
@@ -65,16 +69,22 @@ class LookupResult:
         return sum(f.amount_ils for f in self.fines)
 
 
-def lookup(plate: str, israeli_id: str | None = None) -> LookupResult:
+def lookup(plate: str, israeli_id: str | None = None, fine_number: str | None = None) -> LookupResult:
     plate = _normalize_digits(plate)
     if not plate:
         return LookupResult(plate=plate, error="Некорректный номер машины")
 
     if settings.parser_mode == "live":
         israeli_id = _normalize_digits(israeli_id or "")
+        fine_number = _normalize_digits(fine_number or "")
         if not israeli_id:
             return LookupResult(plate=plate, error="Для live-режима нужен ID (תעודת זהות)")
-        return _lookup_live(plate, israeli_id)
+        if not fine_number:
+            return LookupResult(
+                plate=plate,
+                error="Нужен номер любого известного штрафа — без него gov.il не отдаёт список.",
+            )
+        return _lookup_live(plate, israeli_id, fine_number)
 
     return _lookup_mock(plate)
 
@@ -125,19 +135,21 @@ def _lookup_mock(plate: str) -> LookupResult:
 # Live mode (Playwright)
 # ---------------------------------------------------------------------------
 
+# Default target: Jerusalem municipal parking-report search.
+# Source: https://jerinfogen.jerusalem.muni.il/findreport/default.aspx
 LIVE_SELECTORS = {
-    # CSS selectors of the lookup form. Adjust after `playwright codegen`.
-    "plate_input": "input[name='vehicleNumber'], input#vehicle-number",
-    "id_input": "input[name='idNumber'], input#id-number",
-    "submit_button": "button[type='submit'], button#search",
-    "result_row": "table.results tr, div.fine-row",
-    "result_cells": "td, .cell",
-    # Some pages embed a hidden field that needs the captcha token injected.
+    # CSS selectors — adjust with `python -m playwright codegen <MOT_LOOKUP_URL>`.
+    "fine_number_input": "input[name='ReportNumber'], input#txtReportNumber",
+    "plate_input": "input[name='VehicleNumber'], input#txtVehicleNumber",
+    "id_input": "input[name='IdNumber'], input#txtIdNumber",
+    "submit_button": "input[type='submit'], button[type='submit']",
+    "result_row": "table#gvReports tr.row, tr.fine-row",
+    "result_cells": "td",
     "captcha_response": "textarea#g-recaptcha-response",
 }
 
 
-def _lookup_live(plate: str, israeli_id: str) -> LookupResult:
+def _lookup_live(plate: str, israeli_id: str, fine_number: str) -> LookupResult:
     try:
         from playwright.sync_api import sync_playwright
     except ImportError:
@@ -146,7 +158,7 @@ def _lookup_live(plate: str, israeli_id: str) -> LookupResult:
     if not settings.mot_site_key:
         return LookupResult(
             plate=plate,
-            error="MOT_SITE_KEY не задан в .env (нужен sitekey reCAPTCHA v2)",
+            error="MOT_SITE_KEY не задан в .env (sitekey reCAPTCHA целевой страницы)",
         )
 
     solver = create_solver()
@@ -162,15 +174,16 @@ def _lookup_live(plate: str, israeli_id: str) -> LookupResult:
             page = context.new_page()
             page.goto(settings.mot_lookup_url, wait_until="networkidle")
 
+            page.fill(LIVE_SELECTORS["fine_number_input"], fine_number)
             page.fill(LIVE_SELECTORS["plate_input"], plate)
             page.fill(LIVE_SELECTORS["id_input"], israeli_id)
 
             page.evaluate(
-                "(token) => { const el = document.querySelector(arguments[1]) || "
-                "document.querySelector('textarea#g-recaptcha-response'); "
-                "if (el) { el.style.display=''; el.value = token; } }",
-                token,
-                LIVE_SELECTORS["captcha_response"],
+                "(args) => { const sel = args.selector; const tok = args.token; "
+                "const el = document.querySelector(sel) "
+                "  || document.querySelector('textarea#g-recaptcha-response'); "
+                "if (el) { el.style.display=''; el.value = tok; } }",
+                {"selector": LIVE_SELECTORS["captcha_response"], "token": token},
             )
 
             page.click(LIVE_SELECTORS["submit_button"])
@@ -198,14 +211,13 @@ def _extract_fines_from_page(page) -> Iterable[Fine]:
                 violation=cells[3],
                 amount_ils=_parse_amount(cells[4] if len(cells) > 4 else "0"),
                 status=cells[5] if len(cells) > 5 else "",
-                source="משרד התחבורה",
+                source="עיריית ירושלים",
             )
         except (ValueError, IndexError) as exc:
             logger.warning("skipped unparseable row %r: %s", cells, exc)
 
 
 def _parse_he_date(value: str) -> dt.date:
-    # Accepts dd/mm/yyyy or yyyy-mm-dd
     if "/" in value:
         d, m, y = value.split("/")
         return dt.date(int(y), int(m), int(d))

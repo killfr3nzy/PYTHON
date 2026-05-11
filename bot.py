@@ -32,6 +32,7 @@ logger = logging.getLogger(__name__)
 class Flow(StatesGroup):
     waiting_for_plate = State()
     waiting_for_id = State()
+    waiting_for_fine_number = State()
 
 
 dp = Dispatcher(storage=MemoryStorage())
@@ -76,23 +77,42 @@ async def handle_plate(message: Message, state: FSMContext) -> None:
         )
         return
 
-    await _run_lookup_and_reply(message, plate=plate, israeli_id=None)
+    await _run_lookup_and_reply(message, plate=plate, israeli_id=None, fine_number=None)
     await state.clear()
 
 
 @dp.message(Flow.waiting_for_id, F.text)
 async def handle_id(message: Message, state: FSMContext) -> None:
     israeli_id = message.text.strip()
+    await state.update_data(israeli_id=israeli_id)
+    await state.set_state(Flow.waiting_for_fine_number)
+    await message.answer(
+        "И последнее — номер любого штрафа, который вы помните "
+        "(из SMS, бумажного уведомления или предыдущего отчёта).\n\n"
+        "Без него gov.il не отдаёт список — это защита приватности. "
+        "Зная один штраф, мы найдём все остальные."
+    )
+
+
+@dp.message(Flow.waiting_for_fine_number, F.text)
+async def handle_fine_number(message: Message, state: FSMContext) -> None:
+    fine_number = message.text.strip()
     data = await state.get_data()
     plate = data.get("plate", "")
-    await _run_lookup_and_reply(message, plate=plate, israeli_id=israeli_id)
+    israeli_id = data.get("israeli_id", "")
+    await _run_lookup_and_reply(message, plate=plate, israeli_id=israeli_id, fine_number=fine_number)
     await state.clear()
 
 
-async def _run_lookup_and_reply(message: Message, plate: str, israeli_id: str | None) -> None:
+async def _run_lookup_and_reply(
+    message: Message,
+    plate: str,
+    israeli_id: str | None,
+    fine_number: str | None,
+) -> None:
     await message.answer("🔍 Проверяю штрафы, это займёт до минуты...")
 
-    result = await asyncio.to_thread(lookup, plate, israeli_id)
+    result = await asyncio.to_thread(lookup, plate, israeli_id, fine_number)
     if result.error:
         await message.answer(f"❌ {result.error}")
         return
