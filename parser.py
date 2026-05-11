@@ -191,6 +191,7 @@ def _lookup_one_source(
     token: str | None = None
     if site_key and source.captcha_kind != "none":
         solver = create_solver()
+        logger.info("Solving %s captcha for %s via %s", source.captcha_kind, source.key, solver.name)
         try:
             if source.captcha_kind == "recaptcha_v3":
                 token = solver.solve_recaptcha_v3(site_key, source.url, source.captcha_action)
@@ -198,6 +199,7 @@ def _lookup_one_source(
                 token = solver.solve_recaptcha_v2(site_key, source.url, invisible=True)
             else:
                 token = solver.solve_recaptcha_v2(site_key, source.url)
+            logger.info("Captcha solved, token len=%d", len(token))
         except CaptchaError as exc:
             raise RuntimeError(f"captcha: {exc}") from exc
 
@@ -205,14 +207,18 @@ def _lookup_one_source(
     page = context.new_page()
     page.set_default_timeout(PER_SOURCE_TIMEOUT_MS)
     try:
+        logger.info("Navigating to %s", source.url)
         page.goto(source.url, wait_until="networkidle")
 
         if source.fine_labels:
             _fill_first_match(page, source.fine_labels, fine_number)
+            logger.info("Filled fine_number")
         if source.plate_labels:
             _fill_first_match(page, source.plate_labels, plate)
+            logger.info("Filled plate")
         if source.id_labels and israeli_id:
             _fill_first_match(page, source.id_labels, israeli_id)
+            logger.info("Filled ID")
 
         if token:
             page.evaluate(
@@ -222,9 +228,27 @@ def _lookup_one_source(
                 "}",
                 token,
             )
+            logger.info("Injected captcha token")
 
         _click_first_match(page, source.submit_texts)
-        page.wait_for_load_state("networkidle", timeout=PER_SOURCE_TIMEOUT_MS)
+        logger.info("Clicked submit, waiting for response page")
+        try:
+            page.wait_for_load_state("networkidle", timeout=PER_SOURCE_TIMEOUT_MS)
+        except Exception:
+            logger.warning("networkidle timeout after submit, scraping anyway")
+
+        # Diagnostic dump after submit so we can see what the page returned.
+        snapshot_base = f"/tmp/after_submit_{source.key}"
+        try:
+            page.screenshot(path=f"{snapshot_base}.png", full_page=True)
+            with open(f"{snapshot_base}.html", "w", encoding="utf-8") as f:
+                f.write(page.content())
+            logger.info("Saved diagnostics: %s.png and %s.html", snapshot_base, snapshot_base)
+        except Exception as exc:
+            logger.warning("Could not save diagnostics: %s", exc)
+
+        body_text = page.evaluate("() => document.body.innerText.slice(0, 600)")
+        logger.info("Page text head (600 chars): %r", body_text)
 
         return list(_extract_fines_from_page(page, source))
     finally:
