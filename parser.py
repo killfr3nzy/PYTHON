@@ -144,31 +144,65 @@ USER_AGENT = (
 )
 
 # Minimal stealth payload: hide the most obvious automation fingerprints that
-# reCAPTCHA v3 / Akamai use to score sessions below the human threshold.
-# Comprehensive packages exist (playwright-stealth) but inline is enough for
-# the few flags that actually move the needle here.
+# reCAPTCHA / Akamai use to score sessions below the human threshold.
 STEALTH_INIT_JS = r"""
-() => {
-  Object.defineProperty(navigator, 'webdriver', { get: () => undefined });
-  Object.defineProperty(navigator, 'languages', { get: () => ['he-IL', 'he', 'en-US', 'en'] });
-  Object.defineProperty(navigator, 'plugins', {
-    get: () => [
-      { name: 'PDF Viewer' },
-      { name: 'Chrome PDF Viewer' },
-      { name: 'Chromium PDF Viewer' },
-    ],
+Object.defineProperty(navigator, 'webdriver', { get: () => undefined });
+Object.defineProperty(navigator, 'languages', { get: () => ['he-IL', 'he', 'en-US', 'en'] });
+Object.defineProperty(navigator, 'plugins', {
+  get: () => [
+    { name: 'PDF Viewer' },
+    { name: 'Chrome PDF Viewer' },
+    { name: 'Chromium PDF Viewer' },
+  ],
+});
+Object.defineProperty(navigator, 'platform', { get: () => 'MacIntel' });
+Object.defineProperty(navigator, 'hardwareConcurrency', { get: () => 8 });
+Object.defineProperty(navigator, 'deviceMemory', { get: () => 8 });
+if (!window.chrome) window.chrome = { runtime: {}, app: { isInstalled: false } };
+const origQuery = window.navigator.permissions && window.navigator.permissions.query;
+if (origQuery) {
+  window.navigator.permissions.query = (p) =>
+    p.name === 'notifications'
+      ? Promise.resolve({ state: Notification.permission })
+      : origQuery(p);
+}
+"""
+
+# Token-injection JS for invisible/programmatic reCAPTCHA v2.
+# Setting textarea#g-recaptcha-response alone is not enough: the site reads
+# the token via the grecaptcha callback. Walk every client in
+# window.___grecaptcha_cfg.clients and fire its callback with our token so
+# the form's submit handler unblocks.
+INJECT_RECAPTCHA_JS = r"""
+(token) => {
+  // 1) Fill the textarea — covers visible v2.
+  const sel = 'textarea[name="g-recaptcha-response"], textarea#g-recaptcha-response, input[name="g-recaptcha-response"]';
+  document.querySelectorAll(sel).forEach((el) => {
+    el.style.display = '';
+    el.value = token;
+    el.innerHTML = token;
   });
-  Object.defineProperty(navigator, 'platform', { get: () => 'MacIntel' });
-  Object.defineProperty(navigator, 'hardwareConcurrency', { get: () => 8 });
-  Object.defineProperty(navigator, 'deviceMemory', { get: () => 8 });
-  if (!window.chrome) window.chrome = { runtime: {}, app: { isInstalled: false } };
-  const origQuery = window.navigator.permissions && window.navigator.permissions.query;
-  if (origQuery) {
-    window.navigator.permissions.query = (p) =>
-      p.name === 'notifications'
-        ? Promise.resolve({ state: Notification.permission })
-        : origQuery(p);
+  // 2) Walk reCAPTCHA client configs and fire every callback — covers
+  //    invisible v2 and programmatically-rendered widgets.
+  const cfg = window.___grecaptcha_cfg;
+  let fired = 0;
+  if (cfg && cfg.clients) {
+    for (const cid of Object.keys(cfg.clients)) {
+      const client = cfg.clients[cid];
+      for (const k of Object.keys(client)) {
+        const v = client[k];
+        if (v && typeof v === 'object') {
+          for (const f of Object.keys(v)) {
+            const fv = v[f];
+            if (fv && typeof fv.callback === 'function') {
+              try { fv.callback(token); fired++; } catch (e) {}
+            }
+          }
+        }
+      }
+    }
   }
+  return {fired};
 }
 """
 
@@ -263,14 +297,8 @@ def _lookup_one_source(
             logger.info("Filled ID")
 
         if token:
-            page.evaluate(
-                "(tok) => { "
-                "  const sel = 'textarea#g-recaptcha-response, input[name=\"g-recaptcha-response\"]'; "
-                "  document.querySelectorAll(sel).forEach((el) => { el.style.display=''; el.value = tok; }); "
-                "}",
-                token,
-            )
-            logger.info("Injected captcha token")
+            inject_result = page.evaluate(INJECT_RECAPTCHA_JS, token)
+            logger.info("Injected captcha token, callbacks fired=%s", inject_result)
 
         _click_first_match(page, source.submit_texts)
         logger.info("Clicked submit, waiting for response page")
