@@ -30,6 +30,7 @@ from aiogram.types import (
 )
 
 from config import settings
+from intake import IntakeResult, from_image, from_text, manual
 from llm import build_appeal
 from parser import Fine, LookupResult, lookup
 from pdf_appeal import render_appeal_pdf
@@ -43,19 +44,30 @@ logger = logging.getLogger(__name__)
 # Constants / menus
 # ---------------------------------------------------------------------------
 
-BTN_CHECK = "🚗 Проверить штрафы"
+BTN_APPEAL = "📝 Подать апелляцию"
+BTN_CHECK = "🚗 Проверить штрафы (бета)"
 BTN_PRICING = "💰 Цены"
 BTN_ABOUT = "ℹ️ О сервисе"
 BTN_HELP = "❓ Помощь"
 
 MAIN_MENU = ReplyKeyboardMarkup(
     keyboard=[
+        [KeyboardButton(text=BTN_APPEAL)],
         [KeyboardButton(text=BTN_CHECK)],
         [KeyboardButton(text=BTN_PRICING), KeyboardButton(text=BTN_ABOUT)],
         [KeyboardButton(text=BTN_HELP)],
     ],
     resize_keyboard=True,
     persistent=True,
+)
+
+CONFIRM_FINE_KB = InlineKeyboardMarkup(
+    inline_keyboard=[
+        [
+            InlineKeyboardButton(text="✅ Верно, генерируй апелляцию", callback_data="confirm_fine"),
+            InlineKeyboardButton(text="✏️ Исправить", callback_data="edit_fine"),
+        ]
+    ]
 )
 
 LETTERS_KB = InlineKeyboardMarkup(
@@ -77,6 +89,13 @@ class Flow(StatesGroup):
     waiting_for_id = State()
     waiting_for_fine_number = State()
     awaiting_letter_decision = State()
+    appeal_waiting_for_input = State()       # photo / text / manual
+    appeal_awaiting_confirmation = State()   # show parsed fine, ask yes/no
+    appeal_manual_fine_id = State()
+    appeal_manual_date = State()
+    appeal_manual_amount = State()
+    appeal_manual_violation = State()
+    appeal_manual_location = State()
 
 
 dp = Dispatcher(storage=MemoryStorage())
@@ -91,11 +110,12 @@ async def cmd_start(message: Message, state: FSMContext) -> None:
     await state.clear()
     await message.answer(
         "שלום! 👋\n\n"
-        "Я проверю ваши израильские штрафы по 9 муниципальным базам "
-        "(Иерусалим, Тель-Авив, Хайфа, Беэр-Шева, Ришон, Нетания, "
-        "Петах-Тиква, Холон + полиция) и подготовлю апелляционные письма "
-        "на иврите.\n\n"
-        "Нажмите «🚗 Проверить штрафы» в меню снизу или используйте /check.",
+        "Я сделаю апелляцию по израильскому штрафу за минуту:\n"
+        "• Распознаю детали штрафа по фото или SMS\n"
+        "• Проведу юридический анализ оснований\n"
+        "• Сгенерирую готовое письмо на иврите в PDF\n"
+        "• Дам инструкцию как подать\n\n"
+        "Нажмите «📝 Подать апелляцию» в меню снизу.",
         reply_markup=MAIN_MENU,
     )
 
@@ -160,6 +180,182 @@ async def cmd_cancel(message: Message, state: FSMContext) -> None:
     await state.clear()
     await message.answer("Отменено. Главное меню снизу.", reply_markup=MAIN_MENU)
 
+
+@dp.message(Command("appeal"))
+@dp.message(F.text == BTN_APPEAL)
+async def start_appeal(message: Message, state: FSMContext) -> None:
+    await state.clear()
+    await state.set_state(Flow.appeal_waiting_for_input)
+    await message.answer(
+        "Отправьте детали штрафа любым из трёх способов:\n\n"
+        "📷 <b>Фото</b> — сфотографируйте бумажный штраф или скриншот SMS\n"
+        "📋 <b>Текст</b> — скопируйте текст SMS / уведомления\n"
+        "✍️ <b>Ввести руками</b> — отправьте слово <code>руками</code>\n\n"
+        "Что бы вы ни отправили — Claude распознает данные и подтвердит "
+        "со мной до генерации письма.",
+        parse_mode="HTML",
+    )
+
+
+@dp.message(Flow.appeal_waiting_for_input, F.photo)
+async def appeal_handle_photo(message: Message, state: FSMContext, bot: Bot) -> None:
+    await message.answer("📸 Распознаю штраф с фото через Claude Vision...")
+    photo = message.photo[-1]
+    file = await bot.get_file(photo.file_id)
+    buf = await bot.download_file(file.file_path)
+    image_bytes = buf.read()
+    try:
+        result = await asyncio.to_thread(from_image, image_bytes, "image/jpeg")
+    except Exception as exc:
+        await message.answer(
+            f"❌ Не получилось распознать: {exc}\n\n"
+            "Попробуйте отправить текст SMS или ввести данные руками "
+            "(напишите <code>руками</code>).",
+            parse_mode="HTML",
+        )
+        return
+    await _present_intake(message, state, result)
+
+
+@dp.message(Flow.appeal_waiting_for_input, F.text)
+async def appeal_handle_text(message: Message, state: FSMContext) -> None:
+    text = message.text.strip()
+    if text.lower() in ("руками", "manual", "ручной", "вручную"):
+        await state.set_state(Flow.appeal_manual_fine_id)
+        await message.answer("Введите номер штрафа (מספר דוח):")
+        return
+    await message.answer("📋 Парсю текст через Claude...")
+    try:
+        result = await asyncio.to_thread(from_text, text)
+    except Exception as exc:
+        await message.answer(f"❌ Ошибка распознавания: {exc}")
+        return
+    await _present_intake(message, state, result)
+
+
+# --- Manual entry ---------------------------------------------------------
+
+@dp.message(Flow.appeal_manual_fine_id, F.text)
+async def manual_fine_id(message: Message, state: FSMContext) -> None:
+    await state.update_data(m_fine_id=message.text.strip())
+    await state.set_state(Flow.appeal_manual_date)
+    await message.answer("Дата штрафа в формате YYYY-MM-DD (например 2026-05-01):")
+
+
+@dp.message(Flow.appeal_manual_date, F.text)
+async def manual_date(message: Message, state: FSMContext) -> None:
+    await state.update_data(m_date=message.text.strip())
+    await state.set_state(Flow.appeal_manual_amount)
+    await message.answer("Сумма в шекелях (только число, например 250):")
+
+
+@dp.message(Flow.appeal_manual_amount, F.text)
+async def manual_amount(message: Message, state: FSMContext) -> None:
+    try:
+        amount = int("".join(ch for ch in message.text if ch.isdigit()))
+    except ValueError:
+        amount = 0
+    await state.update_data(m_amount=amount)
+    await state.set_state(Flow.appeal_manual_violation)
+    await message.answer(
+        "Тип нарушения на иврите (например <code>חניה במקום אסור</code>) "
+        "или на русском — переведу:",
+        parse_mode="HTML",
+    )
+
+
+@dp.message(Flow.appeal_manual_violation, F.text)
+async def manual_violation(message: Message, state: FSMContext) -> None:
+    await state.update_data(m_violation=message.text.strip())
+    await state.set_state(Flow.appeal_manual_location)
+    await message.answer("Локация / адрес штрафа:")
+
+
+@dp.message(Flow.appeal_manual_location, F.text)
+async def manual_location(message: Message, state: FSMContext) -> None:
+    location = message.text.strip()
+    data = await state.get_data()
+    result = manual(
+        fine_id=data.get("m_fine_id", ""),
+        issued_at=data.get("m_date", ""),
+        amount_ils=data.get("m_amount", 0),
+        violation=data.get("m_violation", ""),
+        location=location,
+    )
+    await _present_intake(message, state, result)
+
+
+# --- Confirmation step ----------------------------------------------------
+
+async def _present_intake(message: Message, state: FSMContext, result: IntakeResult) -> None:
+    f = result.fine
+    conf_emoji = {"high": "🟢", "medium": "🟡", "low": "🔴"}.get(result.confidence, "⚪️")
+    block = [
+        "<b>Распознано:</b>",
+        f"{conf_emoji} уверенность: {result.confidence}",
+        "",
+        f"<b>Номер штрафа:</b> {f.fine_id or '<i>не определён</i>'}",
+        f"<b>Дата:</b> {f.issued_at.isoformat()}",
+        f"<b>Орган:</b> {f.source}",
+        f"<b>Нарушение:</b> {f.violation or '<i>не определено</i>'}",
+        f"<b>Локация:</b> {f.location or '<i>не определена</i>'}",
+        f"<b>Сумма:</b> {f.amount_ils} ₪",
+    ]
+    if result.warning:
+        block.extend(["", f"⚠️ {result.warning}"])
+
+    await state.update_data(intake_fine=f.to_dict())
+    await state.set_state(Flow.appeal_awaiting_confirmation)
+    await message.answer("\n".join(block), parse_mode="HTML", reply_markup=CONFIRM_FINE_KB)
+
+
+@dp.callback_query(F.data == "confirm_fine", Flow.appeal_awaiting_confirmation)
+async def cb_confirm_fine(cb: CallbackQuery, state: FSMContext) -> None:
+    await cb.answer("Готовлю апелляцию...")
+    await cb.message.edit_reply_markup(reply_markup=None)
+    data = await state.get_data()
+    fine = _fine_from_dict(data["intake_fine"])
+
+    from templates import analyse
+    analysis = await asyncio.to_thread(analyse, fine)
+    summary = (
+        f"<b>🎯 Вероятность отмены:</b> {analysis.success_probability} ({analysis.success_score}/100)\n"
+        f"<b>💵 Ожидаемая выгода:</b> {analysis.estimated_savings_ils} ₪\n"
+        f"<b>📅 Дедлайн:</b> {analysis.deadline}\n\n"
+        f"<b>Основания для апелляции:</b>\n  • " + "\n  • ".join(analysis.grounds) + "\n\n"
+        f"<i>{analysis.risk_note}</i>\n\n"
+        "Генерирую PDF на иврите..."
+    )
+    await cb.message.answer(summary, parse_mode="HTML")
+
+    a, letter = await asyncio.to_thread(build_appeal, fine)
+    pdf_bytes = await asyncio.to_thread(render_appeal_pdf, fine, letter)
+    document = BufferedInputFile(pdf_bytes, filename=f"appeal_{fine.fine_id or 'unknown'}.pdf")
+    await cb.message.answer_document(
+        document,
+        caption="📄 Готовое апелляционное письмо на иврите.\n\n"
+                "Как подать:\n"
+                "1. Откройте сайт нужного муниципалитета → раздел «הגשת ערעור»\n"
+                "2. Приложите этот PDF\n"
+                "3. Сохраните номер обращения\n\n"
+                "Удачи! 🤞",
+        reply_markup=MAIN_MENU,
+    )
+    await state.clear()
+
+
+@dp.callback_query(F.data == "edit_fine", Flow.appeal_awaiting_confirmation)
+async def cb_edit_fine(cb: CallbackQuery, state: FSMContext) -> None:
+    await cb.answer()
+    await cb.message.edit_reply_markup(reply_markup=None)
+    await state.set_state(Flow.appeal_manual_fine_id)
+    await cb.message.answer(
+        "Введите данные руками. Сначала — номер штрафа (מספר דוח):",
+        reply_markup=MAIN_MENU,
+    )
+
+
+# --- Legacy live-lookup flow (beta) ---------------------------------------
 
 @dp.message(Command("check"))
 @dp.message(F.text == BTN_CHECK)
