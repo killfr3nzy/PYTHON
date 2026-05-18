@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Апелляция израильских штрафов за 1 минуту</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .hebrew { direction: rtl; text-align: right; font-family: 'David', 'Times New Roman', serif; }
+    .loader {
+      width: 32px; height: 32px;
+      border: 3px solid #e5e7eb;
+      border-top-color: #2563eb;
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+  </style>
+</head>
+<body class="bg-gradient-to-br from-blue-50 via-white to-indigo-50 min-h-screen">
+
+  <header class="bg-white shadow-sm">
+    <div class="max-w-4xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div>
+        <div class="text-xl font-bold text-slate-800">Апелляция штрафа</div>
+        <div class="text-sm text-slate-500">Израиль · 1 минута · готовый PDF на иврите</div>
+      </div>
+      <div class="text-sm text-slate-500 hidden sm:block">@Dohcheck_bot</div>
+    </div>
+  </header>
+
+  <main class="max-w-4xl mx-auto px-6 py-10">
+
+    <!-- Hero -->
+    <section class="text-center mb-10">
+      <h1 class="text-4xl sm:text-5xl font-bold text-slate-900 mb-4">
+        Получите апелляцию по штрафу за <span class="text-blue-600">1 минуту</span>
+      </h1>
+      <p class="text-lg text-slate-600 max-w-2xl mx-auto">
+        Загрузите фото штрафа, скопируйте SMS или введите данные руками.
+        Получите готовое юридическое письмо на иврите в PDF.
+      </p>
+    </section>
+
+    <!-- Step 1: Input -->
+    <section id="step-input" class="bg-white rounded-2xl shadow-lg p-6 sm:p-8 mb-6">
+      <div class="flex items-center mb-6">
+        <div class="w-8 h-8 rounded-full bg-blue-600 text-white font-bold flex items-center justify-center mr-3">1</div>
+        <h2 class="text-xl font-semibold text-slate-900">Отправьте данные штрафа</h2>
+      </div>
+
+      <!-- Tabs -->
+      <div class="flex border-b border-slate-200 mb-6">
+        <button class="tab-btn px-4 py-2 font-medium border-b-2 border-blue-600 text-blue-600" data-tab="photo">📷 Фото</button>
+        <button class="tab-btn px-4 py-2 font-medium border-b-2 border-transparent text-slate-500" data-tab="text">📋 Текст SMS</button>
+        <button class="tab-btn px-4 py-2 font-medium border-b-2 border-transparent text-slate-500" data-tab="manual">✍️ Руками</button>
+      </div>
+
+      <!-- Photo -->
+      <div class="tab-content" data-tab="photo">
+        <label class="block border-2 border-dashed border-slate-300 rounded-xl p-8 text-center cursor-pointer hover:border-blue-400 transition">
+          <input type="file" id="photo-input" accept="image/*" capture="environment" class="hidden">
+          <div class="text-4xl mb-2">📷</div>
+          <div class="text-slate-700 font-medium">Нажмите чтобы выбрать или сфотографировать</div>
+          <div class="text-sm text-slate-500 mt-1">JPG, PNG · до 10 МБ</div>
+          <div id="photo-name" class="text-sm text-blue-600 mt-2 hidden"></div>
+        </label>
+        <button id="photo-submit" class="mt-4 w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-xl font-medium disabled:opacity-50" disabled>
+          Распознать через Claude Vision
+        </button>
+      </div>
+
+      <!-- Text -->
+      <div class="tab-content hidden" data-tab="text">
+        <textarea id="text-input" rows="6" class="w-full border border-slate-300 rounded-xl p-4 focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="Скопируйте сюда текст SMS от полиции/муниципалитета..."></textarea>
+        <button id="text-submit" class="mt-4 w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-xl font-medium">
+          Распознать
+        </button>
+      </div>
+
+      <!-- Manual -->
+      <div class="tab-content hidden" data-tab="manual">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-sm font-medium text-slate-700 mb-1">Номер штрафа (מספר דוח)</label>
+            <input id="m-fine-id" class="w-full border border-slate-300 rounded-lg p-2 focus:ring-2 focus:ring-blue-500" placeholder="1234567890">
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-slate-700 mb-1">Дата (YYYY-MM-DD)</label>
+            <input id="m-date" type="date" class="w-full border border-slate-300 rounded-lg p-2 focus:ring-2 focus:ring-blue-500">
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-slate-700 mb-1">Сумма ₪</label>
+            <input id="m-amount" type="number" class="w-full border border-slate-300 rounded-lg p-2 focus:ring-2 focus:ring-blue-500" placeholder="250">
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-slate-700 mb-1">Орган</label>
+            <select id="m-source" class="w-full border border-slate-300 rounded-lg p-2 focus:ring-2 focus:ring-blue-500">
+              <option value="עיריית תל אביב-יפו">Мэрия Тель-Авив-Яффо</option>
+              <option value="עיריית ירושלים">Мэрия Иерусалима</option>
+              <option value="עיריית חיפה">Мэрия Хайфы</option>
+              <option value="משטרת ישראל">Полиция Израиля</option>
+              <option value="רשות האכיפה והגבייה">Управление исполнения и сбора</option>
+            </select>
+          </div>
+          <div class="sm:col-span-2">
+            <label class="block text-sm font-medium text-slate-700 mb-1">Тип нарушения</label>
+            <input id="m-violation" class="w-full border border-slate-300 rounded-lg p-2 focus:ring-2 focus:ring-blue-500" placeholder="חניה במקום אסור / парковка в неположенном месте">
+          </div>
+          <div class="sm:col-span-2">
+            <label class="block text-sm font-medium text-slate-700 mb-1">Локация / адрес</label>
+            <input id="m-location" class="w-full border border-slate-300 rounded-lg p-2 focus:ring-2 focus:ring-blue-500" placeholder="רחוב אלנבי 45, תל אביב">
+          </div>
+        </div>
+        <button id="manual-submit" class="mt-4 w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-xl font-medium">
+          Перейти к анализу
+        </button>
+      </div>
+
+      <div id="extract-error" class="hidden mt-4 p-3 bg-red-50 text-red-700 rounded-lg"></div>
+      <div id="extract-loader" class="hidden mt-4 flex items-center justify-center">
+        <div class="loader"></div>
+        <span class="ml-3 text-slate-600">Обрабатываю...</span>
+      </div>
+    </section>
+
+    <!-- Step 2: Confirm extracted data -->
+    <section id="step-confirm" class="hidden bg-white rounded-2xl shadow-lg p-6 sm:p-8 mb-6">
+      <div class="flex items-center mb-6">
+        <div class="w-8 h-8 rounded-full bg-blue-600 text-white font-bold flex items-center justify-center mr-3">2</div>
+        <h2 class="text-xl font-semibold text-slate-900">Проверьте распознанные данные</h2>
+      </div>
+      <div id="confidence-badge" class="inline-block px-3 py-1 rounded-full text-sm font-medium mb-4"></div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+        <div>
+          <label class="block text-sm font-medium text-slate-700 mb-1">Номер штрафа</label>
+          <input id="c-fine-id" class="w-full border border-slate-300 rounded-lg p-2">
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-slate-700 mb-1">Дата</label>
+          <input id="c-date" type="date" class="w-full border border-slate-300 rounded-lg p-2">
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-slate-700 mb-1">Сумма ₪</label>
+          <input id="c-amount" type="number" class="w-full border border-slate-300 rounded-lg p-2">
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-slate-700 mb-1">Орган</label>
+          <input id="c-source" class="w-full border border-slate-300 rounded-lg p-2 hebrew">
+        </div>
+        <div class="sm:col-span-2">
+          <label class="block text-sm font-medium text-slate-700 mb-1">Нарушение</label>
+          <input id="c-violation" class="w-full border border-slate-300 rounded-lg p-2 hebrew">
+        </div>
+        <div class="sm:col-span-2">
+          <label class="block text-sm font-medium text-slate-700 mb-1">Локация</label>
+          <input id="c-location" class="w-full border border-slate-300 rounded-lg p-2 hebrew">
+        </div>
+      </div>
+      <button id="analyse-btn" class="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-xl font-medium">
+        Проанализировать →
+      </button>
+    </section>
+
+    <!-- Step 3: Analysis + PDF -->
+    <section id="step-result" class="hidden bg-white rounded-2xl shadow-lg p-6 sm:p-8 mb-6">
+      <div class="flex items-center mb-6">
+        <div class="w-8 h-8 rounded-full bg-green-600 text-white font-bold flex items-center justify-center mr-3">3</div>
+        <h2 class="text-xl font-semibold text-slate-900">Анализ и письмо</h2>
+      </div>
+
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
+        <div class="bg-slate-50 rounded-lg p-3">
+          <div class="text-xs text-slate-500">Вероятность</div>
+          <div id="r-prob" class="text-lg font-bold text-slate-900"></div>
+        </div>
+        <div class="bg-slate-50 rounded-lg p-3">
+          <div class="text-xs text-slate-500">Score</div>
+          <div id="r-score" class="text-lg font-bold text-slate-900"></div>
+        </div>
+        <div class="bg-slate-50 rounded-lg p-3">
+          <div class="text-xs text-slate-500">Выгода ₪</div>
+          <div id="r-savings" class="text-lg font-bold text-green-600"></div>
+        </div>
+        <div class="bg-slate-50 rounded-lg p-3">
+          <div class="text-xs text-slate-500">Дедлайн</div>
+          <div id="r-deadline" class="text-sm font-bold text-slate-900"></div>
+        </div>
+      </div>
+
+      <div class="mb-4">
+        <div class="font-semibold text-slate-900 mb-2">Основания для апелляции</div>
+        <ul id="r-grounds" class="list-disc list-inside text-slate-700 space-y-1"></ul>
+      </div>
+
+      <div class="mb-4">
+        <div class="font-semibold text-slate-900 mb-2">Рекомендованные действия</div>
+        <ul id="r-actions" class="list-disc list-inside text-slate-700 space-y-1"></ul>
+      </div>
+
+      <div class="mb-6">
+        <div class="font-semibold text-slate-900 mb-2">Какие доказательства запросить</div>
+        <ul id="r-evidence" class="list-disc list-inside text-slate-700 space-y-1"></ul>
+      </div>
+
+      <div id="r-risk" class="text-sm text-slate-500 italic mb-6"></div>
+
+      <button id="pdf-btn" class="w-full bg-green-600 hover:bg-green-700 text-white py-4 rounded-xl font-medium text-lg">
+        📄 Скачать апелляционное письмо (PDF)
+      </button>
+      <button id="restart-btn" class="mt-3 w-full bg-slate-100 hover:bg-slate-200 text-slate-700 py-2 rounded-xl">
+        Начать заново
+      </button>
+    </section>
+
+    <footer class="text-center text-sm text-slate-500 mt-10">
+      Сервис не даёт юридических консультаций · Данные не сохраняются после генерации · Бот в Telegram: <a href="https://t.me/Dohcheck_bot" class="text-blue-600 hover:underline">@Dohcheck_bot</a>
+    </footer>
+  </main>
+
+  <script>
+    // --- Tab switching ---
+    document.querySelectorAll('.tab-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.tab-btn').forEach(b => {
+          b.classList.remove('border-blue-600', 'text-blue-600');
+          b.classList.add('border-transparent', 'text-slate-500');
+        });
+        btn.classList.add('border-blue-600', 'text-blue-600');
+        btn.classList.remove('border-transparent', 'text-slate-500');
+
+        const tab = btn.dataset.tab;
+        document.querySelectorAll('.tab-content').forEach(c => {
+          c.classList.toggle('hidden', c.dataset.tab !== tab);
+        });
+      });
+    });
+
+    // --- Photo input ---
+    const photoInput = document.getElementById('photo-input');
+    const photoName = document.getElementById('photo-name');
+    const photoSubmit = document.getElementById('photo-submit');
+    photoInput.addEventListener('change', () => {
+      if (photoInput.files.length > 0) {
+        photoName.textContent = '📎 ' + photoInput.files[0].name;
+        photoName.classList.remove('hidden');
+        photoSubmit.disabled = false;
+      }
+    });
+
+    photoSubmit.addEventListener('click', async () => {
+      const fd = new FormData();
+      fd.append('image', photoInput.files[0]);
+      await callExtract(fd);
+    });
+
+    document.getElementById('text-submit').addEventListener('click', async () => {
+      const text = document.getElementById('text-input').value.trim();
+      if (!text) return;
+      const fd = new FormData();
+      fd.append('text', text);
+      await callExtract(fd);
+    });
+
+    document.getElementById('manual-submit').addEventListener('click', () => {
+      showConfirm({
+        fine_id: document.getElementById('m-fine-id').value,
+        issued_at: document.getElementById('m-date').value || new Date().toISOString().slice(0, 10),
+        amount_ils: parseInt(document.getElementById('m-amount').value || '0', 10),
+        violation: document.getElementById('m-violation').value,
+        location: document.getElementById('m-location').value,
+        source: document.getElementById('m-source').value,
+      }, 'high', '');
+    });
+
+    async function callExtract(formData) {
+      const loader = document.getElementById('extract-loader');
+      const err = document.getElementById('extract-error');
+      loader.classList.remove('hidden');
+      err.classList.add('hidden');
+      try {
+        const r = await fetch('/api/extract', { method: 'POST', body: formData });
+        if (!r.ok) throw new Error((await r.json()).detail || r.statusText);
+        const data = await r.json();
+        showConfirm(data.fine, data.confidence, data.warning || '');
+      } catch (e) {
+        err.textContent = '❌ ' + e.message;
+        err.classList.remove('hidden');
+      } finally {
+        loader.classList.add('hidden');
+      }
+    }
+
+    function showConfirm(fine, confidence, warning) {
+      document.getElementById('c-fine-id').value = fine.fine_id || '';
+      document.getElementById('c-date').value = fine.issued_at || '';
+      document.getElementById('c-amount').value = fine.amount_ils || 0;
+      document.getElementById('c-source').value = fine.source || '';
+      document.getElementById('c-violation').value = fine.violation || '';
+      document.getElementById('c-location').value = fine.location || '';
+
+      const badge = document.getElementById('confidence-badge');
+      const map = {
+        high:   ['bg-green-100 text-green-800', '🟢 Высокая уверенность'],
+        medium: ['bg-yellow-100 text-yellow-800', '🟡 Средняя уверенность'],
+        low:    ['bg-red-100 text-red-800', '🔴 Низкая уверенность — проверьте поля'],
+      };
+      const [cls, label] = map[confidence] || map.medium;
+      badge.className = 'inline-block px-3 py-1 rounded-full text-sm font-medium mb-4 ' + cls;
+      badge.textContent = label + (warning ? ' · ' + warning : '');
+
+      document.getElementById('step-confirm').classList.remove('hidden');
+      document.getElementById('step-confirm').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function readFineFromForm() {
+      return {
+        fine_id: document.getElementById('c-fine-id').value,
+        issued_at: document.getElementById('c-date').value,
+        amount_ils: parseInt(document.getElementById('c-amount').value || '0', 10),
+        violation: document.getElementById('c-violation').value,
+        location: document.getElementById('c-location').value,
+        source: document.getElementById('c-source').value,
+      };
+    }
+
+    document.getElementById('analyse-btn').addEventListener('click', async () => {
+      const fine = readFineFromForm();
+      const r = await fetch('/api/analyse', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(fine),
+      });
+      if (!r.ok) {
+        alert('Ошибка анализа: ' + ((await r.json()).detail || r.statusText));
+        return;
+      }
+      const a = await r.json();
+      document.getElementById('r-prob').textContent = a.success_probability;
+      document.getElementById('r-score').textContent = a.success_score + '/100';
+      document.getElementById('r-savings').textContent = '~' + a.estimated_savings_ils;
+      document.getElementById('r-deadline').textContent = a.deadline;
+      document.getElementById('r-grounds').innerHTML = a.grounds.map(g => `<li>${g}</li>`).join('');
+      document.getElementById('r-actions').innerHTML = a.recommended_actions.map(g => `<li>${g}</li>`).join('');
+      document.getElementById('r-evidence').innerHTML = a.evidence_to_request.map(g => `<li>${g}</li>`).join('');
+      document.getElementById('r-risk').textContent = a.risk_note;
+      document.getElementById('step-result').classList.remove('hidden');
+      document.getElementById('step-result').scrollIntoView({ behavior: 'smooth' });
+    });
+
+    document.getElementById('pdf-btn').addEventListener('click', async () => {
+      const btn = document.getElementById('pdf-btn');
+      const original = btn.textContent;
+      btn.disabled = true;
+      btn.textContent = '⏳ Генерирую PDF (Claude пишет письмо)...';
+      try {
+        const r = await fetch('/api/appeal', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(readFineFromForm()),
+        });
+        if (!r.ok) throw new Error((await r.json()).detail || r.statusText);
+        const blob = await r.blob();
+        const fineId = readFineFromForm().fine_id || 'unknown';
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = `appeal_${fineId}.pdf`;
+        a.click();
+        URL.revokeObjectURL(url);
+        btn.textContent = '✅ Скачано! Скачать ещё раз';
+      } catch (e) {
+        btn.textContent = '❌ ' + e.message;
+      } finally {
+        btn.disabled = false;
+        setTimeout(() => btn.textContent = original, 4000);
+      }
+    });
+
+    document.getElementById('restart-btn').addEventListener('click', () => {
+      document.getElementById('step-confirm').classList.add('hidden');
+      document.getElementById('step-result').classList.add('hidden');
+      document.getElementById('photo-input').value = '';
+      photoName.classList.add('hidden');
+      photoSubmit.disabled = true;
+      document.getElementById('text-input').value = '';
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
+</body>
+</html>
