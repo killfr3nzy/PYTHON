@@ -1,51 +1,66 @@
-cookies = {
-    'y2018-2-cohort': '2',
-    'leadSaleRentFree': '83',
-    '__ssds': '3',
-    '__uzma': '9baffaad-0cdf-4a17-a6eb-19a1d8e8a842',
-    '__uzmb': '1661951074',
-    '__uzme': '2543',
-    '__ssuzjsr3': 'a9be0cd8e',
-    '__uzmaj3': 'cca9a8a7-a7fa-4c33-a085-a3d90737d146',
-    '__uzmbj3': '1661951074',
-    '_ga_10CMRFNKW7': 'GS1.1.1662015224.2.1.1662015556.0.0.0',
-    '_hjSessionUser_266550': 'eyJpZCI6Ijk3YTRiMTgyLTRiYzYtNTVjYy04NjFiLWJhZjRjZGRhNGM4NyIsImNyZWF0ZWQiOjE2NjE5NTEwNzU5MzQsImV4aXN0aW5nIjp0cnVlfQ==',
-    '_gcl_au': '1.1.1518172149.1667896842',
-    'guest_token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7InV1aWQiOiI4MzgzODJkMC03MGM0LTRjNTEtYTgxMS1iZjNmYjMxOWMwNWIifSwiaWF0IjoxNjY5MDE1MTk2LCJleHAiOjE3MDIyMjAyMTIwOTB9.hEDquYxM9pOqXI4xVUOpoAmD42enEhy81XIjFTsWga4',
-    'abTestKey': '99',
-    'canary': 'never',
-    '_gid': 'GA1.3.60691387.1670137759',
-    'server_env': 'production',
-    'use_elastic_search': '1',
-    '_gat_UA-708051-1': '1',
-    '_hjSession_266550': 'eyJpZCI6IjAxNDU1MmQ2LWE5NDEtNGZmYi1hYzBlLWUxYzg0OTQwNjBkNiIsImNyZWF0ZWQiOjE2NzAyMjQ4MTQxNTUsImluU2FtcGxlIjpmYWxzZX0=',
-    '_hjAbsoluteSessionInProgress': '0',
-    'y2_cohort_2020': '19',
-    '__uzmcj3': '1512619636766',
-    '__uzmdj3': '1670224836',
-    '_ga': 'GA1.3.2068577508.1661951074',
-    'favorites_userid': 'iff161863480',
-    '__uzmd': '1670224839',
-    '__uzmc': '24037425884541',
-    '_ga_GQ385NHRG1': 'GS1.1.1670224806.41.1.1670224868.60.0.0',
-}
+"""Application configuration loaded from environment variables.
 
-headers = {
-    'Accept': 'application/json, text/plain, */*',
-    'Accept-Language': 'en-US,en;q=0.9,ru;q=0.8',
-    'Connection': 'keep-alive',
-    # 'Cookie': 'y2018-2-cohort=2; leadSaleRentFree=83; __ssds=3; __uzma=9baffaad-0cdf-4a17-a6eb-19a1d8e8a842; __uzmb=1661951074; __uzme=2543; __ssuzjsr3=a9be0cd8e; __uzmaj3=cca9a8a7-a7fa-4c33-a085-a3d90737d146; __uzmbj3=1661951074; _ga_10CMRFNKW7=GS1.1.1662015224.2.1.1662015556.0.0.0; _hjSessionUser_266550=eyJpZCI6Ijk3YTRiMTgyLTRiYzYtNTVjYy04NjFiLWJhZjRjZGRhNGM4NyIsImNyZWF0ZWQiOjE2NjE5NTEwNzU5MzQsImV4aXN0aW5nIjp0cnVlfQ==; _gcl_au=1.1.1518172149.1667896842; guest_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7InV1aWQiOiI4MzgzODJkMC03MGM0LTRjNTEtYTgxMS1iZjNmYjMxOWMwNWIifSwiaWF0IjoxNjY5MDE1MTk2LCJleHAiOjE3MDIyMjAyMTIwOTB9.hEDquYxM9pOqXI4xVUOpoAmD42enEhy81XIjFTsWga4; abTestKey=99; canary=never; _gid=GA1.3.60691387.1670137759; server_env=production; use_elastic_search=1; _gat_UA-708051-1=1; _hjSession_266550=eyJpZCI6IjAxNDU1MmQ2LWE5NDEtNGZmYi1hYzBlLWUxYzg0OTQwNjBkNiIsImNyZWF0ZWQiOjE2NzAyMjQ4MTQxNTUsImluU2FtcGxlIjpmYWxzZX0=; _hjAbsoluteSessionInProgress=0; y2_cohort_2020=19; __uzmcj3=1512619636766; __uzmdj3=1670224836; _ga=GA1.3.2068577508.1661951074; favorites_userid=iff161863480; __uzmd=1670224839; __uzmc=24037425884541; _ga_GQ385NHRG1=GS1.1.1670224806.41.1.1670224868.60.0.0',
-    'Origin': 'https://www.yad2.co.il',
-    'Referer': 'https://www.yad2.co.il/',
-    'Sec-Fetch-Dest': 'empty',
-    'Sec-Fetch-Mode': 'cors',
-    'Sec-Fetch-Site': 'same-site',
-    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36',
-    'mainsite_version_commit': '6a5e4fe328a58cdbd96d1062411785d670ae7990',
-    'mobile-app': 'false',
-    'sec-ch-ua': '"Google Chrome";v="107", "Chromium";v="107", "Not=A?Brand";v="24"',
-    'sec-ch-ua-mobile': '?0',
-    'sec-ch-ua-platform': '"Windows"',
-}
+Set these in your shell or in a local .env file (which is git-ignored):
 
-token = '5930711050:AAFr35cJuppbz-vaakW0CYzxKky2zVeNais'
+    TG_BOT_TOKEN=...                # Telegram bot token from @BotFather
+    ANTHROPIC_API_KEY=...           # Optional. If empty, falls back to templates.
+    LLM_MODE=auto                   # auto | claude | template
+    CLAUDE_MODEL=claude-sonnet-4-6
+    PARSER_MODE=mock                # mock | live
+    CAPTCHA_PROVIDER=2captcha       # mock | 2captcha | anti-captcha
+    CAPTCHA_API_KEY=...             # required when PARSER_MODE=live
+    MOT_LOOKUP_URL=https://www.gov.il/he/service/check-traffic-tickets
+    MOT_SITE_KEY=                   # reCAPTCHA v2 sitekey of the lookup page
+    PLAYWRIGHT_HEADLESS=true        # set to false to watch the browser
+"""
+
+import os
+from dataclasses import dataclass
+
+try:
+    from dotenv import load_dotenv
+    load_dotenv()
+except ImportError:
+    pass
+
+
+@dataclass(frozen=True)
+class Settings:
+    tg_bot_token: str
+    anthropic_api_key: str
+    llm_mode: str
+    claude_model: str
+    parser_mode: str
+    captcha_provider: str
+    captcha_api_key: str
+    mot_lookup_url: str
+    mot_site_key: str
+    playwright_headless: bool
+
+    @property
+    def use_claude(self) -> bool:
+        if self.llm_mode == "claude":
+            return True
+        if self.llm_mode == "template":
+            return False
+        return bool(self.anthropic_api_key)
+
+
+def _bool(value: str, default: bool = True) -> bool:
+    if not value:
+        return default
+    return value.strip().lower() in {"1", "true", "yes", "on"}
+
+
+settings = Settings(
+    tg_bot_token=os.getenv("TG_BOT_TOKEN", ""),
+    anthropic_api_key=os.getenv("ANTHROPIC_API_KEY", ""),
+    llm_mode=os.getenv("LLM_MODE", "auto").lower(),
+    claude_model=os.getenv("CLAUDE_MODEL", "claude-sonnet-4-6"),
+    parser_mode=os.getenv("PARSER_MODE", "mock").lower(),
+    captcha_provider=os.getenv("CAPTCHA_PROVIDER", "mock").lower(),
+    captcha_api_key=os.getenv("CAPTCHA_API_KEY", ""),
+    mot_lookup_url=os.getenv("MOT_LOOKUP_URL", "https://www.gov.il/he/service/check-traffic-tickets"),
+    mot_site_key=os.getenv("MOT_SITE_KEY", ""),
+    playwright_headless=_bool(os.getenv("PLAYWRIGHT_HEADLESS", "true"), default=True),
+)

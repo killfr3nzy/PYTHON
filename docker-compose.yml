@@ -1,0 +1,32 @@
+services:
+  bot:
+    build: .
+    image: fine-appeals:latest
+    container_name: fine-appeals-bot
+    env_file: .env
+    restart: unless-stopped
+    init: true
+    # Playwright needs more shared memory than the 64 MB default to run
+    # Chromium reliably under load.
+    shm_size: "1gb"
+    healthcheck:
+      test: ["CMD", "python", "-c", "import sys; sys.exit(0)"]
+      interval: 60s
+      timeout: 5s
+      retries: 3
+
+  web:
+    build: .
+    image: fine-appeals:latest
+    container_name: fine-appeals-web
+    env_file: .env
+    restart: unless-stopped
+    init: true
+    command: uvicorn webapp.main:app --host 0.0.0.0 --port 8000
+    ports:
+      - "8000:8000"
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request,sys; sys.exit(0 if urllib.request.urlopen('http://localhost:8000/healthz').status==200 else 1)"]
+      interval: 60s
+      timeout: 5s
+      retries: 3

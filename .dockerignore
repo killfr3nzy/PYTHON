@@ -1,0 +1,16 @@
+__pycache__/
+*.pyc
+*.pyo
+.git/
+.gitignore
+.env
+.venv/
+venv/
+.idea/
+.vscode/
+*.log
+*.md
+report.pdf
+build_report.py
+PYTHON.rar
+data/
